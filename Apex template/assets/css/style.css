@@ -64,4 +64,38 @@ p {
     font-weight: 700;
     font-size: 2.5rem; }
 
+.topnav {
+  background-color: #F8F9FA;
+  color: #8D9297; }
+  .topnav__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: auto;
+    gap: 0px;
+    font-size: 0.85rem; }
+    .topnav__content .topnav-info {
+      padding: 5px 10px;
+      border-left: 1px solid #8D9297; }
+      .topnav__content .topnav-info:last-child {
+        border-right: 1px solid #8D9297; }
+    .topnav__content__contact {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: auto;
+      gap: 0px; }
+      .topnav__content__contact__item i {
+        margin-right: 5px; }
+    .topnav__content__social__link {
+      color: #8D9297; }
+
+@media (max-width: 992px) {
+  .topnav {
+    display: none; } }
+
 /*# sourceMappingURL=style.css.map */
