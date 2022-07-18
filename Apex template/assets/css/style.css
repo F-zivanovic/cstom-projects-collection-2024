@@ -1,5 +1,67 @@
 /*----------------------------------------
 EXTERNAL FILES
 ----------------------------------------*/
+/*----------------------------------------
+PARTIALS
+----------------------------------------*/
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth; }
+
+body {
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  overflow-x: hidden; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+  color: #182434; }
+
+a {
+  text-decoration: none;
+  transition: 0.15s ease-in-out;
+  color: #F8F9FA; }
+  a:hover, a:focus {
+    cursor: pointer;
+    transition: 0.35s ease-in;
+    outline: none;
+    color: #FDA12B; }
+
+ul {
+  list-style-type: none; }
+
+img {
+  width: 100%; }
+
+.section {
+  padding: 70px 0px; }
+
+p {
+  font-size: 1rem; }
+
+.container {
+  width: 90%;
+  margin: 0px auto; }
+
+.section-title {
+  border-left: 5px solid #FDA12B;
+  padding-left: 25px; }
+  .section-title__heading1 {
+    color: #F8F9FA;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 1rem; }
+  .section-title__heading2 {
+    color: #182434;
+    font-weight: 700;
+    font-size: 2.5rem; }
 
 /*# sourceMappingURL=style.css.map */

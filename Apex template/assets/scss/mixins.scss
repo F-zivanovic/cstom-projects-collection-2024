@@ -1,0 +1,25 @@
+@mixin flex($justify, $align, $direction: row, $wrap: nowrap, $alignContent: auto, $gap: 0px) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    align-content: $alignContent;
+    gap: $gap;
+}
+
+@mixin positioning($position, $top, $right, $bottom, $left, $width: auto, $height: auto) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    width: $width;
+    height: $height;
+}
+
+@mixin breakpoints($bp) {
+    @media(max-width:$bp) {
+        @content;
+    }
+}
