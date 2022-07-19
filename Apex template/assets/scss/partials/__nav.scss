@@ -1,0 +1,81 @@
+.nav {
+    padding: 15px 0px;
+    @include flex(space-between, center);
+
+    &__logo {
+        @include flex(center, center);
+
+        i {
+            color: $primaryColor;
+            margin-right: 10px;
+            font-size: 3rem;
+        }
+
+        &__heading {
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 2rem;
+        }
+    }
+
+    &__list {
+        @include flex(center, center);
+
+        &__item {
+
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+
+            &:nth-child(3) {
+                position: relative;
+            }
+
+            &__link {
+                color: #8D9297;
+                text-transform: uppercase;
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    &__hamburger {
+        display: none;
+        border: 1px solid #8D9297;
+        padding: 5px 12px;
+        cursor: pointer;
+
+        i {
+            font-size: 1.7rem;
+        }
+    }
+}
+
+.mobilemenu {
+    border-top: 1px solid #8D9297;
+    transition: $transition;
+
+    @media(min-width:992px) {
+        display: none;
+    }
+
+    &__list {
+        margin-top: 30px;
+
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            &__link {
+                display: block;
+                color: #8D9297;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &.hidden {
+        transform: translateX(-100%);
+    }
+}

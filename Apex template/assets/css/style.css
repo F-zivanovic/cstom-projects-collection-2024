@@ -94,8 +94,89 @@ p {
     .topnav__content__social__link {
       color: #8D9297; }
 
+.nav {
+  padding: 15px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: auto;
+  gap: 0px; }
+  .nav__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: auto;
+    gap: 0px; }
+    .nav__logo i {
+      color: #FDA12B;
+      margin-right: 10px;
+      font-size: 3rem; }
+    .nav__logo__heading {
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 2rem; }
+  .nav__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: auto;
+    gap: 0px; }
+    .nav__list__item:not(:last-child) {
+      margin-right: 15px; }
+    .nav__list__item:nth-child(3) {
+      position: relative; }
+    .nav__list__item__link {
+      color: #8D9297;
+      text-transform: uppercase;
+      font-size: 1.1rem; }
+  .nav__hamburger {
+    display: none;
+    border: 1px solid #8D9297;
+    padding: 5px 12px;
+    cursor: pointer; }
+    .nav__hamburger i {
+      font-size: 1.7rem; }
+
+.mobilemenu {
+  border-top: 1px solid #8D9297;
+  transition: 0.15s ease-in-out; }
+  @media (min-width: 992px) {
+    .mobilemenu {
+      display: none; } }
+  .mobilemenu__list {
+    margin-top: 30px; }
+    .mobilemenu__list__item:not(:last-child) {
+      margin-bottom: 10px; }
+    .mobilemenu__list__item__link {
+      display: block;
+      color: #8D9297;
+      text-transform: uppercase; }
+  .mobilemenu.hidden {
+    transform: translateX(-100%); }
+
 @media (max-width: 992px) {
-  .topnav {
-    display: none; } }
+  .topnav,
+  .nav__list {
+    display: none; }
+
+  .nav__hamburger {
+    display: block; } }
+@media (max-width: 576px) {
+  .nav__logo__heading {
+    font-size: 1.5rem; }
+
+  .nav__logo i {
+    font-size: 2.5rem; }
+
+  .nav__hamburger {
+    padding: 5px 10px; }
+    .nav__hamburger i {
+      font-size: 1.5rem; } }
 
 /*# sourceMappingURL=style.css.map */

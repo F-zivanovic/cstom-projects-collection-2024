@@ -1,6 +1,30 @@
-@include breakpoints(992px){
-    
-    .topnav{
+@include breakpoints(992px) {
+
+    .topnav,
+    .nav__list {
         display: none;
+    }
+
+    .nav__hamburger {
+        display: block;
+    }
+}
+
+@include breakpoints(576px) {
+
+    .nav__logo__heading {
+        font-size: 1.5rem;
+    }
+
+    .nav__logo i {
+        font-size: 2.5rem;
+    }
+
+    .nav__hamburger {
+        padding: 5px 10px;
+
+        i {
+            font-size: 1.5rem;
+        }
     }
 }
