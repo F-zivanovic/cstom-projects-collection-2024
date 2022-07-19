@@ -1,0 +1,61 @@
+.about{
+
+    &__content{
+        @include flex(space-around, center, row, wrap);
+
+        &__img{
+            flex: 0 0 45%;
+            position: relative;
+
+            img{
+                height: 500px;
+                object-fit: cover;
+            }
+
+            &__box{
+                @include positioning(absolute, 0px, auto, auto, 0px);
+                background-color: $primaryColor;
+                text-align: center;
+                padding: 25px 40px;
+                border: 20px solid $whiteColor;
+               
+                h3{
+                    color: $whiteColor;
+                    font-size: 2rem;
+                }
+
+                p{
+                    color: $whiteColor;
+                    font-weight: 700;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        &__text{
+            flex: 0 0 45%;
+
+            &__paragraph{
+                margin-top: 20px;
+                color: #8D9297;
+            }
+
+            &__group{
+                padding-top: 20px;
+                border-top: 1px solid #8D9297;
+                margin-top: 20px;
+                @include flex(space-between,center,row,wrap);
+
+                i{
+                    color: $primaryColor;
+                    font-size: 2rem;
+                    margin-right: 5px;
+                }
+
+                span{
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
