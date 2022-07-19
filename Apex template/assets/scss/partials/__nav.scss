@@ -60,7 +60,7 @@
     }
 
     &__list {
-        margin-top: 30px;
+        margin: 30px;
 
         &__item {
             &:not(:last-child) {
@@ -76,6 +76,6 @@
     }
 
     &.hidden {
-        transform: translateX(-100%);
+        display: none;
     }
 }

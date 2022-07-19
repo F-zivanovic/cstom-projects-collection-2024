@@ -45,6 +45,24 @@ img {
     width: 100%;
 }
 
+button {
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+    padding: 15px 35px;
+    transition: $transition;
+    cursor: pointer;
+    color: $whiteColor;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: inline-block;
+
+    &:hover {
+        transition: $transition-out;
+        background: transparent;
+        color: $primaryColor;
+    }
+}
+
 .section {
     padding: 70px 0px;
 }

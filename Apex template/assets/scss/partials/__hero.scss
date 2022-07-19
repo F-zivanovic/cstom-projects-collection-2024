@@ -1,0 +1,28 @@
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../../assets/img/carousel-1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    height: 80vh;
+    @include flex(center, flex-start, column);
+
+    &__heading {
+        @include flex(center, flex-start, column);
+
+        &-1 {
+            color: $whiteColor;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        &-2 {
+            max-width: 800px;
+            color: $whiteColor;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            font-size: 4rem;
+        }
+    }
+}

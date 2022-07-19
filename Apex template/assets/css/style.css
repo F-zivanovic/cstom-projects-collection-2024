@@ -41,6 +41,21 @@ ul {
 img {
   width: 100%; }
 
+button {
+  background-color: #FDA12B;
+  border-color: #FDA12B;
+  padding: 15px 35px;
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: inline-block; }
+  button:hover {
+    transition: 0.35s ease-in;
+    background: transparent;
+    color: #FDA12B; }
+
 .section {
   padding: 70px 0px; }
 
@@ -150,7 +165,7 @@ p {
     .mobilemenu {
       display: none; } }
   .mobilemenu__list {
-    margin-top: 30px; }
+    margin: 30px; }
     .mobilemenu__list__item:not(:last-child) {
       margin-bottom: 10px; }
     .mobilemenu__list__item__link {
@@ -158,7 +173,41 @@ p {
       color: #8D9297;
       text-transform: uppercase; }
   .mobilemenu.hidden {
-    transform: translateX(-100%); }
+    display: none; }
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../assets/img/carousel-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: auto;
+  gap: 0px; }
+  .hero__heading {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: auto;
+    gap: 0px; }
+    .hero__heading-1 {
+      color: #fff;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      text-transform: uppercase; }
+    .hero__heading-2 {
+      max-width: 800px;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      font-size: 4rem; }
 
 @media (max-width: 992px) {
   .topnav,
@@ -166,8 +215,18 @@ p {
     display: none; }
 
   .nav__hamburger {
-    display: block; } }
+    display: block; }
+
+  .hero__heading-2 {
+    max-width: 700px; } }
+@media (max-width: 768px) {
+  .hero__heading-2 {
+    max-width: 500px; } }
 @media (max-width: 576px) {
+  button {
+    padding: 10px 25px;
+    font-size: 1rem; }
+
   .nav__logo__heading {
     font-size: 1.5rem; }
 
@@ -177,6 +236,18 @@ p {
   .nav__hamburger {
     padding: 5px 10px; }
     .nav__hamburger i {
-      font-size: 1.5rem; } }
+      font-size: 1.5rem; }
+
+  .hero__heading {
+    align-items: center;
+    text-align: center; }
+    .hero__heading-1 {
+      font-size: 1.2rem; }
+    .hero__heading-2 {
+      font-size: 2.5rem;
+      width: 100%; } }
+@media (max-width: 500px) {
+  .hero__heading-2 {
+    font-size: 2rem; } }
 
 /*# sourceMappingURL=style.css.map */
