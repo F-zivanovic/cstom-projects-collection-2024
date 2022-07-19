@@ -1,0 +1,36 @@
+.topnav{
+    background-color: $secondaryColor;
+    color: #8D9297;
+
+    &__content{
+        @include flex(space-between,center);
+        font-size: 0.85rem;
+
+        .topnav-info{
+            padding: 5px 10px;
+            border-left: 1px solid #8D9297;
+
+            &:last-child{
+                border-right:1px solid #8D9297;
+            }
+        }
+
+        &__contact{
+            @include flex(center,flex-start);
+
+            &__item{
+
+                i{
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        &__social{
+
+            &__link{
+                color: #8D9297;
+            }
+        }
+    }
+}
