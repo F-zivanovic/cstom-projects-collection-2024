@@ -30,6 +30,19 @@
     .number__item {
         flex: 0 0 50%;
     }
+
+    .services__content {
+
+        &__item {
+            flex-basis: 45%;
+        }
+    }
+
+    .services__header {
+        button {
+            margin-top: 15px;
+        }
+    }
 }
 
 @include breakpoints(768px) {
@@ -44,6 +57,14 @@
 
     .number__item {
         flex: 0 0 100%;
+    }
+
+    .services__content {
+        justify-content: center;
+
+        &__item {
+            flex-basis: 85%;
+        }
     }
 }
 
@@ -108,6 +129,13 @@
 
     .section-title__heading2 {
         font-size: 1.5rem;
+    }
+
+    .services__content {
+
+        &__item {
+            flex-basis: 100%;
+        }
     }
 }
 

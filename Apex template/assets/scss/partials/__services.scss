@@ -1,0 +1,54 @@
+.services {
+
+    &__header {
+        @include flex(space-between, center, row, wrap);
+    }
+
+    &__content {
+        @include flex(space-between, center, row, wrap);
+
+        &__item {
+            margin-top: 30px;
+            flex-basis: 31%;
+            text-align: center;
+
+            &:hover &__text {
+                background-color: $primaryColor;
+                transition: $transition-out;
+            }
+
+            &:hover &__text h4,
+            &:hover &__text p,
+            &:hover &__text a {
+                color: $whiteColor;
+            }
+
+            img {
+                width: 100%;
+                resize: both;
+                vertical-align: middle;
+            }
+
+            &__text {
+                padding: 20px;
+                background-color: #f8f9fb;
+
+                h4 {
+                    text-transform: uppercase;
+                }
+
+                p {
+                    margin: 10px 0px;
+                    color: #8D9297;
+                }
+
+                a {
+                    color: $primaryColor;
+                    text-transform: uppercase;
+                    font-size: 0.9rem;
+                }
+            }
+
+        }
+    }
+}

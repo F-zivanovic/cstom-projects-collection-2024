@@ -311,6 +311,48 @@ p {
       .number__item__link i {
         margin-left: 10px; }
 
+.services__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: auto;
+  gap: 0px; }
+.services__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: auto;
+  gap: 0px; }
+  .services__content__item {
+    margin-top: 30px;
+    flex-basis: 31%;
+    text-align: center; }
+    .services__content__item:hover .services__content__item__text {
+      background-color: #FDA12B;
+      transition: 0.35s ease-in; }
+    .services__content__item:hover .services__content__item__text h4, .services__content__item:hover .services__content__item__text p, .services__content__item:hover .services__content__item__text a {
+      color: #fff; }
+    .services__content__item img {
+      width: 100%;
+      resize: both;
+      vertical-align: middle; }
+    .services__content__item__text {
+      padding: 20px;
+      background-color: #f8f9fb; }
+      .services__content__item__text h4 {
+        text-transform: uppercase; }
+      .services__content__item__text p {
+        margin: 10px 0px;
+        color: #8D9297; }
+      .services__content__item__text a {
+        color: #FDA12B;
+        text-transform: uppercase;
+        font-size: 0.9rem; }
+
 @media (max-width: 992px) {
   .topnav,
   .nav__list {
@@ -334,7 +376,13 @@ p {
     align-items: flex-start; }
 
   .number__item {
-    flex: 0 0 50%; } }
+    flex: 0 0 50%; }
+
+  .services__content__item {
+    flex-basis: 45%; }
+
+  .services__header button {
+    margin-top: 15px; } }
 @media (max-width: 768px) {
   .hero__heading-2 {
     max-width: 500px; }
@@ -344,7 +392,12 @@ p {
     flex: 0 0 90%; }
 
   .number__item {
-    flex: 0 0 100%; } }
+    flex: 0 0 100%; }
+
+  .services__content {
+    justify-content: center; }
+    .services__content__item {
+      flex-basis: 85%; } }
 @media (max-width: 576px) {
   button {
     padding: 10px 25px;
@@ -386,7 +439,10 @@ p {
       font-size: 1rem; }
 
   .section-title__heading2 {
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+
+  .services__content__item {
+    flex-basis: 100%; } }
 @media (max-width: 500px) {
   .hero__heading-2 {
     font-size: 2rem; } }
