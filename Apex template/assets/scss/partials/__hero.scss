@@ -9,6 +9,8 @@
 
     &__heading {
         @include flex(center, flex-start, column);
+        animation: heroAniamtion 1s $transition;
+        transition-delay: 15s;
 
         &-1 {
             color: $whiteColor;

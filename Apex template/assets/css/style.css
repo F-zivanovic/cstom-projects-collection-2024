@@ -1,6 +1,24 @@
 /*----------------------------------------
 EXTERNAL FILES
 ----------------------------------------*/
+@keyframes navAnimation {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0; }
+  80% {
+    opacity: 1; }
+  100% {
+    transform: translateY(0); } }
+@keyframes heroAniamtion {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%); }
+  70% {
+    transform: translateX(200px);
+    opacity: 0.75; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
 /*----------------------------------------
 PARTIALS
 ----------------------------------------*/
@@ -79,6 +97,23 @@ p {
     font-weight: 700;
     font-size: 2.5rem; }
 
+.scroll__top {
+  position: fixed;
+  top: auto;
+  right: 15px;
+  bottom: 15px;
+  left: auto;
+  width: auto;
+  height: auto;
+  padding: 10px 15px;
+  border: 1px solid #FDA12B;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: 0.35s ease-in; }
+  .scroll__top.animated {
+    opacity: 1;
+    transform: translate(0); }
+
 .topnav {
   background-color: #F8F9FA;
   color: #8D9297; }
@@ -117,7 +152,8 @@ p {
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: auto;
-  gap: 0px; }
+  gap: 0px;
+  animation: navAnimation 1s 0.15s ease-in-out; }
   .nav__logo {
     display: flex;
     justify-content: center;
@@ -196,7 +232,9 @@ p {
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: auto;
-    gap: 0px; }
+    gap: 0px;
+    animation: heroAniamtion 1s 0.15s ease-in-out;
+    transition-delay: 15s; }
     .hero__heading-1 {
       color: #fff;
       margin-bottom: 1rem;

@@ -1,6 +1,7 @@
 .nav {
     padding: 15px 0px;
     @include flex(space-between, center);
+    animation: navAnimation 1s $transition;
 
     &__logo {
         @include flex(center, center);
