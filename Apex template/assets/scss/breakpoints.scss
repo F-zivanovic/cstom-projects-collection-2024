@@ -56,6 +56,16 @@
             margin-top: 20px;
         }
     }
+
+    .team__header {
+
+        P {
+            max-width: 100%;
+            margin-top: 30px;
+        }
+
+    }
+
 }
 
 @include breakpoints(768px) {
@@ -79,6 +89,15 @@
             flex-basis: 85%;
         }
     }
+
+    .team__content {
+        justify-content: center;
+
+        &__img {
+            flex: 0 0 70%;
+        }
+    }
+
 }
 
 @include breakpoints(576px) {
@@ -168,6 +187,17 @@
                     padding: 20px 10px;
                     font-size: 0.9rem;
                 }
+            }
+        }
+    }
+
+    .team__content {
+
+        &__img {
+            flex: 0 0 100%;
+
+            &__text {
+                bottom: 30px;
             }
         }
     }

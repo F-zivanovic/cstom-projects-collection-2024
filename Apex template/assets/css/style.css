@@ -417,6 +417,48 @@ p {
         width: 100%;
         margin-top: 20px; }
 
+.team .team__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: auto;
+  gap: 0px; }
+  .team .team__header P {
+    max-width: 500px; }
+.team__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: auto;
+  gap: 0px; }
+  .team__content__img {
+    flex: 0 0 32%;
+    margin-top: 30px;
+    position: relative;
+    cursor: pointer; }
+    .team__content__img:hover .team__content__img__text {
+      right: 0px; }
+    .team__content__img img {
+      width: 100%; }
+    .team__content__img__text {
+      position: absolute;
+      top: auto;
+      right: 40px;
+      bottom: 60px;
+      left: 0px;
+      width: auto;
+      height: auto;
+      background-color: #fff;
+      transition: 0.15s ease-in-out;
+      padding: 10px 30px; }
+      .team__content__img__text h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px; }
+
 @media (max-width: 992px) {
   .topnav,
   .nav__list {
@@ -454,7 +496,11 @@ p {
       flex: 0 0 80%; }
     .contact__content form {
       flex: 0 0 80%;
-      margin-top: 20px; } }
+      margin-top: 20px; }
+
+  .team__header P {
+    max-width: 100%;
+    margin-top: 30px; } }
 @media (max-width: 768px) {
   .hero__heading-2 {
     max-width: 500px; }
@@ -469,7 +515,12 @@ p {
   .services__content {
     justify-content: center; }
     .services__content__item {
-      flex-basis: 85%; } }
+      flex-basis: 85%; }
+
+  .team__content {
+    justify-content: center; }
+    .team__content__img {
+      flex: 0 0 70%; } }
 @media (max-width: 576px) {
   button {
     padding: 10px 25px;
@@ -525,7 +576,12 @@ p {
       .contact__content form .input-group .form-input {
         width: 100%;
         padding: 20px 10px;
-        font-size: 0.9rem; } }
+        font-size: 0.9rem; }
+
+  .team__content__img {
+    flex: 0 0 100%; }
+    .team__content__img__text {
+      bottom: 30px; } }
 @media (max-width: 500px) {
   .hero__heading-2 {
     font-size: 2rem; } }

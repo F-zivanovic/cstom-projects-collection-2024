@@ -1,0 +1,42 @@
+.team {
+
+    .team__header {
+        @include flex(space-between, center, row, wrap);
+
+        P {
+            max-width: 500px;
+        }
+    }
+
+    &__content {
+        @include flex(space-between, center, row, wrap);
+
+        &__img {
+            flex: 0 0 32%;
+            margin-top: 30px;
+            position: relative;
+            cursor: pointer;
+
+            &:hover &__text {
+                right: 0px;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            &__text {
+                @include positioning(absolute, auto, 40px, 60px, 0px);
+                background-color: $whiteColor;
+                transition: $transition;
+                padding: 10px 30px;
+
+                h4 {
+                    font-size: 1.2rem;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+}
