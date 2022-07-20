@@ -1,0 +1,103 @@
+.footer {
+    background-color: #182434;
+    color: $whiteColor;
+
+    &__content {
+        @include flex(space-between, flex-start, row, wrap);
+
+        &__item {
+            flex: 0 0 30%;
+
+            h3 {
+                color: $whiteColor;
+                font-size: 1.4rem;
+                margin-bottom: 15px;
+            }
+
+            &:nth-child(1) {
+
+                .logo {
+                    color: $primaryColor;
+                    font-size: 2.2rem;
+                    margin-right: 10px;
+                }
+
+                span {
+                    font-weight: bold;
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+
+                p {
+                    margin: 20px 0px;
+                }
+            }
+
+            &:nth-child(2) {
+
+                li {
+                    &:not(:first-child) {
+                        margin-top: 15px;
+                    }
+
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+
+                li {
+                    &:not(:first-child) {
+                        margin-top: 15px;
+                    }
+
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            &__social {
+
+                a {
+                    border: 1px solid $primaryColor;
+                    text-align: center;
+                    display: inline-block;
+                    width: 35px;
+                    height: 35px;
+                    line-height: 35px;
+
+                    &:hover {
+                        background-color: $primaryColor;
+                    }
+
+                    &:hover i {
+                        color: $whiteColor;
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: 10px;
+                    }
+
+                    i {
+                        color: $primaryColor;
+                    }
+                }
+            }
+        }
+    }
+
+    &__subcontent {
+        padding: 40px;
+        border-top: 1px solid $secondaryColor;
+        @include flex(space-between, center);
+
+        span {
+            font-weight: 800;
+            color: $primaryColor;
+        }
+    }
+}

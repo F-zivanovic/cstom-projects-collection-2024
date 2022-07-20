@@ -459,6 +459,71 @@ p {
         font-size: 1.2rem;
         margin-bottom: 10px; }
 
+.footer {
+  background-color: #182434;
+  color: #fff; }
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: auto;
+    gap: 0px; }
+    .footer__content__item {
+      flex: 0 0 30%; }
+      .footer__content__item h3 {
+        color: #fff;
+        font-size: 1.4rem;
+        margin-bottom: 15px; }
+      .footer__content__item:nth-child(1) .logo {
+        color: #FDA12B;
+        font-size: 2.2rem;
+        margin-right: 10px; }
+      .footer__content__item:nth-child(1) span {
+        font-weight: bold;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 2px; }
+      .footer__content__item:nth-child(1) p {
+        margin: 20px 0px; }
+      .footer__content__item:nth-child(2) li:not(:first-child) {
+        margin-top: 15px; }
+      .footer__content__item:nth-child(2) li i {
+        margin-right: 10px; }
+      .footer__content__item:nth-child(3) li:not(:first-child) {
+        margin-top: 15px; }
+      .footer__content__item:nth-child(3) li i {
+        margin-right: 10px; }
+      .footer__content__item__social a {
+        border: 1px solid #FDA12B;
+        text-align: center;
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        line-height: 35px; }
+        .footer__content__item__social a:hover {
+          background-color: #FDA12B; }
+        .footer__content__item__social a:hover i {
+          color: #fff; }
+        .footer__content__item__social a:not(:last-child) {
+          margin-right: 10px; }
+        .footer__content__item__social a i {
+          color: #FDA12B; }
+  .footer__subcontent {
+    padding: 40px;
+    border-top: 1px solid #F8F9FA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: auto;
+    gap: 0px; }
+    .footer__subcontent span {
+      font-weight: 800;
+      color: #FDA12B; }
+
 @media (max-width: 992px) {
   .topnav,
   .nav__list {
@@ -500,7 +565,12 @@ p {
 
   .team__header P {
     max-width: 100%;
-    margin-top: 30px; } }
+    margin-top: 30px; }
+
+  .footer__content__item {
+    flex: 0 0 70%; }
+    .footer__content__item:not(:first-child) {
+      margin-top: 20px; } }
 @media (max-width: 768px) {
   .hero__heading-2 {
     max-width: 500px; }
@@ -581,7 +651,14 @@ p {
   .team__content__img {
     flex: 0 0 100%; }
     .team__content__img__text {
-      bottom: 30px; } }
+      bottom: 30px; }
+
+  .footer__content__item {
+    flex: 0 0 100%; }
+
+  .footer__subcontent {
+    flex-direction: column;
+    text-align: center; } }
 @media (max-width: 500px) {
   .hero__heading-2 {
     font-size: 2rem; } }

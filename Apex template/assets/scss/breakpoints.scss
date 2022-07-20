@@ -66,6 +66,14 @@
 
     }
 
+    .footer__content__item {
+        flex: 0 0 70%;
+
+        &:not(:first-child) {
+            margin-top: 20px;
+        }
+    }
+
 }
 
 @include breakpoints(768px) {
@@ -200,6 +208,15 @@
                 bottom: 30px;
             }
         }
+    }
+
+    .footer__content__item {
+        flex: 0 0 100%;
+    }
+
+    .footer__subcontent {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
