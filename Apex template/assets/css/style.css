@@ -265,6 +265,52 @@ p {
       .about__content__text__group span {
         font-weight: 500; }
 
+.number {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: auto;
+  gap: 0px; }
+  .number__item {
+    flex: 1;
+    padding: 15px 40px;
+    color: #fff; }
+    .number__item:nth-child(1) {
+      background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../assets/img/fact-1.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: auto; }
+    .number__item:nth-child(2) {
+      background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../assets/img/fact-2.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: auto; }
+    .number__item:nth-child(3) {
+      background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../assets/img/fact-3.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: auto; }
+    .number__item:nth-child(4) {
+      background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../assets/img/fact-4.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: auto; }
+    .number__item__heading {
+      color: transparent;
+      font-size: 7rem;
+      -webkit-text-stroke: 2px #FDA12B; }
+    .number__item__paragraph {
+      font-size: 0.8rem; }
+    .number__item__link {
+      text-transform: uppercase;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      display: inline-block; }
+      .number__item__link i {
+        margin-left: 10px; }
+
 @media (max-width: 992px) {
   .topnav,
   .nav__list {
@@ -285,14 +331,20 @@ p {
 
   .about__content__text__group {
     flex-direction: column;
-    align-items: flex-start; } }
+    align-items: flex-start; }
+
+  .number__item {
+    flex: 0 0 50%; } }
 @media (max-width: 768px) {
   .hero__heading-2 {
     max-width: 500px; }
 
   .about__content__img,
   .about__content__text {
-    flex: 0 0 90%; } }
+    flex: 0 0 90%; }
+
+  .number__item {
+    flex: 0 0 100%; } }
 @media (max-width: 576px) {
   button {
     padding: 10px 25px;
