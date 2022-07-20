@@ -1,0 +1,70 @@
+.contact {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../../assets/img/carousel-1.jpg');
+    background-position: center;
+    background-size: cover;
+
+    &__content {
+        @include flex(space-between, center, row, wrap);
+
+        &__text {
+            flex: 0 0 40%;
+
+            .section-title {
+                color: $whiteColor;
+
+                &__heading1 {
+                    color: $whiteColor;
+                }
+
+                &__heading2 {
+                    color: $whiteColor;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        form {
+            flex: 0 0 50%;
+            @include flex(center, flex-start, column, nowrap);
+
+            .input-group {
+                @include flex(space-between, center);
+                gap: 10px;
+                width: 100%;
+                margin-bottom: 15px;
+
+                .form-input {
+                    flex: 0 0 50%;
+                    outline: none;
+                    padding: 25px 15px;
+                    background-color: #182434;
+                    border: none;
+                    font-weight: 400;
+                    color: $whiteColor;
+
+                    &::placeholder {
+                        color: $whiteColor;
+                    }
+                }
+            }
+
+            textarea {
+                width: 100%;
+                outline: none;
+                padding: 15px;
+                background-color: #182434;
+                border: none;
+                height: 150px;
+
+                &::placeholder {
+                    color: $whiteColor;
+                }
+            }
+
+            button[type="submit"] {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+    }
+}
