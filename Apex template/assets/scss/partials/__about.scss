@@ -3,9 +3,21 @@
     &__content {
         @include flex(space-around, center, row, wrap);
 
+        @include breakpoints(992px) {
+            justify-content: center;
+        }
+
         &__img {
             flex: 0 0 45%;
             position: relative;
+
+            @include breakpoints(992px) {
+                flex: 0 0 70%;
+            }
+
+            @include breakpoints(576px) {
+                flex: 0 0 100%;
+            }
 
             img {
                 height: 500px;
@@ -13,21 +25,47 @@
             }
 
             &__box {
-                @include positioning(absolute, 0px, auto, auto, 0px);
+                @include positioning(absolute, auto, auto, 0px, 0px);
                 background-color: $primaryColor;
                 text-align: center;
                 padding: 25px 40px;
                 border: 20px solid $whiteColor;
 
+                @include breakpoints(992px) {
+                    padding: 20px 30px;
+                    border: 15px solid $whiteColor;
+                }
+
+                @include breakpoints(576px) {
+                    padding: 15px;
+                    border: 10px solid $whiteColor;
+                }
+
                 h3 {
                     color: $whiteColor;
                     font-size: 2rem;
+
+                    @include breakpoints(992px) {
+                        font-size: 1.5rem;
+                    }
+
+                    @include breakpoints(576px) {
+                        font-size: 1rem;
+                    }
                 }
 
                 p {
                     color: $whiteColor;
                     font-weight: 700;
                     font-size: 1.4rem;
+
+                    @include breakpoints(992px) {
+                        font-size: 1.2rem;
+                    }
+
+                    @include breakpoints(576px) {
+                        font-size: 1rem;
+                    }
                 }
             }
         }
@@ -35,9 +73,19 @@
         &__text {
             flex: 0 0 45%;
 
+            @include breakpoints(992px) {
+                flex: 0 0 70%;
+                margin-top: 30px;
+            }
+
+            @include breakpoints(576px) {
+                flex: 0 0 100%;
+            }
+
             &__paragraph {
                 margin-top: 20px;
                 color: #8D9297;
+                text-align: justify;
             }
 
             &__group {
@@ -46,10 +94,14 @@
                 margin-top: 20px;
                 @include flex(space-between, center, row, wrap);
 
+                @include breakpoints(992px) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
                 i {
                     color: $primaryColor;
-                    font-size: 2rem;
-                    margin-right: 5px;
+                    font-size: 1.5rem;
                 }
 
                 span {

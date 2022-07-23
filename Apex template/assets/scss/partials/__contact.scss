@@ -6,8 +6,21 @@
     &__content {
         @include flex(space-between, center, row, wrap);
 
+        @include breakpoints(992px) {
+            justify-content: center;
+        }
+
         &__text {
             flex: 0 0 40%;
+
+            @include breakpoints(992px) {
+                flex: 0 0 80%;
+            }
+
+            @include breakpoints(576px) {
+                flex: 0 0 100%;
+            }
+
 
             .section-title {
                 color: $whiteColor;
@@ -27,11 +40,24 @@
             flex: 0 0 50%;
             @include flex(center, flex-start, column, nowrap);
 
+            @include breakpoints(992px) {
+                flex: 0 0 80%;
+                margin-top: 30px;
+            }
+
+            @include breakpoints(576px) {
+                flex: 0 0 100%;
+            }
+
             .input-group {
                 @include flex(space-between, center);
                 gap: 10px;
                 width: 100%;
                 margin-bottom: 15px;
+
+                @include breakpoints(576px) {
+                    flex-direction: column;
+                }
 
                 .form-input {
                     flex: 0 0 50%;
@@ -41,6 +67,12 @@
                     border: none;
                     font-weight: 400;
                     color: $whiteColor;
+
+                    @include breakpoints(576px) {
+                        width: 100%;
+                        padding: 20px 10px;
+                        font-size: 0.8rem;
+                    }
 
                     &::placeholder {
                         color: $whiteColor;

@@ -3,19 +3,42 @@
     .team__header {
         @include flex(space-between, center, row, wrap);
 
-        P {
-            max-width: 500px;
+        @include breakpoints(992px) {
+            flex-direction: column;
+            align-items: flex-start;
         }
+
+        p {
+            max-width: 500px;
+
+            @include breakpoints(992px) {
+                margin-top: 20px;
+                max-width: 90%;
+            }
+        }
+
     }
 
     &__content {
         @include flex(space-between, center, row, wrap);
+
+        @include breakpoints(576px) {
+            justify-content: center;
+        }
 
         &__img {
             flex: 0 0 32%;
             margin-top: 30px;
             position: relative;
             cursor: pointer;
+
+            @include breakpoints(768px) {
+                flex: 0 0 45%;
+            }
+
+            @include breakpoints(576px) {
+                flex: 0 0 80%;
+            }
 
             &:hover &__text {
                 right: 0px;
@@ -31,9 +54,19 @@
                 transition: $transition;
                 padding: 10px 30px;
 
+                @include breakpoints(576px) {
+                    padding: 10px 20px;
+                    bottom: 20px;
+                }
+
                 h4 {
                     font-size: 1.2rem;
                     margin-bottom: 10px;
+
+                    @include breakpoints(576px) {
+                        margin-bottom: 0px;
+                        font-size: 1rem;
+                    }
                 }
             }
         }

@@ -10,17 +10,29 @@
             color: $primaryColor;
             margin-right: 10px;
             font-size: 3rem;
+
+            @include breakpoints(576px) {
+                font-size: 2.5rem;
+            }
         }
 
         &__heading {
             text-transform: uppercase;
             letter-spacing: 1.5px;
             font-size: 2rem;
+
+            @include breakpoints(768px) {
+                font-size: 1.5rem;
+            }
         }
     }
 
     &__list {
         @include flex(center, center);
+
+        @include breakpoints(992px) {
+            display: none;
+        }
 
         &__item {
 
@@ -28,12 +40,7 @@
                 margin-right: 15px;
             }
 
-            &:nth-child(3) {
-                position: relative;
-            }
-
             &__link {
-                color: #8D9297;
                 text-transform: uppercase;
                 font-size: 1.1rem;
             }
@@ -46,8 +53,20 @@
         padding: 5px 12px;
         cursor: pointer;
 
+        @include breakpoints(992px) {
+            display: block;
+        }
+
+        @include breakpoints(576px) {
+            padding: 5px 10px;
+        }
+
         i {
             font-size: 1.7rem;
+
+            @include breakpoints(576px) {
+                font-size: 1.5rem;
+            }
         }
     }
 }

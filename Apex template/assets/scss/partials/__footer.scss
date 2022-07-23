@@ -8,10 +8,18 @@
         &__item {
             flex: 0 0 30%;
 
+            @include breakpoints(992px) {
+                flex: 0 0 80%;
+            }
+
             h3 {
                 color: $whiteColor;
                 font-size: 1.4rem;
                 margin-bottom: 15px;
+
+                @include breakpoints(992px) {
+                    margin-top: 20px;
+                }
             }
 
             &:nth-child(1) {
@@ -94,6 +102,11 @@
         padding: 40px;
         border-top: 1px solid $secondaryColor;
         @include flex(space-between, center);
+
+        @include breakpoints(576px) {
+            flex-direction: column;
+            text-align: center;
+        }
 
         span {
             font-weight: 800;

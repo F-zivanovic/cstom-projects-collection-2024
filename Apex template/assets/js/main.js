@@ -2,6 +2,8 @@ let hamburgerIcon = document.querySelector('.nav__hamburger');
 let mobileMenu = document.querySelector('.mobilemenu');
 let listItems = document.querySelectorAll('.mobilemenu li');
 
+console.log(listItems);
+
 hamburgerIcon.addEventListener('click', openMobileMenu);
 
 function openMobileMenu() {

@@ -26,7 +26,7 @@ h6 {
 a {
     text-decoration: none;
     transition: $transition;
-    color: $secondaryColor;
+    color: #8D9297;
 
     &:hover,
     &:focus {
@@ -61,6 +61,11 @@ button {
         background: transparent;
         color: $primaryColor;
     }
+
+    @include breakpoints(576px) {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
 }
 
 .section {
@@ -91,6 +96,14 @@ p {
         color: $tertiaryColor;
         font-weight: 700;
         font-size: 2.5rem;
+
+        @include breakpoints(768px) {
+            font-size: 2rem;
+        }
+
+        @include breakpoints(576px) {
+            font-size: 1.5rem;
+        }
     }
 }
 
