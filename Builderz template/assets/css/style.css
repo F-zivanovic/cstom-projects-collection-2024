@@ -274,4 +274,76 @@ nav {
         padding: 10px 25px;
         font-size: 0.9rem; } }
 
+.sub-hero {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 0px;
+  justify-content: flex-start;
+  align-items: center; }
+  .sub-hero__item {
+    grid-column: span 4;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 0px;
+    justify-content: flex-start;
+    align-items: center; }
+    @media (max-width: 992px) {
+      .sub-hero__item {
+        padding: 30px; } }
+    .sub-hero__item i {
+      grid-column: span 3;
+      font-size: 2.5rem;
+      justify-self: center; }
+      @media (max-width: 992px) {
+        .sub-hero__item i {
+          grid-column: span 1; } }
+      @media (max-width: 992px) {
+        .sub-hero__item i {
+          justify-self: flex-start; } }
+      @media (max-width: 768px) {
+        .sub-hero__item i {
+          grid-column: span 12;
+          justify-self: center; } }
+      @media (max-width: 576px) {
+        .sub-hero__item i {
+          font-size: 2rem;
+          margin-bottom: 10px; } }
+    .sub-hero__item__text {
+      color: #fdbe33;
+      grid-column: span 9; }
+      @media (max-width: 992px) {
+        .sub-hero__item__text {
+          grid-column: span 11; } }
+      @media (max-width: 768px) {
+        .sub-hero__item__text {
+          text-align: center;
+          grid-column: span 12; } }
+      .sub-hero__item__text h3 {
+        color: #fdbe33;
+        font-size: 1.4rem; }
+        @media (max-width: 576px) {
+          .sub-hero__item__text h3 {
+            font-size: 1.2rem; } }
+      .sub-hero__item__text p {
+        margin-top: 10px;
+        font-size: 1.1rem; }
+    @media (max-width: 992px) {
+      .sub-hero__item {
+        grid-column: span 12; } }
+    .sub-hero__item:not(:nth-child(2)) {
+      background-color: #030f27; }
+      .sub-hero__item:not(:nth-child(2)) i {
+        color: #fdbe33; }
+    .sub-hero__item:nth-child(2) {
+      background-color: #fdbe33; }
+      .sub-hero__item:nth-child(2) i {
+        color: #030f27; }
+      .sub-hero__item:nth-child(2) h3 {
+        color: #030f27; }
+      .sub-hero__item:nth-child(2) p {
+        color: #030f27; }
+
 /*# sourceMappingURL=style.css.map */
