@@ -79,4 +79,131 @@ input {
       .section__subtitle {
         font-size: 1.5rem; } }
 
+nav {
+  background-color: #fdbe33; }
+  nav .nav__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0px;
+    padding: 15px 0px; }
+    @media (max-width: 992px) {
+      nav .nav__top {
+        justify-content: center; } }
+    nav .nav__top__logo {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #030f27; }
+      @media (max-width: 992px) {
+        nav .nav__top__logo {
+          text-align: center; } }
+      @media (max-width: 350px) {
+        nav .nav__top__logo {
+          font-size: 2rem; } }
+    nav .nav__top__item {
+      color: #030f27;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 0px; }
+      @media (max-width: 992px) {
+        nav .nav__top__item {
+          display: none; } }
+      nav .nav__top__item i {
+        font-size: 2rem;
+        font-weight: 300; }
+      nav .nav__top__item div {
+        margin-left: 15px;
+        font-size: 0.8rem; }
+  nav .nav__bottom {
+    background-color: #030f27;
+    color: #fff;
+    padding: 20px 0px; }
+    @media (max-width: 992px) {
+      nav .nav__bottom {
+        width: 100%; } }
+    nav .nav__bottom .nav__list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 0px; }
+      @media (max-width: 992px) {
+        nav .nav__bottom .nav__list {
+          display: none; } }
+      nav .nav__bottom .nav__list__item:not(:last-child) {
+        margin-right: 10px; }
+      nav .nav__bottom .nav__list__item:last-child {
+        position: relative;
+        transition: 0.15s ease-in-out; }
+        nav .nav__bottom .nav__list__item:last-child .nav__item__dropdown {
+          position: absolute;
+          top: 80%;
+          right: auto;
+          bottom: auto;
+          left: 0px;
+          width: 150px;
+          height: auto;
+          background-color: #fff;
+          padding: 15px;
+          z-index: 100; }
+          nav .nav__bottom .nav__list__item:last-child .nav__item__dropdown.open {
+            display: none; }
+          nav .nav__bottom .nav__list__item:last-child .nav__item__dropdown a {
+            color: #030f27; }
+      nav .nav__bottom .nav__list__item__link {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.9rem; }
+        nav .nav__bottom .nav__list__item__link:hover {
+          color: #fdbe33; }
+    nav .nav__bottom .nav__mobile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 0px;
+      display: none; }
+      @media (max-width: 992px) {
+        nav .nav__bottom .nav__mobile {
+          display: flex; } }
+      nav .nav__bottom .nav__mobile__heading {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 1.2rem; }
+      nav .nav__bottom .nav__mobile i {
+        font-size: 1.5rem;
+        z-index: 101; }
+  nav .nav__mobile__menu {
+    background-color: #030f27; }
+    @media (min-width: 992px) {
+      nav .nav__mobile__menu {
+        display: none; } }
+    nav .nav__mobile__menu.openMobileMenu {
+      display: none; }
+    nav .nav__mobile__menu ul li {
+      margin-bottom: 10px; }
+      nav .nav__mobile__menu ul li:nth-child(6) div {
+        background-color: #fff;
+        padding: 15px;
+        width: 100%;
+        margin: 10px 0px; }
+        nav .nav__mobile__menu ul li:nth-child(6) div.open {
+          display: none; }
+        nav .nav__mobile__menu ul li:nth-child(6) div a {
+          color: #030f27; }
+      nav .nav__mobile__menu ul li a {
+        color: #fff;
+        display: block; }
+        nav .nav__mobile__menu ul li a:hover {
+          color: #fdbe33; }
+
 /*# sourceMappingURL=style.css.map */

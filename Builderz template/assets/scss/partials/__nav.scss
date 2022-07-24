@@ -1,0 +1,167 @@
+nav {
+    background-color: $secondaryColor;
+
+    .nav__top {
+        @include flex(space-between, center);
+        padding: 15px 0px;
+
+        @include breakpoint(lg) {
+            justify-content: center;
+        }
+
+        &__logo {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: $primaryColor;
+
+            @include breakpoint(lg) {
+                text-align: center;
+            }
+
+            @include breakpoint(xs) {
+                font-size: 2rem;
+            }
+        }
+
+        &__item {
+            color: $primaryColor;
+            @include flex(center, center);
+
+            @include breakpoint(lg) {
+                display: none;
+            }
+
+            i {
+                font-size: 2rem;
+                font-weight: 300;
+            }
+
+            div {
+                margin-left: 15px;
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .nav__bottom {
+        background-color: $primaryColor;
+        color: $whiteColor;
+        padding: 20px 0px;
+
+        @include breakpoint(lg) {
+            width: 100%
+        }
+
+        .nav__list {
+            @include flex(center, center);
+
+            @include breakpoint(lg) {
+                display: none;
+            }
+
+            &__item {
+
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+
+                &:last-child {
+                    position: relative;
+                    transition: $transition;
+
+                    .nav__item__dropdown {
+                        @include positioning(absolute, 80%, auto, auto, 0px, 150px);
+                        background-color: $whiteColor;
+                        padding: 15px;
+                        z-index: 100;
+
+                        &.open {
+                            display: none;
+                        }
+
+                        a {
+                            color: $primaryColor;
+                        }
+                    }
+                }
+
+                &__link {
+                    color: $whiteColor;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 0.9rem;
+
+                    &:hover {
+                        color: $secondaryColor;
+                    }
+                }
+            }
+        }
+
+        .nav__mobile {
+            @include flex(space-between, center);
+            display: none;
+
+            @include breakpoint(lg) {
+                display: flex;
+            }
+
+            &__heading {
+                color: $whiteColor;
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size: 1.2rem;
+            }
+
+            i {
+                font-size: 1.5rem;
+                z-index: 101;
+            }
+        }
+    }
+
+    .nav__mobile__menu {
+        background-color: $primaryColor;
+
+        @media(min-width:992px) {
+            display: none;
+        }
+
+        &.openMobileMenu {
+            display: none;
+        }
+
+        ul {
+            li {
+                margin-bottom: 10px;
+
+                &:nth-child(6) {
+
+                    div {
+                        background-color: $whiteColor;
+                        padding: 15px;
+                        width: 100%;
+                        margin: 10px 0px;
+
+                        &.open {
+                            display: none;
+                        }
+
+                        a {
+                            color: $primaryColor;
+                        }
+                    }
+                }
+
+                a {
+                    color: $whiteColor;
+                    display: block;
+
+                    &:hover {
+                        color: $secondaryColor;
+                    }
+                }
+            }
+        }
+    }
+}
