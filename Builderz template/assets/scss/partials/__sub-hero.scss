@@ -5,21 +5,16 @@
         grid-column: span 4;
         padding: 30px;
         @include grid(auto, 0px, flex-start);
-
-        @include breakpoint(lg) {
-            padding: 30px;
-        }
+        background-color: $primaryColor;
 
         i {
             grid-column: span 3;
             font-size: 2.5rem;
             justify-self: center;
+            color: $secondaryColor;
 
             @include breakpoint(lg) {
                 grid-column: span 1;
-            }
-
-            @include breakpoint(lg) {
                 justify-self: flex-start;
             }
 
@@ -66,27 +61,20 @@
             grid-column: span 12;
         }
 
-        &:not(:nth-child(2)) {
-            background-color: $primaryColor;
 
-            i {
-                color: $secondaryColor;
-            }
-        }
-
-        &:nth-child(2) {
+        &--mod{
             background-color: $secondaryColor;
-
-            i {
+            
+            i{
                 color: $primaryColor;
             }
 
-            h3 {
+            .sub-hero__item__text{
                 color: $primaryColor;
-            }
 
-            p {
-                color: $primaryColor;
+                h3{
+                    color: $primaryColor;
+                }
             }
         }
     }

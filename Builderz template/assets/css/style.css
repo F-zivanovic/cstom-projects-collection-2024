@@ -289,19 +289,16 @@ nav {
     grid-auto-rows: auto;
     grid-gap: 0px;
     justify-content: flex-start;
-    align-items: center; }
-    @media (max-width: 992px) {
-      .sub-hero__item {
-        padding: 30px; } }
+    align-items: center;
+    background-color: #030f27; }
     .sub-hero__item i {
       grid-column: span 3;
       font-size: 2.5rem;
-      justify-self: center; }
+      justify-self: center;
+      color: #fdbe33; }
       @media (max-width: 992px) {
         .sub-hero__item i {
-          grid-column: span 1; } }
-      @media (max-width: 992px) {
-        .sub-hero__item i {
+          grid-column: span 1;
           justify-self: flex-start; } }
       @media (max-width: 768px) {
         .sub-hero__item i {
@@ -333,18 +330,14 @@ nav {
     @media (max-width: 992px) {
       .sub-hero__item {
         grid-column: span 12; } }
-    .sub-hero__item:not(:nth-child(2)) {
-      background-color: #030f27; }
-      .sub-hero__item:not(:nth-child(2)) i {
-        color: #fdbe33; }
-    .sub-hero__item:nth-child(2) {
+    .sub-hero__item--mod {
       background-color: #fdbe33; }
-      .sub-hero__item:nth-child(2) i {
+      .sub-hero__item--mod i {
         color: #030f27; }
-      .sub-hero__item:nth-child(2) h3 {
+      .sub-hero__item--mod .sub-hero__item__text {
         color: #030f27; }
-      .sub-hero__item:nth-child(2) p {
-        color: #030f27; }
+        .sub-hero__item--mod .sub-hero__item__text h3 {
+          color: #030f27; }
 
 .about {
   display: flex;
