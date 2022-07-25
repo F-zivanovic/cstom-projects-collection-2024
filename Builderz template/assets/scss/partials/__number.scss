@@ -1,0 +1,119 @@
+.number {
+    @include grid(auto, 0px);
+
+    &__left {
+        grid-column: span 6;
+        @include grid(200px, 10px);
+        background-color: $primaryColor;
+        padding: 0px 20px;
+
+        @include breakpoint(lg) {
+            grid-column: span 12;
+        }
+
+        @include breakpoint(xs) {
+            gap: 0px;
+            grid-auto-rows: 170px;
+        }
+
+        &__item {
+            grid-column: span 6;
+            @include grid(auto, 20px);
+
+            @include breakpoint(xs) {
+                grid-column: span 12;
+            }
+
+            i {
+                grid-column: span 2;
+                font-size: 2.2rem;
+                color: $secondaryColor;
+
+                @include breakpoint(sm) {
+                    grid-column: span 12;
+                    text-align: center;
+                }
+            }
+
+            div {
+                grid-column: span 10;
+                margin-left: 10px;
+
+                @include breakpoint(sm) {
+                    grid-column: span 12;
+                    text-align: center;
+                }
+
+                h3 {
+                    color: $secondaryColor;
+                    font-weight: 800;
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                    color: $secondaryColor;
+                }
+            }
+        }
+    }
+
+    &__right {
+        grid-column: span 6;
+        @include grid(200px, 10px);
+        background-color: $secondaryColor;
+        padding: 0px 20px;
+
+        @include breakpoint(lg) {
+            grid-column: span 12;
+        }
+
+        @include breakpoint(xs) {
+            gap: 0px;
+            grid-auto-rows: 170px;
+        }
+
+        &__item {
+            grid-column: span 6;
+            @include grid(auto, 20px);
+
+            @include breakpoint(xs) {
+                grid-column: span 12;
+            }
+
+            i {
+                grid-column: span 2;
+                font-size: 2.2rem;
+                color: $primaryColor;
+
+                @include breakpoint(sm) {
+                    grid-column: span 12;
+                    text-align: center;
+                }
+            }
+
+            div {
+                grid-column: span 10;
+                margin-left: 10px;
+
+                @include breakpoint(sm) {
+                    grid-column: span 12;
+                    text-align: center;
+                }
+
+                h3 {
+                    color: $primaryColor;
+                    font-weight: 800;
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                    color: $primaryColor;
+                }
+            }
+        }
+    }
+}

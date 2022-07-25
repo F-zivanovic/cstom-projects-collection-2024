@@ -77,7 +77,7 @@
     }
 
     @else if $breakpoint==xs {
-        @media(max-width:350px) {
+        @media(max-width:450px) {
             @content;
         }
     }
