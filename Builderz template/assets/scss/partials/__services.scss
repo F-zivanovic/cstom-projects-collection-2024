@@ -1,0 +1,92 @@
+.services {
+
+    &__header {
+        text-align: center;
+    }
+
+    &__content {
+        @include flex(space-between, center, row, wrap);
+
+        @include breakpoint(md) {
+            justify-content: center;
+        }
+
+        &__item {
+            flex: 0 0 30%;
+            margin-top: 20px;
+
+            &:hover .overlay {
+                visibility: visible;
+                transition: $transition;
+            }
+
+            @include breakpoint(lg) {
+                flex: 0 0 45%;
+            }
+
+            @include breakpoint(md) {
+                flex: 0 0 90%;
+            }
+
+            @include breakpoint(sm) {
+                flex: 0 0 100%;
+            }
+
+            &__img {
+                position: relative;
+
+                img {
+                    resize: both;
+                    vertical-align: middle;
+                    object-fit: cover;
+                }
+
+                .overlay {
+                    @include positioning(absolute, 0px, 0px, 0px, 0px);
+                    background-color: $primaryColor;
+                    opacity: 0.75;
+                    color: $whiteColor;
+                    text-align: center;
+                    padding: 15px;
+                    @include flex(center, center);
+                    visibility: hidden;
+                }
+            }
+
+            &__group {
+                background-color: $primaryColor;
+                @include flex(space-between, center);
+                height: 60px;
+
+                p {
+                    font-weight: 700;
+                    color: $secondaryColor;
+                    font-size: 1.3rem;
+                    margin-left: 10px;
+
+                    @include breakpoint(sm) {
+                        font-size: 1rem;
+                    }
+
+                    @include breakpoint(xs) {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                i {
+                    background-color: $secondaryColor;
+                    color: $whiteColor;
+                    height: 60px;
+                    width: 50px;
+                    line-height: 60px;
+                    text-align: center;
+                    font-size: 1.8rem;
+
+                    @include breakpoint(xs) {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

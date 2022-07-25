@@ -521,4 +521,89 @@ nav {
           font-size: 0.9rem;
           color: #030f27; }
 
+.services__header {
+  text-align: center; }
+.services__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0px; }
+  @media (max-width: 768px) {
+    .services__content {
+      justify-content: center; } }
+  .services__content__item {
+    flex: 0 0 30%;
+    margin-top: 20px; }
+    .services__content__item:hover .overlay {
+      visibility: visible;
+      transition: 0.15s ease-in-out; }
+    @media (max-width: 992px) {
+      .services__content__item {
+        flex: 0 0 45%; } }
+    @media (max-width: 768px) {
+      .services__content__item {
+        flex: 0 0 90%; } }
+    @media (max-width: 576px) {
+      .services__content__item {
+        flex: 0 0 100%; } }
+    .services__content__item__img {
+      position: relative; }
+      .services__content__item__img img {
+        resize: both;
+        vertical-align: middle;
+        object-fit: cover; }
+      .services__content__item__img .overlay {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        width: auto;
+        height: auto;
+        background-color: #030f27;
+        opacity: 0.75;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 0px;
+        visibility: hidden; }
+    .services__content__item__group {
+      background-color: #030f27;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 0px;
+      height: 60px; }
+      .services__content__item__group p {
+        font-weight: 700;
+        color: #fdbe33;
+        font-size: 1.3rem;
+        margin-left: 10px; }
+        @media (max-width: 576px) {
+          .services__content__item__group p {
+            font-size: 1rem; } }
+        @media (max-width: 450px) {
+          .services__content__item__group p {
+            font-size: 0.8rem; } }
+      .services__content__item__group i {
+        background-color: #fdbe33;
+        color: #fff;
+        height: 60px;
+        width: 50px;
+        line-height: 60px;
+        text-align: center;
+        font-size: 1.8rem; }
+        @media (max-width: 450px) {
+          .services__content__item__group i {
+            font-size: 1.5rem; } }
+
 /*# sourceMappingURL=style.css.map */
