@@ -1,0 +1,105 @@
+.team {
+
+    &__header {
+        text-align: center;
+    }
+
+    &__content {
+        @include flex(space-between, center, row, wrap);
+
+        @include breakpoint(md) {
+            justify-content: center;
+        }
+
+        &__item {
+            flex: 0 0 22%;
+            margin-top: 20px;
+            position: relative;
+
+            @include breakpoint(lg) {
+                flex: 0 0 47%;
+            }
+
+            @include breakpoint(md) {
+                flex: 0 0 80%;
+            }
+
+            @include breakpoint(xs) {
+                flex: 0 0 100%;
+            }
+
+
+            &:hover &__text {
+                transition: $transition-out;
+                background-color: $secondaryColor;
+            }
+
+            &:hover &__text h3 {
+                color: $primaryColor;
+                transition: $transition-out;
+                transform: scale(1.1);
+            }
+
+            &:hover &__icons {
+                opacity: 1;
+                transition: $transition-out;
+            }
+
+            img {
+                resize: both;
+                height: auto;
+                vertical-align: middle;
+            }
+
+            &__text {
+                background-color: $primaryColor;
+                padding: 25px 0px;
+                text-align: center;
+
+                h3 {
+                    color: $secondaryColor;
+                    transition: $transition;
+                }
+
+                p {
+                    color: $whiteColor;
+                    font-weight: 600;
+                }
+            }
+
+            &__icons {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                @include flex(flex-start, flex-start, column);
+                opacity: 0;
+                transition: $transition;
+
+                i {
+                    color: $whiteColor;
+                    font-size: 1.2rem;
+                    width: 50px;
+                    height: 50px;
+                    line-height: 50px;
+                    text-align: center;
+
+                    &.twitter {
+                        background: #00acee;
+                    }
+
+                    &.facebook {
+                        background: #3b5998;
+                    }
+
+                    &.instagram {
+                        background: #3f729b;
+                    }
+
+                    &.linkedin {
+                        background: #0e76a8;
+                    }
+                }
+            }
+        }
+    }
+}

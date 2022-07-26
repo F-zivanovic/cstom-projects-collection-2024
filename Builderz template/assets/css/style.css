@@ -606,4 +606,81 @@ nav {
           .services__content__item__group i {
             font-size: 1.5rem; } }
 
+.team__header {
+  text-align: center; }
+.team__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0px; }
+  @media (max-width: 768px) {
+    .team__content {
+      justify-content: center; } }
+  .team__content__item {
+    flex: 0 0 22%;
+    margin-top: 20px;
+    position: relative; }
+    @media (max-width: 992px) {
+      .team__content__item {
+        flex: 0 0 47%; } }
+    @media (max-width: 768px) {
+      .team__content__item {
+        flex: 0 0 80%; } }
+    @media (max-width: 450px) {
+      .team__content__item {
+        flex: 0 0 100%; } }
+    .team__content__item:hover .team__content__item__text {
+      transition: 0.35s ease-in;
+      background-color: #fdbe33; }
+    .team__content__item:hover .team__content__item__text h3 {
+      color: #030f27;
+      transition: 0.35s ease-in;
+      transform: scale(1.1); }
+    .team__content__item:hover .team__content__item__icons {
+      opacity: 1;
+      transition: 0.35s ease-in; }
+    .team__content__item img {
+      resize: both;
+      height: auto;
+      vertical-align: middle; }
+    .team__content__item__text {
+      background-color: #030f27;
+      padding: 25px 0px;
+      text-align: center; }
+      .team__content__item__text h3 {
+        color: #fdbe33;
+        transition: 0.15s ease-in-out; }
+      .team__content__item__text p {
+        color: #fff;
+        font-weight: 600; }
+    .team__content__item__icons {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 0px;
+      opacity: 0;
+      transition: 0.15s ease-in-out; }
+      .team__content__item__icons i {
+        color: #fff;
+        font-size: 1.2rem;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center; }
+        .team__content__item__icons i.twitter {
+          background: #00acee; }
+        .team__content__item__icons i.facebook {
+          background: #3b5998; }
+        .team__content__item__icons i.instagram {
+          background: #3f729b; }
+        .team__content__item__icons i.linkedin {
+          background: #0e76a8; }
+
 /*# sourceMappingURL=style.css.map */
