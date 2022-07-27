@@ -1,0 +1,109 @@
+.contact {
+
+    &__header {
+        text-align: center;
+    }
+
+    &__content {
+        @include flex(center, flex-start, row, wrap);
+        margin-top: 20px;
+
+        &__item {
+            flex: 1;
+            height: 500px;
+
+            @include breakpoint(sm) {
+                height: 450px;
+            }
+
+            @include breakpoint(md) {
+                flex: 0 0 70%;
+            }
+
+            @include breakpoint(sm) {
+                flex: 0 0 80%;
+            }
+
+            @include breakpoint(xs) {
+                flex: 0 0 100%;
+            }
+
+            &:nth-child(1) {
+                background-color: $primaryColor;
+                padding: 30px;
+
+                @include breakpoint(sm) {
+                    padding: 20px;
+                }
+
+                div {
+                    border: 2px solid $secondaryColor;
+                    padding: 30px;
+
+                    @include breakpoint(sm) {
+                        padding: 20px;
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 25px;
+                    }
+
+                    h3 {
+                        color: $secondaryColor;
+                        font-size: 1.3rem;
+                    }
+
+                    p {
+                        color: $whiteColor;
+                        margin-top: 10px;
+                        font-size: 1.1rem;
+                        font-weight: 500;
+
+                        @include breakpoint(sm) {
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                background-color: $secondaryColor;
+                padding: 30px;
+
+                @include breakpoint(sm) {
+                    padding: 20px;
+                }
+
+                .form-input {
+                    width: 100%;
+                    border: 2px solid $whiteColor;
+                    background: transparent;
+                    padding: 10px 15px;
+                    margin-bottom: 15px;
+
+
+                    &::placeholder {
+                        color: $whiteColor;
+                        font-size: 1.2rem;
+
+                        @include breakpoint(sm) {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+
+                textarea {
+                    height: 185px;
+
+                    @include breakpoint(sm) {
+                        height: 150px;
+                    }
+                }
+
+                button[type="submit"] {
+                    @include btn($primaryColor, $primaryColor, $secondaryColor, $whiteColor, $primaryColor);
+                }
+            }
+        }
+    }
+}
