@@ -1,0 +1,85 @@
+footer {
+    background-color: $primaryColor;
+
+    .footer__content {
+        @include grid(auto, 10px, center, flex-start);
+
+        &__item {
+            grid-column: span 3;
+
+            @include breakpoint(xl) {
+                grid-column: span 6;
+                margin-top: 15px;
+            }
+
+            @include breakpoint(md) {
+                grid-column: span 12;
+            }
+
+            &__social {
+                margin-top: 10px;
+
+                a {
+                    color: $whiteColor;
+
+                    &:not(:last-child) {
+                        margin-right: 10px;
+                    }
+
+                    &:hover {
+                        color: $primaryColor;
+                    }
+
+                    i {
+                        width: 35px;
+                        height: 35px;
+                        line-height: 35px;
+                        text-align: center;
+                        border-radius: 50%;
+                        border: 1px solid $whiteColor;
+
+                        &:hover {
+                            background-color: $secondaryColor;
+                        }
+                    }
+                }
+            }
+
+            &__heading {
+                color: $secondaryColor;
+                font-size: 1.3rem;
+
+                &::after {
+                    display: block;
+                    content: "";
+                    margin: 10px 0px;
+                    height: 2px;
+                    background-color: $secondaryColor;
+                    width: 50px;
+                }
+            }
+
+            ul {
+                margin-top: 15px;
+
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+
+                    a {
+                        color: $whiteColor;
+
+                        &:hover {
+                            color: $secondaryColor;
+                        }
+
+                        i {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
