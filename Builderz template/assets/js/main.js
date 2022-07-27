@@ -55,3 +55,22 @@ buttons.forEach((btn) => {
 });
 
 
+// Open login modal
+
+const btnModal = document.querySelector('.hero > button');
+const modal = document.querySelector('.modal');
+const btnCloseModal = document.querySelector('.close');
+
+btnModal.addEventListener('click', openModal);
+
+function openModal() {
+    modal.classList.remove('hidden');
+}
+
+btnCloseModal.addEventListener('click', closeLoginModal);
+
+function closeLoginModal() {
+    modal.classList.add('hidden');
+}
+
+

@@ -1,0 +1,86 @@
+.modal {
+    @include positioning(fixed, 0px, 0px, 0px, 0px 100%, 100%);
+    background: rgba(0, 0, 0, .5);
+    transition: 0.5s ease-in-out;
+
+    &.hidden {
+        transform: translateX(100%);
+    }
+
+    &__box {
+        margin: 0 auto;
+        background: $whiteColor;
+        width: 400px;
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include breakpoint(sm) {
+            width: 80%;
+        }
+
+        @include breakpoint(xs) {
+            width: 90%;
+        }
+
+        &__tittle {
+            @include flex(space-between, center);
+            background: $secondaryColor;
+            padding: 15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+
+            h3 {
+                color: $whiteColor;
+                font-size: 1.4rem;
+
+                @include breakpoint(sm) {
+                    font-size: 1rem;
+                }
+            }
+
+            i {
+                font-size: 1.5rem;
+                color: $whiteColor;
+            }
+        }
+
+        &__body {
+            padding: 10px 15px;
+
+            form {
+
+                .form-control {
+                    padding: 10px 0px;
+
+                    label {
+                        display: block;
+                        color: $primaryColor;
+                        font-weight: 500;
+                    }
+
+                    .form-input {
+                        width: 100%;
+                        border-radius: 5px;
+                        font-size: 1.2rem;
+                        color: $primaryColor;
+                        padding: 10px;
+                        border: 1px solid $primaryColor;
+
+                        @include breakpoint(sm) {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+
+                button[type="submit"] {
+                    @include btn($primaryColor, $primaryColor, $whiteColor, transparent, $primaryColor );
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

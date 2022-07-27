@@ -799,4 +799,90 @@ footer {
           footer .footer__content__item ul li a i {
             margin-right: 10px; }
 
+.modal {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px 100%;
+  width: 100%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease-in-out; }
+  .modal.hidden {
+    transform: translateX(100%); }
+  .modal__box {
+    margin: 0 auto;
+    background: #fff;
+    width: 400px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    @media (max-width: 576px) {
+      .modal__box {
+        width: 80%; } }
+    @media (max-width: 450px) {
+      .modal__box {
+        width: 90%; } }
+    .modal__box__tittle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 0px;
+      background: #fdbe33;
+      padding: 15px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px; }
+      .modal__box__tittle h3 {
+        color: #fff;
+        font-size: 1.4rem; }
+        @media (max-width: 576px) {
+          .modal__box__tittle h3 {
+            font-size: 1rem; } }
+      .modal__box__tittle i {
+        font-size: 1.5rem;
+        color: #fff; }
+    .modal__box__body {
+      padding: 10px 15px; }
+      .modal__box__body form .form-control {
+        padding: 10px 0px; }
+        .modal__box__body form .form-control label {
+          display: block;
+          color: #030f27;
+          font-weight: 500; }
+        .modal__box__body form .form-control .form-input {
+          width: 100%;
+          border-radius: 5px;
+          font-size: 1.2rem;
+          color: #030f27;
+          padding: 10px;
+          border: 1px solid #030f27; }
+          @media (max-width: 576px) {
+            .modal__box__body form .form-control .form-input {
+              font-size: 1rem; } }
+      .modal__box__body form button[type="submit"] {
+        margin-top: 15px;
+        padding: 15px 35px;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        border: 2px solid #030f27;
+        background: #030f27;
+        color: #fff;
+        transition: 0.15s ease-in-out;
+        width: 100%; }
+        .modal__box__body form button[type="submit"]:hover {
+          transition: 0.35s ease-in;
+          cursor: pointer;
+          background-color: transparent;
+          color: #030f27; }
+        @media (max-width: 576px) {
+          .modal__box__body form button[type="submit"] {
+            padding: 10px 25px;
+            font-size: 0.9rem; } }
+
 /*# sourceMappingURL=style.css.map */
