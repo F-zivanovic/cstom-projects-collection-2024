@@ -7,12 +7,22 @@
     &__content {
         @include flex(space-between, center, row, wrap);
 
-        @include breakpoint(md) {
+        @include breakpoint(sm) {
             justify-content: center;
         }
 
+        &__categories {
+            flex: 0 0 100%;
+            text-align: center;
+            margin: 20px 0px;
+
+            button {
+                @include btn($primaryColor, $primaryColor, $whiteColor, transparent, $primaryColor);
+            }
+        }
+
         &__item {
-            flex: 0 0 30%;
+            flex: 0 0 31%;
             margin-top: 20px;
 
             &:hover .overlay {
@@ -21,16 +31,13 @@
             }
 
             @include breakpoint(lg) {
-                flex: 0 0 45%;
-            }
-
-            @include breakpoint(md) {
-                flex: 0 0 90%;
+                flex: 0 0 47%;
             }
 
             @include breakpoint(sm) {
                 flex: 0 0 100%;
             }
+
 
             &__img {
                 position: relative;
@@ -55,14 +62,13 @@
 
             &__group {
                 background-color: $primaryColor;
-                @include flex(space-between, center);
-                height: 60px;
+                padding: 15px;
+                text-align: center;
+                color: $secondaryColor;
 
                 p {
                     font-weight: 700;
-                    color: $secondaryColor;
                     font-size: 1.3rem;
-                    margin-left: 10px;
 
                     @include breakpoint(sm) {
                         font-size: 1rem;
@@ -70,20 +76,6 @@
 
                     @include breakpoint(xs) {
                         font-size: 0.8rem;
-                    }
-                }
-
-                i {
-                    background-color: $secondaryColor;
-                    color: $whiteColor;
-                    height: 60px;
-                    width: 50px;
-                    line-height: 60px;
-                    text-align: center;
-                    font-size: 1.8rem;
-
-                    @include breakpoint(xs) {
-                        font-size: 1.5rem;
                     }
                 }
             }

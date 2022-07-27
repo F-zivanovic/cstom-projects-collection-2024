@@ -530,21 +530,41 @@ nav {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0px; }
-  @media (max-width: 768px) {
+  @media (max-width: 576px) {
     .services__content {
       justify-content: center; } }
+  .services__content__categories {
+    flex: 0 0 100%;
+    text-align: center;
+    margin: 20px 0px; }
+    .services__content__categories button {
+      margin-top: 15px;
+      padding: 15px 35px;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      border: 2px solid #030f27;
+      background: #030f27;
+      color: #fff;
+      transition: 0.15s ease-in-out; }
+      .services__content__categories button:hover {
+        transition: 0.35s ease-in;
+        cursor: pointer;
+        background-color: transparent;
+        color: #030f27; }
+      @media (max-width: 576px) {
+        .services__content__categories button {
+          padding: 10px 25px;
+          font-size: 0.9rem; } }
   .services__content__item {
-    flex: 0 0 30%;
+    flex: 0 0 31%;
     margin-top: 20px; }
     .services__content__item:hover .overlay {
       visibility: visible;
       transition: 0.15s ease-in-out; }
     @media (max-width: 992px) {
       .services__content__item {
-        flex: 0 0 45%; } }
-    @media (max-width: 768px) {
-      .services__content__item {
-        flex: 0 0 90%; } }
+        flex: 0 0 47%; } }
     @media (max-width: 576px) {
       .services__content__item {
         flex: 0 0 100%; } }
@@ -576,35 +596,18 @@ nav {
         visibility: hidden; }
     .services__content__item__group {
       background-color: #030f27;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      gap: 0px;
-      height: 60px; }
+      padding: 15px;
+      text-align: center;
+      color: #fdbe33; }
       .services__content__item__group p {
         font-weight: 700;
-        color: #fdbe33;
-        font-size: 1.3rem;
-        margin-left: 10px; }
+        font-size: 1.3rem; }
         @media (max-width: 576px) {
           .services__content__item__group p {
             font-size: 1rem; } }
         @media (max-width: 450px) {
           .services__content__item__group p {
             font-size: 0.8rem; } }
-      .services__content__item__group i {
-        background-color: #fdbe33;
-        color: #fff;
-        height: 60px;
-        width: 50px;
-        line-height: 60px;
-        text-align: center;
-        font-size: 1.8rem; }
-        @media (max-width: 450px) {
-          .services__content__item__group i {
-            font-size: 1.5rem; } }
 
 .team__header {
   text-align: center; }

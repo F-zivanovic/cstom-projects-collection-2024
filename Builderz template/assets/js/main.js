@@ -27,13 +27,31 @@ function openMobileMenu() {
     mobileMenu.classList.toggle('openMobileMenu');
 }
 
-// Close Main Mobile Menu whe click on item
-// const mobileMenuItems = document.querySelectorAll('#navItem');
 
-// for (mobileMenuItem of mobileMenuItems) {
-//     mobileMenu.addEventListener('click', closeMobileMenu);
-// }
+// Services section filer
+const buttons = document.querySelectorAll('.services__content__categories > button');
 
-// function closeMobileMenu() {
-//     mobileMenu.classList.add('openMobileMenu');
-// }
+buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        const category = btn.getAttribute('data-category');
+        const article = document.querySelectorAll('.services__content > article');
+
+        for (item of article) {
+            item.style.display = 'none';
+        }
+
+        if (category === 'all') {
+            for (item of article) {
+                item.style.display = 'block';
+            }
+        }
+
+        for (item of article) {
+            if (item.getAttribute('data-category').includes(category)) {
+                item.style.display = 'block';
+            }
+        }
+    });
+});
+
+
