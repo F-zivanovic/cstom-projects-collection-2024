@@ -609,6 +609,63 @@ nav {
           .services__content__item__group p {
             font-size: 0.8rem; } }
 
+.blog__header {
+  text-align: center; }
+.blog__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0px; }
+  @media (max-width: 768px) {
+    .blog__content {
+      justify-content: center; } }
+  .blog__content__item {
+    flex: 0 0 31%;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.35s ease-in; }
+    .blog__content__item:hover .blog__content__item__img {
+      transform: scale(1.1);
+      transition: 0.15s ease-in-out; }
+    @media (max-width: 992px) {
+      .blog__content__item {
+        flex: 0 0 47%; } }
+    @media (max-width: 768px) {
+      .blog__content__item {
+        flex: 0 0 80%;
+        margin-top: 20px; } }
+    @media (max-width: 576px) {
+      .blog__content__item {
+        flex: 0 0 90%; } }
+    @media (max-width: 450px) {
+      .blog__content__item {
+        flex: 0 0 100%; } }
+    .blog__content__item__img {
+      width: 100%;
+      resize: both;
+      vertical-align: middle;
+      object-fit: cover; }
+    .blog__content__item__text {
+      background-color: #f3f6ff;
+      padding: 20px 35px;
+      text-align: center; }
+    .blog__content__item__heading {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: auto;
+      left: auto;
+      width: auto;
+      height: auto;
+      padding: 10px 15px;
+      background-color: #030f27;
+      color: #fdbe33;
+      font-weight: 700;
+      font-size: 1.3rem; }
+
 .team__header {
   text-align: center; }
 .team__content {
