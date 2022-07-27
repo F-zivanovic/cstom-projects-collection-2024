@@ -1,0 +1,51 @@
+@keyframes heroHeadingAnimation {
+
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0.75;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes heroHeadingAnimation1 {
+
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0.75;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes heroButtonAnimation1 {
+
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0.75;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

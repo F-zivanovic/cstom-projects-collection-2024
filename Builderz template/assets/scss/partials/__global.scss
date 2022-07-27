@@ -98,3 +98,20 @@ input {
         }
     }
 }
+
+.scrolltop {
+    @include positioning(fixed, auto, 15px, 15px, auto);
+    @include btn($secondaryColor, $secondaryColor, $whiteColor, transparent, $primaryColor);
+    padding: 10px 15px;
+    opacity: 0;
+    transform: translateX(-100%);
+
+    i {
+        color: $primaryColor;
+    }
+
+    &.animated {
+        opacity: 1;
+        transform: translate(0)
+    }
+}

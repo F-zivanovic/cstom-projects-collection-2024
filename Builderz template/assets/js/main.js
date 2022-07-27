@@ -74,3 +74,25 @@ function closeLoginModal() {
 }
 
 
+// Show scroll to top btn
+window.onscroll = function () {
+    myFunction();
+};
+
+function myFunction() {
+    if (document.documentElement.scrollTop > 150) {
+        document.querySelector(".scrolltop").classList.add('animated');
+    } else {
+        document.querySelector(".scrolltop").classList.remove('animated');
+    }
+}
+
+// Scroll to top
+let scrollBtn = document.querySelector('.scrolltop');
+scrollBtn.addEventListener('click', scrollToTop);
+
+function scrollToTop() {
+    window.scroll({ top: 0, behavior: "smooth" });
+}
+
+

@@ -48,6 +48,15 @@ nav {
         color: $whiteColor;
         padding: 20px 0px;
 
+        &.fixed {
+            position: fixed;
+            transition: $transition;
+            top: 0px;
+            right: 0px;
+            left: 0px;
+            width: 100%;
+        }
+
         @include breakpoint(lg) {
             width: 100%
         }
@@ -80,7 +89,12 @@ nav {
                         }
 
                         a {
+                            display: block;
                             color: $primaryColor;
+
+                            &:hover {
+                                color: $secondaryColor;
+                            }
                         }
                     }
                 }
@@ -149,6 +163,11 @@ nav {
 
                         a {
                             color: $whiteColor;
+                            display: block;
+
+                            &:hover {
+                                color: $secondaryColor;
+                            }
                         }
                     }
                 }

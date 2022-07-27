@@ -17,6 +17,7 @@
             letter-spacing: 1px;
             font-size: 2rem;
             font-weight: 400;
+            animation: heroHeadingAnimation 1s $transition;
 
             @include breakpoint(sm) {
                 font-size: 1.5rem;
@@ -32,6 +33,7 @@
             font-size: 3.5rem;
             margin-bottom: 10px;
             font-weight: 800;
+            animation: heroHeadingAnimation1 1s $transition;
 
             @include breakpoint(md) {
                 font-size: 3rem;
@@ -50,5 +52,6 @@
     button {
         text-transform: uppercase;
         @include btn($whiteColor, transparent, $whiteColor, $secondaryColor, $primaryColor);
+        animation: heroButtonAnimation1 1s $transition;
     }
 }

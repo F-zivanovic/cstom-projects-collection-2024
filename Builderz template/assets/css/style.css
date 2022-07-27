@@ -1,6 +1,33 @@
 /*----------------------------------------
 EXTERNAL FILES
 ----------------------------------------*/
+@keyframes heroHeadingAnimation {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0; }
+  70% {
+    opacity: 0.75; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+@keyframes heroHeadingAnimation1 {
+  0% {
+    transform: translateX(100%);
+    opacity: 0; }
+  70% {
+    opacity: 0.75; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+@keyframes heroButtonAnimation1 {
+  0% {
+    transform: translateY(100%);
+    opacity: 0; }
+  70% {
+    opacity: 0.75; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
 /*----------------------------------------
 PARTIALS
 ----------------------------------------*/
@@ -80,6 +107,41 @@ input {
       .section__subtitle {
         font-size: 1.5rem; } }
 
+.scrolltop {
+  position: fixed;
+  top: auto;
+  right: 15px;
+  bottom: 15px;
+  left: auto;
+  width: auto;
+  height: auto;
+  margin-top: 15px;
+  padding: 15px 35px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border: 2px solid #fdbe33;
+  background: #fdbe33;
+  color: #fff;
+  transition: 0.15s ease-in-out;
+  padding: 10px 15px;
+  opacity: 0;
+  transform: translateX(-100%); }
+  .scrolltop:hover {
+    transition: 0.35s ease-in;
+    cursor: pointer;
+    background-color: transparent;
+    color: #030f27; }
+  @media (max-width: 576px) {
+    .scrolltop {
+      padding: 10px 25px;
+      font-size: 0.9rem; } }
+  .scrolltop i {
+    color: #030f27; }
+  .scrolltop.animated {
+    opacity: 1;
+    transform: translate(0); }
+
 nav {
   background-color: #fdbe33; }
   nav .nav__top {
@@ -124,6 +186,13 @@ nav {
     background-color: #030f27;
     color: #fff;
     padding: 20px 0px; }
+    nav .nav__bottom.fixed {
+      position: fixed;
+      transition: 0.15s ease-in-out;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      width: 100%; }
     @media (max-width: 992px) {
       nav .nav__bottom {
         width: 100%; } }
@@ -156,7 +225,10 @@ nav {
           nav .nav__bottom .nav__list__item:last-child .nav__item__dropdown.open {
             display: none; }
           nav .nav__bottom .nav__list__item:last-child .nav__item__dropdown a {
+            display: block;
             color: #030f27; }
+            nav .nav__bottom .nav__list__item:last-child .nav__item__dropdown a:hover {
+              color: #fdbe33; }
       nav .nav__bottom .nav__list__item__link {
         color: #fff;
         text-transform: uppercase;
@@ -200,7 +272,10 @@ nav {
         nav .nav__mobile__menu ul li:nth-child(6) div.open {
           display: none; }
         nav .nav__mobile__menu ul li:nth-child(6) div a {
-          color: #fff; }
+          color: #fff;
+          display: block; }
+          nav .nav__mobile__menu ul li:nth-child(6) div a:hover {
+            color: #fdbe33; }
       nav .nav__mobile__menu ul li a {
         color: #030f27;
         display: block; }
@@ -233,7 +308,8 @@ nav {
       margin-bottom: 10px;
       letter-spacing: 1px;
       font-size: 2rem;
-      font-weight: 400; }
+      font-weight: 400;
+      animation: heroHeadingAnimation 1s 0.15s ease-in-out; }
       @media (max-width: 576px) {
         .hero__headings-1 {
           font-size: 1.5rem; } }
@@ -244,7 +320,8 @@ nav {
       color: #fff;
       font-size: 3.5rem;
       margin-bottom: 10px;
-      font-weight: 800; }
+      font-weight: 800;
+      animation: heroHeadingAnimation1 1s 0.15s ease-in-out; }
       @media (max-width: 768px) {
         .hero__headings-2 {
           font-size: 3rem; } }
@@ -264,7 +341,8 @@ nav {
     border: 2px solid #fff;
     background: transparent;
     color: #fff;
-    transition: 0.15s ease-in-out; }
+    transition: 0.15s ease-in-out;
+    animation: heroButtonAnimation1 1s 0.15s ease-in-out; }
     .hero button:hover {
       transition: 0.35s ease-in;
       cursor: pointer;
