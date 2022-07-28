@@ -6,6 +6,14 @@
         padding: 30px;
         @include grid(auto, 0px, flex-start);
         background-color: $primaryColor;
+        transform: translateY(50%);
+        opacity: 0;
+
+        &.animated {
+            transform: translateY(0);
+            opacity: 1;
+            transition: $transition-out;
+        }
 
         i {
             grid-column: span 3;
@@ -62,17 +70,17 @@
         }
 
 
-        &--mod{
+        &--mod {
             background-color: $secondaryColor;
-            
-            i{
+
+            i {
                 color: $primaryColor;
             }
 
-            .sub-hero__item__text{
+            .sub-hero__item__text {
                 color: $primaryColor;
 
-                h3{
+                h3 {
                     color: $primaryColor;
                 }
             }

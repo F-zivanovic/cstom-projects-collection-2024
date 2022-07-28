@@ -17,6 +17,14 @@
             position: relative;
             overflow: hidden;
             transition: $transition-out;
+            transform: translateY(50%);
+            opacity: 0;
+
+            &.animated {
+                transform: translateY(0);
+                opacity: 1;
+                transition: $transition-out;
+            }
 
             &:hover &__img {
                 transform: scale(1.1);

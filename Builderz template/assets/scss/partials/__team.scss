@@ -16,6 +16,15 @@
             margin-top: 20px;
             position: relative;
 
+            transform: translateY(50%);
+            opacity: 0;
+
+            &.animated {
+                transform: translateY(0);
+                opacity: 1;
+                transition: $transition-out;
+            }
+
             @include breakpoint(lg) {
                 flex: 0 0 47%;
             }

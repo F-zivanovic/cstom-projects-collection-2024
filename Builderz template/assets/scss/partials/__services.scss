@@ -25,6 +25,15 @@
             flex: 0 0 31%;
             margin-top: 20px;
 
+            transform: translateY(50%);
+            opacity: 0;
+
+            &.animated {
+                transform: translateY(0);
+                opacity: 1;
+                transition: $transition-out;
+            }
+
             &:hover .overlay {
                 visibility: visible;
                 transition: $transition;

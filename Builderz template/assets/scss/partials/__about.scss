@@ -1,71 +1,80 @@
-.about{
+.about {
     @include flex(space-around, center, row, wrap);
 
-    @include breakpoint(lg){
+    @include breakpoint(lg) {
         justify-content: center;
     }
 
-    &__item{
-        
-        &:nth-child(1){
+    &__item {
+        transform: translateY(50%);
+        opacity: 0;
+
+        &.animated {
+            transform: translateY(0);
+            opacity: 1;
+            transition: $transition-out;
+        }
+
+
+        &:nth-child(1) {
             flex: 0 0 35%;
 
-            @include breakpoint(lg){
+            @include breakpoint(lg) {
                 flex: 0 0 70%;
                 order: 3;
             }
 
-            @include breakpoint(md){
+            @include breakpoint(md) {
                 flex: 0 0 90%;
             }
         }
 
-        &:nth-child(2){
+        &:nth-child(2) {
             flex: 0 0 55%;
 
-            @include breakpoint(lg){
+            @include breakpoint(lg) {
                 flex: 0 0 70%;
                 margin-bottom: 20px;
                 order: 2;
             }
 
-            @include breakpoint(md){
+            @include breakpoint(md) {
                 flex: 0 0 90%;
             }
         }
 
-        &__img{
+        &__img {
             width: 100%;
             resize: both;
             object-fit: cover;
             vertical-align: middle;
             height: 500px;
 
-            @include breakpoint(lg){
-               height: 450px;
+            @include breakpoint(lg) {
+                height: 450px;
             }
 
-            @include breakpoint(sm){
+            @include breakpoint(sm) {
                 height: 350px;
             }
 
-            @include breakpoint(xs){
+            @include breakpoint(xs) {
                 height: 300px;
             }
         }
 
-        &__text{
+        &__text {
             margin-bottom: 10px;
             text-align: justify;
             font-size: 1.1rem;
 
-            @include breakpoint(sm){
+            @include breakpoint(sm) {
                 font-size: 0.8rem;
 
             }
         }
 
-        button{
+        button {
             @include btn($secondaryColor, $secondaryColor, $primaryColor, $primaryColor, $secondaryColor);
         }
     }

@@ -95,4 +95,94 @@ function scrollToTop() {
     window.scroll({ top: 0, behavior: "smooth" });
 }
 
+// Animation On Scroll
+window.onscroll = () => {
+    subHero();
+    about();
+    services();
+    blog();
+    contact();
+    team();
+}
+
+function subHero() {
+    const subHeroSection = document.querySelector('.sub-hero');
+    const positionSubHeroSection = subHeroSection.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.3;
+    const subHeroItems = document.querySelectorAll('.sub-hero > .sub-hero__item');
+
+    for (subHeroItem of subHeroItems) {
+        if (positionSubHeroSection < screenPosition) {
+            subHeroItem.classList.add('animated');
+        }
+    }
+}
+
+function about() {
+    const aboutSection = document.querySelector('.about');
+    const positionAboutSection = aboutSection.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.3;
+    const AboutItems = document.querySelectorAll('.about > .about__item');
+
+    for (aboutItem of AboutItems) {
+        if (positionAboutSection < screenPosition) {
+            aboutItem.classList.add('animated');
+        }
+    }
+}
+
+function services() {
+    const servicesSection = document.querySelector('.services');
+    const positionServicesSection = servicesSection.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.8;
+    const servicesItems = document.querySelectorAll('.services  .services__content__item');
+
+    for (servicesItem of servicesItems) {
+        if (positionServicesSection < screenPosition) {
+            servicesItem.classList.add('animated');
+        }
+    }
+}
+
+function blog() {
+    const blogSection = document.querySelector('.blog');
+    const positionBlogSection = blogSection.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.8;
+    const blogItems = document.querySelectorAll('.blog  .blog__content__item');
+
+    for (blogItem of blogItems) {
+        if (positionBlogSection < screenPosition) {
+            blogItem.classList.add('animated');
+        }
+    }
+}
+
+function contact() {
+    const contactSection = document.querySelector('.contact');
+    const positionContactSection = contactSection.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.8;
+    const contactItems = document.querySelectorAll('.contact  .contact__content__item');
+
+    for (contactItem of contactItems) {
+        if (positionContactSection < screenPosition) {
+            contactItem.classList.add('animated');
+        }
+    }
+}
+
+function team() {
+    const teamSection = document.querySelector('.team');
+    const positionTeamSection = teamSection.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.8;
+    const teamItems = document.querySelectorAll('.team  .team__content__item');
+
+    for (teamItem of teamItems) {
+        if (positionTeamSection < screenPosition) {
+            teamItem.classList.add('animated');
+        }
+    }
+}
+
+
+
 
