@@ -77,6 +77,12 @@ function closeLoginModal() {
 // Show scroll to top btn
 window.onscroll = function () {
     myFunction();
+    subHero();
+    about();
+    services();
+    blog();
+    contact();
+    team();
 };
 
 function myFunction() {
@@ -95,16 +101,8 @@ function scrollToTop() {
     window.scroll({ top: 0, behavior: "smooth" });
 }
 
-// Animation On Scroll
-window.onscroll = () => {
-    subHero();
-    about();
-    services();
-    blog();
-    contact();
-    team();
-}
 
+// AOS
 function subHero() {
     const subHeroSection = document.querySelector('.sub-hero');
     const positionSubHeroSection = subHeroSection.getBoundingClientRect().top;
