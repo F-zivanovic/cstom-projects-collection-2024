@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #777777;
+    background-color: #fff;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+
+}
+
+a {
+    color: #777777;
+    text-decoration: none;
+    transition: $transition;
+
+    &:hover,
+    &:focus,
+    &:active {
+        cursor: pointer;
+        transition: $transition-out;
+        outline: none;
+        color: $secondaryColor;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    font-size: 1rem;
+}
+
+i {
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+        transition: $transition-out;
+    }
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+.btn {
+    cursor: pointer;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 100px;
+    color: $blackColor;
+    background-color: $primaryColor;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    margin-top: 15px;
+    transition: $transition;
+
+    &:hover {
+        transition: $transition-out;
+        transform: translateY(10px);
+    }
+}
+
+.container {
+    width: 90%;
+    margin: 0px auto;
+}
+
+.section {
+    padding: 70px 0px;
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: 600;
+        color: $secondaryColor;
+        margin-bottom: 1rem;
+    }
+
+    &__subtitle {
+        position: relative;
+        padding-left: 60px;
+        font-size: 2rem;
+        color: $blackColor;
+        font-weight: 700;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 10px;
+            left: 0;
+            width: 45px;
+            height: 2px;
+            background: #FFC600;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 14px;
+            left: 0;
+            width: 45px;
+            height: 2px;
+            background: #23A036;
+        }
+    }
+}
