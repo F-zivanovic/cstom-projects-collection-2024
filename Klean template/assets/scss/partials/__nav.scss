@@ -113,6 +113,7 @@ nav {
         @include positioning(fixed, 0%, 0%, auto, auto, 350px, 100%);
         @include flex(center, flex-end, column);
         transition: $transition;
+        z-index: 99;
 
         @media(min-width:992px) {
             display: none;

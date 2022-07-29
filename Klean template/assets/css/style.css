@@ -1,6 +1,29 @@
 /*----------------------------------------
 EXTERNAL FILES
 ----------------------------------------*/
+@keyframes flicker {
+  0% {
+    filter: blur(5px) brightness(0); }
+  3% {
+    filter: blur(5px) brightness(1); }
+  6% {
+    filter: blur(5px) brightness(0); }
+  7% {
+    filter: blur(5px) brightness(1); }
+  8% {
+    filter: blur(5px) brightness(0); }
+  9% {
+    filter: blur(5px) brightness(1); }
+  10% {
+    filter: blur(5px) brightness(0); }
+  20% {
+    filter: blur(5px) brightness(1); }
+  50% {
+    filter: blur(5px) brightness(1); }
+  99% {
+    filter: blur(5px) brightness(0); }
+  100% {
+    filter: blur(5px) brightness(1); } }
 .text-primary {
   color: #FFC600; }
 
@@ -436,7 +459,8 @@ nav {
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 0px;
-    transition: 0.7s ease-in; }
+    transition: 0.7s ease-in;
+    z-index: 99; }
     @media (min-width: 992px) {
       nav .nav__mobile {
         display: none; } }
@@ -445,5 +469,41 @@ nav {
         width: 70%; } }
     nav .nav__mobile.hidden {
       transform: translateX(100%); }
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0px;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../assets/img/header-bg.jpg");
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll; }
+  .hero hgroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0px; }
+    .hero hgroup h3 {
+      font-size: 1.5rem;
+      position: relative; }
+      .hero hgroup h3::before {
+        position: absolute;
+        content: attr(data-text);
+        text-shadow: 0px 0px 5px #23A036;
+        animation: flicker 2.5s forwards; }
+    .hero hgroup h1 {
+      font-size: 3.5rem; }
+      @media (max-width: 576px) {
+        .hero hgroup h1 {
+          font-size: 2.5rem; } }
+      @media (max-width: 400px) {
+        .hero hgroup h1 {
+          font-size: 1.5rem; } }
 
 /*# sourceMappingURL=style.css.map */
