@@ -59,7 +59,7 @@ input {
 .btn {
     cursor: pointer;
     font-weight: 500;
-    padding: 10px 25px;
+    padding: 15px 25px;
     border-radius: 100px;
     color: $blackColor;
     background-color: $primaryColor;
@@ -68,6 +68,7 @@ input {
     border: none;
     margin-top: 15px;
     transition: $transition;
+    font-size: 1.1rem;
 
     &:hover {
         transition: $transition-out;

@@ -1,0 +1,129 @@
+nav {
+    @include flex(space-between, flex-start);
+
+    @media(max-width:992px) {
+        background-color: $secondaryColor;
+        align-items: center;
+        padding: 0px 30px;
+    }
+
+    .nav__logo {
+        flex: 1;
+        align-self: stretch;
+        @include flex(center, center);
+        font-size: 4.5rem;
+
+        @media(max-width:992px) {
+            justify-content: flex-start;
+        }
+
+        @media(max-width:768px) {
+            font-size: 3.5rem;
+        }
+
+        @media(max-width:576px) {
+            font-size: 2.5rem;
+        }
+
+        a {
+            color: $primaryColor;
+
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+    }
+
+    .nav__content {
+        flex: 3;
+
+        @media(max-width:992px) {
+            display: none;
+        }
+
+        .nav__info {
+            @include flex(space-between, center);
+        }
+
+        .nav__list {
+            @include flex(space-between, center);
+
+            ul {
+                @include flex(center, center);
+
+                li {
+                    a {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav__hamburger {
+        display: none;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background: none;
+        z-index: 101;
+        transition: $transition;
+        position: relative;
+
+        @media(max-width:992px) {
+            display: block;
+        }
+
+        @media(max-width:576px) {
+            width: 25px;
+            height: 25px;
+        }
+
+        .hamburger-top,
+        .hamburger-middle,
+        .hamburger-bottom {
+            @include positioning(absolute, 0%, auto, auto, 0%, 100%, 3px);
+            background-color: $blackColor;
+            transform: rotate(0);
+            transition: $transition-out;
+        }
+
+        .hamburger-middle {
+            transform: translateY(10px);
+        }
+
+        .hamburger-bottom {
+            transform: translateY(20px);
+        }
+
+        &.open .hamburger-top {
+            transform: rotate(45deg) translateY(2px) translateX(1px);
+        }
+
+        &.open .hamburger-middle {
+            display: none;
+        }
+
+        &.open .hamburger-bottom {
+            transform: rotate(-45deg) translateY(2px) translateY(1px);
+        }
+    }
+
+    .nav__mobile {
+        @include positioning(fixed, 0%, 0%, auto, auto, 350px, 100%);
+        @include flex(center, flex-end, column);
+        transition: $transition;
+
+        @media(min-width:992px) {
+            display: none;
+        }
+
+        @media(max-width:576px) {
+            width: 70%;
+        }
+
+        &.hidden {
+            transform: translateX(100%);
+        }
+    }
+}
