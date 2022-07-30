@@ -488,7 +488,9 @@ nav {
     align-items: center;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 0px; }
+    gap: 0px;
+    width: 100%;
+    max-width: 900px; }
     .hero hgroup h3 {
       font-size: 1.5rem;
       position: relative; }
@@ -505,5 +507,29 @@ nav {
       @media (max-width: 400px) {
         .hero hgroup h1 {
           font-size: 1.5rem; } }
+
+.sub-hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0px; }
+  .sub-hero article {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 30px; }
+    @media (max-width: 992px) {
+      .sub-hero article {
+        flex: 0 0 100%; } }
+    .sub-hero article i {
+      font-size: 2.5rem; }
+    .sub-hero article .sub-hero-text p:first-child {
+      font-size: 1.3rem; }
 
 /*# sourceMappingURL=style.css.map */

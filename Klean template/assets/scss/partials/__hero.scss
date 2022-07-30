@@ -8,6 +8,8 @@
 
     hgroup {
         @include flex(center, center, column);
+        width: 100%;
+        max-width: 900px;
 
         h3 {
             font-size: 1.5rem;

@@ -1,0 +1,27 @@
+.sub-hero {
+
+    @include flex(flex-start, center, row, wrap);
+
+    article {
+        flex: 1;
+        @include flex(center, center, row, nowrap, 20px);
+        padding: 30px;
+
+        @media(max-width:992px) {
+            flex: 0 0 100%;
+        }
+
+        i {
+            font-size: 2.5rem;
+        }
+
+        .sub-hero-text {
+
+            p {
+                &:first-child {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
