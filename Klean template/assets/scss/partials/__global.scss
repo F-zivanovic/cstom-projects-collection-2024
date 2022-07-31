@@ -98,6 +98,10 @@ input {
         color: $blackColor;
         font-weight: 700;
 
+        @media(max-width:576px){
+            font-size: 1.5rem;
+        }
+
         &::before {
             position: absolute;
             content: "";

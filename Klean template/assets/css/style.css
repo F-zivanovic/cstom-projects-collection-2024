@@ -326,6 +326,9 @@ input {
     font-size: 2rem;
     color: #000;
     font-weight: 700; }
+    @media (max-width: 576px) {
+      .section__subtitle {
+        font-size: 1.5rem; } }
     .section__subtitle::before {
       position: absolute;
       content: "";
@@ -531,5 +534,71 @@ nav {
       font-size: 2.5rem; }
     .sub-hero article .sub-hero-text p:first-child {
       font-size: 1.3rem; }
+
+.about {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0px; }
+  @media (max-width: 992px) {
+    .about {
+      justify-content: center; } }
+  .about .about-item:nth-child(1) {
+    position: relative;
+    flex: 0 0 40%; }
+    @media (max-width: 992px) {
+      .about .about-item:nth-child(1) {
+        flex: 0 0 70%; } }
+    @media (max-width: 576px) {
+      .about .about-item:nth-child(1) {
+        flex: 0 0 90%; } }
+    .about .about-item:nth-child(1) img {
+      resize: both;
+      vertical-align: middle;
+      object-fit: cover; }
+    .about .about-item:nth-child(1) .about-over {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 21; }
+      .about .about-item:nth-child(1) .about-over i {
+        font-size: 4.5rem; }
+        @media (max-width: 768px) {
+          .about .about-item:nth-child(1) .about-over i {
+            font-size: 3rem; } }
+        @media (max-width: 576px) {
+          .about .about-item:nth-child(1) .about-over i {
+            font-size: 2rem; } }
+      .about .about-item:nth-child(1) .about-over h3 {
+        font-size: 3rem; }
+        @media (max-width: 768px) {
+          .about .about-item:nth-child(1) .about-over h3 {
+            font-size: 2rem; } }
+      .about .about-item:nth-child(1) .about-over P {
+        font-size: 2rem; }
+        @media (max-width: 768px) {
+          .about .about-item:nth-child(1) .about-over P {
+            font-size: 1rem; } }
+    .about .about-item:nth-child(1) .about-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 20; }
+  .about .about-item:nth-child(2) {
+    flex: 0 0 50%; }
+    @media (max-width: 992px) {
+      .about .about-item:nth-child(2) {
+        flex: 0 0 70%;
+        margin-top: 30px; } }
+    @media (max-width: 576px) {
+      .about .about-item:nth-child(2) {
+        flex: 0 0 90%; } }
 
 /*# sourceMappingURL=style.css.map */
