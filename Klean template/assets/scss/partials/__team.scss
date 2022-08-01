@@ -1,0 +1,49 @@
+.team {
+
+    &-content {
+        @include grid(auto, 20px);
+
+        .team-item {
+            grid-column: span 4;
+
+            @media(max-width:768px) {
+                grid-column: span 6;
+            }
+
+            @media(max-width:576px) {
+                grid-column: span 12;
+            }
+
+            .team-img {
+                position: relative;
+                overflow: hidden;
+
+                &:hover .team-social {
+                    transform: translateX(0);
+                    opacity: 1;
+                    transition: $transition;
+                }
+
+                img {
+                    vertical-align: middle;
+                    object-fit: cover;
+                }
+
+                .team-social {
+                    @include positioning(absolute, 0px, auto, 0px, 0px, auto, 100%);
+                    @include flex(center, flex-start, column, nowrap);
+                    transform: translateX(-100%);
+                    opacity: 0;
+
+                    a {
+                        width: 45px;
+                        height: 45px;
+                        line-height: 45px;
+                        text-align: center;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
