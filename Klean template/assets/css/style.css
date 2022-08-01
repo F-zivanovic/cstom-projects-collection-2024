@@ -530,6 +530,10 @@ nav {
     @media (max-width: 992px) {
       .sub-hero article {
         flex: 0 0 100%; } }
+    @media (max-width: 576px) {
+      .sub-hero article {
+        flex-direction: column;
+        text-align: center; } }
     .sub-hero article i {
       font-size: 2.5rem; }
     .sub-hero article .sub-hero-text p:first-child {
@@ -600,5 +604,67 @@ nav {
     @media (max-width: 576px) {
       .about .about-item:nth-child(2) {
         flex: 0 0 90%; } }
+
+.services {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../assets/img/services-bg.jpg");
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  width: 100%; }
+  .services-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 30px;
+    justify-content: center;
+    align-items: center; }
+    @media (max-width: 576px) {
+      .services-content {
+        grid-gap: 0px; } }
+    .services-content .services-item:nth-child(1) {
+      grid-column: span 7; }
+      @media (max-width: 992px) {
+        .services-content .services-item:nth-child(1) {
+          grid-column: span 12; } }
+      .services-content .services-item:nth-child(1) .section__subtitle {
+        color: #fff; }
+    .services-content .services-item:nth-child(2) {
+      position: relative;
+      grid-column: span 5;
+      height: 450px; }
+      @media (max-width: 576px) {
+        .services-content .services-item:nth-child(2) {
+          margin-top: 30px; } }
+      @media (max-width: 992px) {
+        .services-content .services-item:nth-child(2) {
+          grid-column: span 12; } }
+      @media (max-width: 576px) {
+        .services-content .services-item:nth-child(2) {
+          height: 400px; } }
+      .services-content .services-item:nth-child(2) i {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #23A036; }
+      .services-content .services-item:nth-child(2) #left {
+        position: absolute;
+        top: 50%;
+        left: 10px; }
+      .services-content .services-item:nth-child(2) #right {
+        position: absolute;
+        top: 50%;
+        right: 10px; }
+      .services-content .services-item:nth-child(2) .services-slider {
+        height: 100%;
+        width: 100%; }
+        .services-content .services-item:nth-child(2) .services-slider img {
+          display: none;
+          object-fit: cover;
+          height: 100%;
+          resize: both; }
+          .services-content .services-item:nth-child(2) .services-slider img:nth-child(1) {
+            display: block; }
 
 /*# sourceMappingURL=style.css.map */
