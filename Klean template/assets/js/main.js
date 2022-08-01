@@ -65,3 +65,58 @@ function hidePictures() {
         img.style.display = 'none';
     });
 }
+
+
+// Close popup
+let closeBtn = document.querySelector('#close');
+let popup = document.querySelector('.portfolio-popup');
+
+closeBtn.addEventListener('click', hidePopup);
+
+function hidePopup() {
+    popup.classList.remove('visible');
+}
+
+// Open popup window
+function init() {
+    bindGalleryItems();
+    bindKeyDown();
+}
+
+function bindGalleryItems() {
+    let images = document.querySelectorAll('.portfolio-content > a');
+
+    images.forEach((img) => {
+        img.addEventListener('click', showImages);
+    });
+}
+
+function showImages(event) {
+    event.preventDefault();
+
+    let link = event.target.parentElement.href;
+
+    let popupImg = document.querySelector('.portfolio-popup > img');
+    popupImg.src = link;
+
+    let popup = document.querySelector('.portfolio-popup');
+
+    popup.classList.add('visible');
+
+}
+
+// Close popup when press ESCAPE key
+
+function bindKeyDown() {
+    window.addEventListener('keydown', keyDownHandler)
+}
+
+function keyDownHandler(event) {
+    switch (event.key) {
+        case "Escape":
+            hidePopup();
+            break;
+    }
+}
+
+window.addEventListener('load', init);

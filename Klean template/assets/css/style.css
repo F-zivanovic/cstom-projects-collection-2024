@@ -725,4 +725,93 @@ nav {
         .feature-item:nth-child(2) img {
           height: 300px; } }
 
+.portfolio {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../../assets/img/header-bg.jpg");
+  height: auto;
+  background-position: center;
+  background-size: cover; }
+  .portfolio-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0px; }
+    @media (max-width: 768px) {
+      .portfolio-content {
+        justify-content: center; } }
+    .portfolio-content a {
+      flex: 0 0 33%;
+      position: relative;
+      overflow: hidden; }
+      .portfolio-content a:hover .portfolio-over {
+        opacity: 1;
+        transform: translateY(0);
+        transition: 0.7s ease-in; }
+      @media (max-width: 992px) {
+        .portfolio-content a {
+          flex: 0 0 50%; } }
+      @media (max-width: 768px) {
+        .portfolio-content a {
+          flex: 0 0 80%; } }
+      @media (max-width: 576px) {
+        .portfolio-content a {
+          flex: 0 0 90%; } }
+      .portfolio-content a img {
+        vertical-align: middle;
+        resize: both;
+        object-fit: cover; }
+      .portfolio-content a .portfolio-over {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        width: auto;
+        height: auto;
+        transform: translateY(-100%);
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 0px; }
+        .portfolio-content a .portfolio-over p {
+          font-size: 1.5rem; }
+  .portfolio-popup {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    bottom: auto;
+    left: 50px;
+    width: auto;
+    height: auto;
+    display: none;
+    z-index: 90; }
+    @media (max-width: 576px) {
+      .portfolio-popup {
+        top: 20px;
+        right: 20px;
+        left: 20px; } }
+    .portfolio-popup.visible {
+      display: block; }
+    .portfolio-popup button {
+      position: absolute;
+      top: -30px;
+      right: -10px;
+      bottom: auto;
+      left: auto;
+      width: auto;
+      height: auto; }
+    .portfolio-popup img {
+      object-fit: cover;
+      height: auto; }
+      @media (max-width: 576px) {
+        .portfolio-popup img {
+          height: 400px; } }
+      @media (max-width: 450px) {
+        .portfolio-popup img {
+          height: 350px; } }
+
 /*# sourceMappingURL=style.css.map */
