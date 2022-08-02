@@ -120,3 +120,17 @@ function keyDownHandler(event) {
 }
 
 window.addEventListener('load', init);
+
+
+// Reset form
+let resetBtn = document.querySelector('#reset');
+let formComponents = document.querySelectorAll('.form-input');
+
+resetBtn.addEventListener('click', resetForm);
+
+function resetForm(){
+    
+    formComponents.forEach((item) => {
+        item.value = '';
+    });
+}
