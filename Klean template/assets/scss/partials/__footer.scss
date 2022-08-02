@@ -35,13 +35,7 @@ footer{
             .footer-social{
 
                 i{
-                    width: 45px;
-                    height:45px;
-                    line-height: 45px;
-                    border-radius: 50%;
-                    text-align: center;
-                    background-color: $whiteColor;
-                    color: $blackColor;
+                    @include icon(45px, $whiteColor, $blackColor);
                 }
             }
         }

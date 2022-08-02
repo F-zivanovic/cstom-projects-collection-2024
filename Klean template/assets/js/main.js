@@ -134,3 +134,23 @@ function resetForm(){
         item.value = '';
     });
 }
+
+
+// Back to top Button
+
+let scrollBtn = document.querySelector('#toTop');
+scrollBtn.addEventListener('click', scrollToTop);
+
+function scrollToTop() {
+    window.scroll({ top: 0, behavior: "smooth" });
+}
+
+
+window.onscroll = function() {
+    if(document.documentElement.scrollTop > 150){
+        scrollBtn.classList.add('visible');
+    }
+    else{
+        scrollBtn.classList.remove('visible');
+    }
+}

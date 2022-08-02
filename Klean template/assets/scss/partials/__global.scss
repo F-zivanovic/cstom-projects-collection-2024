@@ -123,3 +123,13 @@ input {
         }
     }
 }
+
+#toTop{
+    opacity: 0;
+    transition: $transition;
+    @include positioning(fixed, auto, 15px, 15px, auto);
+
+    &.visible{
+        opacity: 1;
+    }
+}

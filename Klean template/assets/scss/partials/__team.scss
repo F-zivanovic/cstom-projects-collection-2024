@@ -24,9 +24,15 @@
                     transition: $transition;
                 }
 
+                &:hover img {
+                    transform: translateX(30px);
+                    transition: $transition;
+                }
+
                 img {
                     vertical-align: middle;
                     object-fit: cover;
+                    transform: translateX(0)
                 }
 
                 .team-social {
@@ -36,11 +42,10 @@
                     opacity: 0;
 
                     a {
-                        width: 45px;
-                        height: 45px;
-                        line-height: 45px;
-                        text-align: center;
-                        border-radius: 50%;
+                       
+                        i{
+                            @include icon(45px, $secondaryColor, $whiteColor);
+                        }
                     }
                 }
             }

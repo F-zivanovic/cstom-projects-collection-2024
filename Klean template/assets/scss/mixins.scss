@@ -26,12 +26,12 @@
     height: $height;
 }
 
-@mixin bg($bg, $width: 100%, $height: auto, $position: center, $size: cover, $repeat: no-repeat, $attachment: scroll) {
-    background: $bg;
+@mixin icon($width, $bg, $color) {
+    border-radius: 50%;
+    text-align: center;
     width: $width;
-    height: $height;
-    background-position: $position;
-    background-size: $size;
-    background-repeat: $repeat;
-    background-attachment: $attachment;
+    height: $width;
+    line-height: $width;
+    background-color: $bg;
+    color: $color;
 }
