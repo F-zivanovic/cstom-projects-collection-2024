@@ -20,6 +20,7 @@
             margin-top: 30px;
             flex: 0 0 30%;
             text-align: center;
+            position: relative;
 
             @include breakpoints(992px) {
                 flex: 0 0 45%;
@@ -30,43 +31,78 @@
             }
 
             @include breakpoints(576px) {
-                flex: 0 0 100%;
+                flex: 0 0 90%;
             }
 
-            &:hover &__text {
-                background-color: $primaryColor;
-                transition: $transition-out;
-            }
+            &__img {
+                position: relative;
 
-            &:hover &__text h4,
-            &:hover &__text p,
-            &:hover &__text a {
-                color: $whiteColor;
-            }
-
-            img {
-                width: 100%;
-                resize: both;
-                vertical-align: middle;
-            }
-
-            &__text {
-                padding: 20px;
-                background-color: #f8f9fb;
-
-                h4 {
-                    text-transform: uppercase;
+                img {
+                    resize: both;
+                    vertical-align: middle;
                 }
 
-                p {
-                    margin: 10px 0px;
-                    color: #8D9297;
+                &::before {
+                    content: "";
+                    @include positioning(absolute, 20px, 50px, auto, auto, 5px, 0px);
+                    background-color: $primaryColor;
+                    z-index: 10;
+                    transition: height $transition-out;
+
+                    @include breakpoints(450px) {
+                        right: 30px
+                    }
                 }
 
-                a {
-                    color: $primaryColor;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    height: 5px;
+                    width: 0px;
+                    background-color: $primaryColor;
+                    transition: width $transition-out;
+                }
+
+                &:hover::before {
+                    height: 80%;
+                }
+
+                &:hover::after {
+                    width: 90%;
+                }
+
+                .name {
+                    @include positioning(absolute, 30%, auto, auto, 30px, 0px);
+                    font-size: 1.4rem;
+                    font-weight: 800;
                     text-transform: uppercase;
-                    font-size: 0.9rem;
+                    color: $whiteColor;
+                    overflow: hidden;
+                    transition: width $transition-out;
+                    z-index: 20;
+
+                    @include breakpoints(768px) {
+                        top: 40%;
+                        left: 50px;
+                    }
+
+                    @include breakpoints(450px) {
+                        top: 30%;
+                        left: 30px;
+                        font-size: 1rem;
+                    }
+                }
+
+                &:hover .name {
+                    width: 100%;
+                }
+
+                .overlay-img {
+                    @include positioning(absolute, 0px, 0px, 0px, 0px, 100%, 100%);
+                    background: rgba(0, 0, 0, 0.5);
                 }
             }
         }
