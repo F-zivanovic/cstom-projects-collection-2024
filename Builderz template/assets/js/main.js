@@ -93,6 +93,7 @@ function myFunction() {
     }
 }
 
+
 // Scroll to top
 let scrollBtn = document.querySelector('.scrolltop');
 scrollBtn.addEventListener('click', scrollToTop);

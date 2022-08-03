@@ -1,0 +1,100 @@
+/*----------------------------------------
+EXTERNAL FILES
+----------------------------------------*/
+/*----------------------------------------
+PARTIALS
+----------------------------------------*/
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #555;
+  overflow-x: hidden; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #282F34;
+  font-family: "Quicksand", sans-serif; }
+
+a {
+  text-decoration: none;
+  transition: 0.7s ease-in;
+  color: #555; }
+  a:hover, a:focus, a:active {
+    cursor: pointer;
+    transition: 0.6s ease-out;
+    outline: none;
+    color: #2EB872; }
+
+ul {
+  list-style-type: none; }
+
+img {
+  width: 100%;
+  resize: both;
+  object-fit: cover; }
+
+i {
+  cursor: pointer;
+  transition: 0.7s ease-in; }
+  i:hover {
+    transition: 0.6s ease-out; }
+
+input,
+textarea {
+  outline: none;
+  border: none; }
+
+.container {
+  width: 90%;
+  margin: 0px auto; }
+
+.section {
+  padding: 70px 0px; }
+  .section-title {
+    margin-bottom: 1rem; }
+  .section-subtitle {
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    font-size: 2.5rem; }
+    @media (max-width: 576px) {
+      .section-subtitle {
+        font-size: 2rem; } }
+    .section-subtitle span {
+      color: #2EB872; }
+
+.btn {
+  color: #fff;
+  font-weight: 500;
+  transition: 0.7s ease-in;
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #2EB872;
+  border: 1px solid #2EB872;
+  font-size: 1rem; }
+  .btn:hover {
+    transition: 0.6s ease-out;
+    cursor: pointer;
+    border: 1px solid #2EB872;
+    background: transparent;
+    color: #2EB872;
+    transform: translateX(10px); }
+  @media (max-width: 576px) {
+    .btn {
+      padding: 10px 25px;
+      font-size: 0.9rem; } }
+
+/*# sourceMappingURL=style.css.map */
