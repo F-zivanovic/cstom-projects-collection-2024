@@ -1,0 +1,156 @@
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../../assets/img/hedaer-bg2.jpg');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    position: relative;
+
+    nav {
+        @include flex(space-between, center);
+        padding: 15px 0px;
+
+        .nav-logo {
+            @include flex(center, center);
+
+            img {
+                @include breakpoint(576px) {
+                    width: 50px;
+                }
+            }
+
+            h1 {
+                margin-left: 10px;
+                color: $primaryColor;
+                font-size: 2.5rem;
+
+                @include breakpoint(576px) {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+        .nav-hamburger {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            position: relative;
+            z-index: 100;
+
+            @include breakpoint(576px) {
+                width: 25px;
+                height: 25px;
+            }
+
+            .hamburger-top,
+            .hamburger-middle,
+            .hamburger-bottom {
+                @include positioning(absolute, 0%, auto, auto, 0%, 100%, 3px);
+                background-color: $primaryColor;
+                transform: rotate(0);
+                transition: $transition-out;
+            }
+
+            .hamburger-middle {
+                transform: translateY(10px);
+            }
+
+            .hamburger-bottom {
+                transform: translateY(20px);
+            }
+
+            &.open .hamburger-top {
+                transform: rotate(45deg) translateY(2px) translateX(1px);
+            }
+
+            &.open .hamburger-middle {
+                display: none;
+            }
+
+            &.open .hamburger-bottom {
+                transform: rotate(-45deg) translateY(2px) translateY(1px);
+            }
+        }
+
+        .nav-mobile-menu {
+            @include positioning(fixed, 0%, 0%, 0%, 0%, 100%, 100%);
+            background-color: $dark;
+            @include flex(center, center);
+            text-align: center;
+            transition: $transition;
+            z-index: 99;
+
+            ul {
+
+                li {
+
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+
+                    a {
+                        color: $light;
+                        text-transform: uppercase;
+                        font-size: 1.5rem;
+
+                        &:hover {
+                            color: $primaryColor;
+                        }
+
+                        @include breakpoint(576px) {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+
+            &.hidden {
+                transform: translateY(-100%);
+            }
+        }
+    }
+
+    .header-content {
+        @include flex(center, center, column);
+        text-align: center;
+        height: 80vh;
+
+        h3 {
+            color: $light;
+            margin-bottom: 15px;
+            font-size: 2.5rem;
+
+            @include breakpoint(576px) {
+                font-size: 1.8rem;
+            }
+        }
+
+        .header-social {
+            margin-bottom: 20px;
+            @include flex(center, center);
+
+            a {
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
+                text-align: center;
+                background-color: transparent;
+                border: 2px solid $primaryColor;
+                color: $primaryColor;
+
+                &:not(:last-child) {
+                    margin-right: 15px;
+                }
+
+                &:hover {
+                    border: 2px solid $light;
+                    color: $light;
+                }
+            }
+        }
+    }
+
+    .header-corner {
+        @include positioning(absolute, auto, 15px, 15px, auto);
+    }
+}
