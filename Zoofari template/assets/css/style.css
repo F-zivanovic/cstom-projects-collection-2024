@@ -350,4 +350,59 @@ header {
       .price-content .price-card .card-content button {
         margin-top: 25px; }
 
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px; }
+  @media (max-width: 992px) {
+    .services-header {
+      flex-direction: column; } }
+  .services-header article {
+    flex: 1; }
+  .services-header .services-contact {
+    background-color: #2EB872;
+    padding: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    color: #F3F4F5; }
+    .services-header .services-contact i {
+      font-size: 3rem; }
+    .services-header .services-contact .contact-info h3 {
+      color: #F3F4F5;
+      font-size: 2rem; }
+.services-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0px; }
+  @media (max-width: 992px) {
+    .services-content {
+      justify-content: center; } }
+  .services-content .services-item {
+    flex: 0 0 22%;
+    margin-top: 20px; }
+    @media (max-width: 992px) {
+      .services-content .services-item {
+        flex: 0 0 47%; } }
+    @media (max-width: 768px) {
+      .services-content .services-item {
+        flex: 0 0 90%; } }
+    .services-content .services-item img {
+      width: 80px; }
+      @media (max-width: 576px) {
+        .services-content .services-item img {
+          width: 60px; } }
+    .services-content .services-item h4 {
+      margin: 10px 0px;
+      font-size: 1.4rem; }
+
 /*# sourceMappingURL=style.css.map */
