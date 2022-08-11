@@ -1,0 +1,46 @@
+.numbers {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../../assets/img/hedaer-bg2.jpg');
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+
+    &-wrapper {
+        @include flex(space-between, center, row, wrap);
+
+        @include breakpoint(992px) {
+            justify-content: center;
+        }
+
+        .numbers-item {
+            flex: 0 0 22%;
+
+            @include breakpoint(992px) {
+                flex: 0 0 47%;
+                margin-top: 20px;
+            }
+
+            @include breakpoint(576px) {
+                flex: 0 0 90%;
+            }
+
+            I {
+                color: $primaryColor;
+                font-size: 3rem;
+            }
+
+            .counter {
+                font-weight: 700;
+                font-size: 2.5rem;
+                margin: 10px 0px;
+                color: $light;
+            }
+
+            P {
+                color: $light;
+                font-weight: 500;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
