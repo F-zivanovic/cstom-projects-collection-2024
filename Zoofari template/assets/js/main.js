@@ -60,3 +60,26 @@ function reset() {
     counters.forEach((counter) => (counter.innerHTML = '0'));
 }
 
+
+// Video section
+let videoPlayer = {
+    play: document.querySelector("#play"),
+    stop:document.querySelector("#stop"),
+    video:  document.querySelector('video'),
+    init: function(){
+        videoPlayer.play.addEventListener('click', videoPlayer.playVideo);
+        videoPlayer.stop.addEventListener('click', videoPlayer.stopVideo);
+    },
+    playVideo: function(){
+        videoPlayer.video.play();
+    },
+
+    stopVideo: function(){
+        videoPlayer.video.pause();
+    }
+}
+
+videoPlayer.init();
+
+
+
