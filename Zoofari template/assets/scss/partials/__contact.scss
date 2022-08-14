@@ -1,0 +1,68 @@
+.contact{
+    @include flex(space-between, center, row, wrap);
+
+    @include breakpoint(992px){
+        justify-content: center;
+    }
+    
+    &-item{
+        flex: 0 0 47%; 
+
+        @include breakpoint(992px){
+           flex: 0 0 70%;
+        }
+
+        @include breakpoint(576px){
+            flex: 0 0 90%;
+         }
+
+        form{
+            @include flex(center, flex-start, column); 
+
+            .input-group{
+              @include flex(space-between,center);
+              width: 100%;
+
+                input{
+                    width: 48%;
+                }
+            }
+
+            .form-input{
+                background-color: $light;
+                padding: 15px;
+                margin-top: 15px;
+
+                @include breakpoint(576px){
+                    font-size: 0.9rem;
+                    padding: 10px;
+                }
+            }
+
+            textarea{
+                width: 100%;
+                background-color: $light;
+                margin-top: 15px;
+                height: 150px;
+                padding: 15px;
+            }
+
+            button[type="submit"]{
+                margin-top: 15px;
+            }
+        }
+
+        .map{
+            height: 500px;
+            width: 100%;
+
+           @include breakpoint(768px){
+            display: none;
+           }
+
+            @include breakpoint(992px){
+            margin-top: 20px;
+            }
+        }
+    }
+}
