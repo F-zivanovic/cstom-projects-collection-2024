@@ -64,22 +64,45 @@ function reset() {
 // Video section
 let videoPlayer = {
     play: document.querySelector("#play"),
-    stop:document.querySelector("#stop"),
-    video:  document.querySelector('video'),
-    init: function(){
+    stop: document.querySelector("#stop"),
+    video: document.querySelector('video'),
+    init: function () {
         videoPlayer.play.addEventListener('click', videoPlayer.playVideo);
         videoPlayer.stop.addEventListener('click', videoPlayer.stopVideo);
     },
-    playVideo: function(){
+    playVideo: function () {
         videoPlayer.video.play();
     },
 
-    stopVideo: function(){
+    stopVideo: function () {
         videoPlayer.video.pause();
     }
 }
 
 videoPlayer.init();
+
+
+// Validate form
+let submitBtn = document.getElementById('sendForm');
+submitBtn.addEventListener('click', validateForm);
+
+function validateForm() {
+
+    let formElements = document.querySelectorAll('.form-input');
+    let message = document.querySelector('.form-messages');
+
+    formElements.forEach((element) => {
+
+        if (element.value == null || element.value == "") {
+            message.innerText = '* Please fill up all fields in form';
+            return false;
+        }
+
+        else {
+            message.innerText = 'The form was sent successfully';;
+        }
+    });
+}
 
 
 

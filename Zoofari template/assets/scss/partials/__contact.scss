@@ -1,45 +1,54 @@
-.contact{
+.contact {
     @include flex(space-between, center, row, wrap);
 
-    @include breakpoint(992px){
+    @include breakpoint(992px) {
         justify-content: center;
     }
-    
-    &-item{
-        flex: 0 0 47%; 
 
-        @include breakpoint(992px){
-           flex: 0 0 70%;
+    &-item {
+        flex: 0 0 47%;
+
+        @include breakpoint(992px) {
+            flex: 0 0 70%;
         }
 
-        @include breakpoint(576px){
+        @include breakpoint(576px) {
             flex: 0 0 90%;
-         }
+        }
 
-        form{
-            @include flex(center, flex-start, column); 
+        form {
+            @include flex(center, flex-start, column);
 
-            .input-group{
-              @include flex(space-between,center);
-              width: 100%;
+            .input-group {
+                @include flex(space-between, center);
+                width: 100%;
 
-                input{
+                @include breakpoint(576px) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                input {
                     width: 48%;
+
+                    @include breakpoint(576px) {
+                        width: 100%;
+                    }
                 }
             }
 
-            .form-input{
+            .form-input {
                 background-color: $light;
                 padding: 15px;
                 margin-top: 15px;
 
-                @include breakpoint(576px){
-                    font-size: 0.9rem;
+                @include breakpoint(576px) {
+                    font-size: 0.8rem;
                     padding: 10px;
                 }
             }
 
-            textarea{
+            textarea {
                 width: 100%;
                 background-color: $light;
                 margin-top: 15px;
@@ -47,21 +56,26 @@
                 padding: 15px;
             }
 
-            button[type="submit"]{
+            button[type="submit"] {
+                margin-top: 15px;
+            }
+
+            .form-messages {
+                text-transform: uppercase;
                 margin-top: 15px;
             }
         }
 
-        .map{
+        .map {
             height: 500px;
             width: 100%;
 
-           @include breakpoint(768px){
-            display: none;
-           }
+            @include breakpoint(768px) {
+                display: none;
+            }
 
-            @include breakpoint(992px){
-            margin-top: 20px;
+            @include breakpoint(992px) {
+                margin-top: 20px;
             }
         }
     }

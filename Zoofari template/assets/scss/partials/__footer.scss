@@ -1,5 +1,5 @@
 footer {
-    background-color: #182434;
+    background-color: $dark;
     color: $whiteColor;
 
     .footer-wrapper {
@@ -24,12 +24,12 @@ footer {
 
             .logo {
                 @include flex(flex-start, center);
-    
+
                 img {
                     width: 50px;
                 }
 
-                h1{
+                h1 {
                     color: $primaryColor;
                     margin-left: 10px;
                 }
@@ -65,7 +65,7 @@ footer {
             &:nth-child(3) {
 
                 li {
-            
+
                     &:not(:first-child) {
                         margin-top: 15px;
                     }
@@ -74,10 +74,10 @@ footer {
                         margin-right: 10px;
                     }
 
-                    a{
+                    a {
                         color: $light;
 
-                        &:hover{
+                        &:hover {
                             color: $primaryColor;
                         }
                     }
