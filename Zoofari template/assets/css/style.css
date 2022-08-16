@@ -1,6 +1,35 @@
 /*----------------------------------------
 EXTERNAL FILES
 ----------------------------------------*/
+@keyframes fadeBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); }
+  20% {
+    opacity: 0;
+    transform: translateY(-20px); }
+  30% {
+    opacity: 1;
+    transform: translateY(0); }
+  50% {
+    opacity: 0;
+    transform: translateY(-20px); }
+  70% {
+    opacity: 1;
+    transform: translateY(0); }
+  80% {
+    opacity: 0;
+    transform: translateY(-20px); }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px); } }
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(140px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
 /*----------------------------------------
 PARTIALS
 ----------------------------------------*/
@@ -205,7 +234,8 @@ header {
     header .header-content h3 {
       color: #F3F4F5;
       margin-bottom: 15px;
-      font-size: 2.5rem; }
+      font-size: 2.5rem;
+      animation: fadeInUp 0.5s ease-in-out; }
       @media (max-width: 576px) {
         header .header-content h3 {
           font-size: 1.8rem; } }
@@ -216,7 +246,9 @@ header {
       align-items: center;
       flex-direction: row;
       flex-wrap: nowrap;
-      gap: 0px; }
+      gap: 0px;
+      animation: fadeInUp 0.5s ease-in-out 0.2s;
+      animation-fill-mode: both; }
       header .header-content .header-social a {
         width: 45px;
         height: 45px;
@@ -230,6 +262,9 @@ header {
         header .header-content .header-social a:hover {
           border: 2px solid #F3F4F5;
           color: #F3F4F5; }
+    header .header-content a {
+      animation: fadeInUp 0.5s ease-in-out 0.4s;
+      animation-fill-mode: both; }
   header .header-corner {
     position: absolute;
     top: auto;
@@ -237,7 +272,17 @@ header {
     bottom: 15px;
     left: auto;
     width: auto;
-    height: auto; }
+    height: auto;
+    animation: fadeInUp 0.5s ease-in-out 0.2s;
+    animation-fill-mode: both; }
+  header .header-arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeBounce 2s infinite; }
+    header .header-arrow i {
+      font-size: 3rem;
+      cursor: auto; }
 
 .about {
   display: flex;
