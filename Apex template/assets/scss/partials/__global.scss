@@ -45,26 +45,36 @@ img {
     width: 100%;
 }
 
-button {
-    background-color: $primaryColor;
-    border-color: $primaryColor;
+.cta{
+    position: relative;
+    border: 2px solid $primaryColor;
     padding: 15px 35px;
     transition: $transition;
     cursor: pointer;
-    color: $whiteColor;
+    color: $primaryColor;
     font-weight: 700;
     font-size: 1.1rem;
-    display: inline-block;
+    z-index: 400;
+    background: transparent;
 
-    &:hover {
-        transition: $transition-out;
-        background: transparent;
-        color: $primaryColor;
+    &:hover{
+        color: $whiteColor;
     }
 
     @include breakpoints(576px) {
         padding: 10px 25px;
         font-size: 1rem;
+    }
+
+    &:hover >div{
+      width: 100%;
+      transition: $transition;
+    }
+
+    div{ 
+        @include positioning(absolute, 0px, auto, 0px, 0px, 0%)  ; 
+        background-color: $primaryColor;
+        z-index: -3;
     }
 }
 
@@ -114,9 +124,17 @@ p {
     opacity: 0;
     transform: translateX(-100%);
     transition: $transition-out;
+    background: $primaryColor;
+    color: $whiteColor;
+    cursor: pointer;
+
+    &:hover{
+        background: transparent;
+        color: $primaryColor;
+    }
 
     &.animated {
         opacity: 1;
-        transform: translate(0)
+        transform: translate(0);
     }
 }
