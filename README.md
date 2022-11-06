@@ -7,6 +7,7 @@ These free templates are compatible with any device and screen size with grid an
 - Zoofari template - <a href="https://f-zivanovic.github.io/Template-Collection-2022/Zoofari%20template/">Live preview</a>
 - Builderz template - <a href="https://f-zivanovic.github.io/Template-Collection-2022/Builderz%20template/">Live preview</a>
 - Apex template - <a href="https://f-zivanovic.github.io/Template-Collection-2022/Apex%20template/">Live preview</a>
+- Construction template - <a href="https://f-zivanovic.github.io/Template-Collection-2022/Construction%20Template/">Live preview</a>
 
 ## Key features
 - Valid HTML5 and CSS3
