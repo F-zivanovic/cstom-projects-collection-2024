@@ -1,0 +1,62 @@
+.projects {
+    background-color: $black;
+
+    .section-title {
+        color: $white;
+        margin-bottom: 1.5rem;
+    }
+
+    &-wrapper {
+        @include grid(25rem);
+
+        @media(max-width:576px) {
+            @include grid(20rem);
+        }
+
+        .projects-item {
+            cursor: pointer;
+
+            &:hover img {
+                transform: scale(1.2);
+            }
+
+            .projects-img {
+                height: 30rem;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .projects-content {
+                display: flex;
+                justify-content: space-between;
+                background-color: $white;
+
+                .info {
+                    padding: 1rem;
+
+                    h3 {
+                        @include titleText(1.5rem, .7rem, 1rem);
+                    }
+
+                    p {
+                        @include graphText();
+                    }
+                }
+
+                i {
+                    cursor: pointer;
+                    background-color: $yellow;
+                    width: 5rem;
+                    line-height: 5.5rem;
+                    text-align: center;
+                    font-size: 2rem;
+                    color: $white;
+                }
+            }
+        }
+    }
+}

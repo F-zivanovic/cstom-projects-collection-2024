@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Template</title>
+
+    <!-- Font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Light gallery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+    <!-- Swiper cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <!-- Custom CSS link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+
+    <!-- Nav section starts-->
+    <nav>
+        <div class="nav-wrapper container">
+            <a href="index.html" class="logo">We<span>Build</span></a>
+            <ul>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </ul>
+            <div class="nav-icons">
+                <div id="menu-btn" class="fa-sharp fa-solid fa-bars"></div>
+                <div id="info-btn" class="fa-sharp fa-solid fa-circle-info"></div>
+                <div id="search-btn" class="fa-solid fa-magnifying-glass"></div>
+                <div id="login-btn" class="fa-solid fa-user"></div>
+            </div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" placeholder="search here...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+
+        <form action="" class="login-form">
+            <h3>Login form</h3>
+            <input type="email" placeholder="enter your email" class="form-control">
+            <input type="password" placeholder="enter your password" class="form-control">
+            <div class="form-flex">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+                <a href="#">forgot password</a>
+            </div>
+            <input type="submit" value="Login Now" class="btn">
+            <p>Do not have an account <span>Register now</span></p>
+        </form>
+
+        <div class="contact-info">
+            <div class="contact-info-box">
+
+                <i class="fas fa-times close"></i>
+
+                <article class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <h4>Phone number</h4>
+                    <p>+321 123 123</p>
+                </article>
+                <article class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email address</h4>
+                    <p>info@gmail.com</p>
+                </article>
+                <article class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Office address</h4>
+                    <p>Anonimna, BB</p>
+                </article>
+                <article class="contact-social">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </article>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav section ends -->
+
+
+    <!-- Home section starts -->
+    <section class="home" id="home">
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide" style="background:url('assets/img/home-slide-1.jpg') no-repeat;">
+                    <div class="content">
+                        <h3>we provide best service</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur beatae iusto pariatur
+                            laborum magnam eos!</p>
+                        <a href="#about" class="btn">get started</a>
+                    </div>
+                </div>
+                <div class="swiper-slide slide" style="background:url('assets/img/home-slide-2.jpg') no-repeat;">
+                    <div class="content">
+                        <h3>making dream come to life</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur beatae iusto pariatur
+                            laborum magnam eos!</p>
+                        <a href="#about" class="btn">get started</a>
+                    </div>>
+                </div>
+                <div class="swiper-slide slide" style="background:url('assets/img/home-slide-3.jpg') no-repeat;">
+                    <div class="content">
+                        <h3>from concept to creation</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur beatae iusto pariatur
+                            laborum magnam eos!</p>
+                        <a href="#about" class="btn">get started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    <!-- Home section ends -->
+
+
+    <!-- About section starts -->
+    <section class="about container" id="about">
+        <h3 class="section-title">about us</h3>
+        <div class="about-wrapper">
+            <div class="about-video">
+                <video src="assets/img/about-vid.mp4" loop muted autoplay></video>
+            </div>
+            <div class="about-content">
+                <h3>We will provide you the best work which you dreamt for!</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas et vero mollitia nemo corporis
+                    consequatur aspernatur distinctio dignissimos velit nam.</p>
+                <a href="#services" class="btn">read more</a>
+            </div>
+        </div>
+        <div class="about-number">
+            <div class="number-item">
+                <h3>10+</h3>
+                <p>years of experince</p>
+            </div>
+            <div class="number-item">
+                <h3>1550+</h3>
+                <p>project completyed</p>
+            </div>
+            <div class="number-item">
+                <h3>700+</h3>
+                <p>satisfied clients</p>
+            </div>
+            <div class="number-item">
+                <h3>450+</h3>
+                <p>active worker</p>
+            </div>
+        </div>
+    </section>
+    <!-- About section end -->
+
+
+    <!-- Services section starts -->
+    <section class="services " id="services">
+        <h3 class="section-title container">our services</h3>
+        <div class="services-wrapper container">
+            <div class="services-item">
+                <img src="assets/img/service-1.png" alt="">
+                <h3>building construction</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, necessitatibus.</p>
+            </div>
+
+            <div class="services-item">
+                <img src="assets/img/service-2.png" alt="">
+                <h3>house renovation</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, necessitatibus.</p>
+            </div>
+
+            <div class="services-item">
+                <img src="assets/img/service-3.png" alt="">
+                <h3>architechture design</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, necessitatibus.</p>
+            </div>
+
+            <div class="services-item">
+                <img src="assets/img/service-4.png" alt="">
+                <h3>material supply</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, necessitatibus.</p>
+            </div>
+
+            <div class="services-item">
+                <img src="assets/img/service-5.png" alt="">
+                <h3>construction consultant</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, necessitatibus.</p>
+            </div>
+
+            <div class="services-item">
+                <img src="assets/img/service-6.png" alt="">
+                <h3>interior design</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, necessitatibus.</p>
+            </div>
+
+            <div class="services-item">
+                <img src="assets/img/service-7.png" alt="">
+                <h3>building maintenance</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, necessitatibus.</p>
+            </div>
+
+            <div class="services-item">
+                <img src="assets/img/service-8.png" alt="">
+                <h3>building renovation</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, necessitatibus.</p>
+            </div>
+
+        </div>
+    </section>
+    <!-- Services section end -->
+
+
+    <!-- Projects section starts -->
+    <section class="projects" id="projects">
+        <h3 class="section-title container">our projetcs</h3>
+        <div class="projects-wrapper container">
+            <a href="assets/img/project-1.jpg" class="projects-item">
+                <div class="projects-img">
+                    <img src="assets/img/project-1.jpg" alt="projects img">
+                </div>
+                <div class="projects-content">
+                    <div class="info">
+                        <h3>dream home</h3>
+                        <p>construction, design</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </a>
+
+            <a href="assets/img/project-2.jpg" class="projects-item">
+                <div class="projects-img">
+                    <img src="assets/img/project-2.jpg" alt="projects img">
+                </div>
+                <div class="projects-content">
+                    <div class="info">
+                        <h3>dream home</h3>
+                        <p>construction, design</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </a>
+
+            <a href="assets/img/project-3.jpg" class="projects-item">
+                <div class="projects-img">
+                    <img src="assets/img/project-3.jpg" alt="projects img">
+                </div>
+                <div class="projects-content">
+                    <div class="info">
+                        <h3>dream home</h3>
+                        <p>construction, design</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </a>
+
+            <a href="assets/img/project-4.jpg" class="projects-item">
+                <div class="projects-img">
+                    <img src="assets/img/project-4.jpg" alt="projects img">
+                </div>
+                <div class="projects-content">
+                    <div class="info">
+                        <h3>dream home</h3>
+                        <p>construction, design</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </a>
+
+            <a href="assets/img/project-5.jpg" class="projects-item">
+                <div class="projects-img">
+                    <img src="assets/img/project-5.jpg" alt="projects img">
+                </div>
+                <div class="projects-content">
+                    <div class="info">
+                        <h3>dream home</h3>
+                        <p>construction, design</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </a>
+
+            <a href="assets/img/project-6.jpg" class="projects-item">
+                <div class="projects-img">
+                    <img src="assets/img/project-6.jpg" alt="projects img">
+                </div>
+                <div class="projects-content">
+                    <div class="info">
+                        <h3>dream home</h3>
+                        <p>construction, design</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- Projects section ends -->
+
+
+    <!-- Reviews section starts -->
+    <section class="reviews container">
+        <h3 class="section-title">clients reviews</h3>
+
+        <div class="swiper reviews-slider">
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis unde suscipit quis consequuntur,
+                        tempora corporis ex molestias dignissimos in cumque sunt ducimus voluptate inventore harum earum
+                        rem aperiam vel modi?</p>
+                    <div class="user">
+                        <img src="assets/img/pic-1.png" alt="">
+                        <div class="info">
+                            <h3>john deo</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis unde suscipit quis consequuntur,
+                        tempora corporis ex molestias dignissimos in cumque sunt ducimus voluptate inventore harum earum
+                        rem aperiam vel modi?</p>
+                    <div class="user">
+                        <img src="assets/img/pic-2.png" alt="">
+                        <div class="info">
+                            <h3>john deo</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis unde suscipit quis consequuntur,
+                        tempora corporis ex molestias dignissimos in cumque sunt ducimus voluptate inventore harum earum
+                        rem aperiam vel modi?</p>
+                    <div class="user">
+                        <img src="assets/img/pic-3.png" alt="">
+                        <div class="info">
+                            <h3>john deo</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis unde suscipit quis consequuntur,
+                        tempora corporis ex molestias dignissimos in cumque sunt ducimus voluptate inventore harum earum
+                        rem aperiam vel modi?</p>
+                    <div class="user">
+                        <img src="assets/img/pic-4.png" alt="">
+                        <div class="info">
+                            <h3>john deo</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis unde suscipit quis consequuntur,
+                        tempora corporis ex molestias dignissimos in cumque sunt ducimus voluptate inventore harum earum
+                        rem aperiam vel modi?</p>
+                    <div class="user">
+                        <img src="assets/img/pic-5.png" alt="">
+                        <div class="info">
+                            <h3>john deo</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis unde suscipit quis consequuntur,
+                        tempora corporis ex molestias dignissimos in cumque sunt ducimus voluptate inventore harum earum
+                        rem aperiam vel modi?</p>
+                    <div class="user">
+                        <img src="assets/img/pic-6.png" alt="">
+                        <div class="info">
+                            <h3>john deo</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Reviews section ends -->
+
+
+    <!-- Pricing section starts -->
+    <section class="pricing " id="pricing">
+        <h3 class="section-title container">our pricing</h3>
+        <div class="pricing-wrapper container">
+            <div class="pricing-item">
+                <i class="fas fa-home"></i>
+                <h3>basic plan</h3>
+                <div class="price"><span>$</span>250<span>/mo</span></div>
+                <div class="list">
+                    <p>interior design</p>
+                    <p>refurbishment</p>
+                    <p>material supply</p>
+                    <p>maintenance</p>
+                    <p>24/7 support</p>
+                </div>
+                <a href="#" class="btn">choose plan</a>
+            </div>
+
+            <div class="pricing-item">
+                <i class="fas fa-building"></i>
+                <h3>premium plan</h3>
+                <div class="price"><span>$</span>650<span>/mo</span></div>
+                <div class="list">
+                    <p>interior design</p>
+                    <p>refurbishment</p>
+                    <p>material supply</p>
+                    <p>maintenance</p>
+                    <p>24/7 support</p>
+                </div>
+                <a href="#" class="btn">choose plan</a>
+            </div>
+
+            <div class="pricing-item">
+                <i class="fas fa-city"></i>
+                <h3>ultimate plan</h3>
+                <div class="price"><span>$</span>1250<span>/mo</span></div>
+                <div class="list">
+                    <p>interior design</p>
+                    <p>refurbishment</p>
+                    <p>material supply</p>
+                    <p>maintenance</p>
+                    <p>24/7 support</p>
+                </div>
+                <a href="#" class="btn">choose plan</a>
+            </div>
+
+        </div>
+    </section>
+    <!-- Pricing section end -->
+
+
+    <!-- Contact section starts -->
+    <section class="contact " id="contact">
+
+        <div class="section-title container">contact us</div>
+
+        <div class="contact-wrapper container">
+
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15076.89592087332!2d72.8319697277345!3d19.14167056419224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1641716772852!5m2!1sen!2sin"
+                allowfullscreen="" loading="lazy"></iframe>
+
+            <form action="" method="">
+                <h3>get in touch</h3>
+                <input type="text" placeholder="name" class="form-component">
+                <input type="email" placeholder="email" class="form-component">
+                <input type="number" placeholder="phone" class="form-component">
+                <textarea name="" placeholder="message" class="form-component" id="" cols="30" rows="10"></textarea>
+                <input type="submit" value="send message" class="btn">
+            </form>
+        </div>
+    </section>
+    <!-- Contact section ends -->
+
+
+
+    <!-- Clients logo section starts -->
+    <section class="logo container">
+        <div class="swiper logo-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide"><img src="assets/img/client-logo-1.png" alt="client logo"></div>
+                <div class="swiper-slide slide"><img src="assets/img/client-logo-2.png" alt="client logo"></div>
+                <div class="swiper-slide slide"><img src="assets/img/client-logo-3.png" alt="client logo"></div>
+                <div class="swiper-slide slide"><img src="assets/img/client-logo-4.png" alt="client logo"></div>
+                <div class="swiper-slide slide"><img src="assets/img/client-logo-5.png" alt="client logo"></div>
+                <div class="swiper-slide slide"><img src="assets/img/client-logo-6.png" alt="client logo"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Clients logo section ends -->
+
+
+    <!-- footer section starts  -->
+
+    <footer>
+
+        <div class="footer-wrapper container">
+            <article class="footer-item">
+                <h4>Get In Touch</h4>
+                <ul>
+                    <li><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</li>
+                    <li><i class="fa fa-phone-alt"></i>+012 345 67890</li>
+                    <li><i class="fa fa-envelope"></i>info@example.com</li>
+                </ul>
+                <div class="footer-social">
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-linkedin-in"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div>
+            </article>
+            <article class="footer-item">
+                <h4>Popular Links</h4>
+                <div class="footer-links">
+                    <a href="#home"><i class="fas fa-arrow-right"></i>Home</a>
+                    <a href="#about"><i class="fas fa-arrow-right"></i>About</a>
+                    <a href="#contact"><i class="fas fa-arrow-right"></i>Contact</a>
+                    <a href="#services"><i class="fas fa-arrow-right"></i>Serivces</a>
+                    <a href="#projects"><i class="fas fa-arrow-right"></i>Projects</a>
+                    <a href="#pricing"><i class="fas fa-arrow-right"></i>Pricing</a>
+                </div>
+            </article>
+            <article class="footer-item">
+                <h4>Useful Links</h4>
+                <div class="footer-links">
+                    <a href=""><i class="fas fa-arrow-right"></i>About us</a>
+                    <a href=""><i class="fas fa-arrow-right"></i>Contact us</a>
+                    <a href=""><i class="fas fa-arrow-right"></i>Serivce ours</a>
+                    <a href=""><i class="fas fa-arrow-right"></i>Pricing plans</a>
+                    <a href=""><i class="fas fa-arrow-right"></i>Pricing plans</a>
+                </div>
+            </article>
+            <article class="footer-item">
+                <h4>Newsletter</h4>
+                <form action="" method="">
+                    <input type="text" placeholder="Full Name" class="footer-input">
+                    <input type="email" placeholder="Email" class="footer-input">
+                    <input type="submit" value="Submit" class="btn">
+                </form>
+            </article>
+        </div>
+
+    </footer>
+
+    <!-- footer section ends -->
+
+
+
+    <!-- Light gallery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Custom JS file link -->
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        lightGallery(document.querySelector('.projects .projects-wrapper'));
+    </script>
+</body>
+
+</html>

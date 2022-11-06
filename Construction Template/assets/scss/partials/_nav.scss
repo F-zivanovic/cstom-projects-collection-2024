@@ -1,0 +1,263 @@
+nav {
+    @include positioning(sticky, 0, 0, auto, 0);
+    box-shadow: $box-shadow;
+    padding: 1.5rem 0rem;
+    z-index: 999;
+    background-color: $white;
+
+    .nav-wrapper {
+        @include flex(space-between);
+
+        @media(max-width:450px) {
+            flex-direction: column;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: $black;
+            text-transform: capitalize;
+
+            span {
+                color: $yellow;
+            }
+        }
+
+        ul {
+            @media(max-width: 992px) {
+                @include positioning(absolute, 99%, 0, auto, 0);
+                padding: 20px;
+                border-top: $border;
+                border-bottom: $border;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                background-color: $white;
+
+                &.active {
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                }
+            }
+
+            a {
+                color: $black;
+
+                &:hover {
+                    color: $yellow;
+                }
+
+                &:not(:last-child) {
+                    margin-right: .7rem;
+                }
+
+                @media(max-width:992px) {
+                    display: block;
+
+                    &:not(:last-child) {
+                        margin-bottom: .7rem;
+                    }
+                }
+            }
+        }
+
+        .nav-icons {
+
+            &>div {
+                @include iconBox();
+
+                &:not(:last-child) {
+                    margin-bottom: .7px;
+                }
+            }
+
+            #menu-btn {
+                display: none;
+
+                @media(max-width: 992px) {
+                    display: inline-block;
+                }
+            }
+        }
+
+    }
+
+    .search-form {
+        @include positioning(absolute, 120%, auto, auto, 50%);
+        transform: translateX(-50%);
+        box-shadow: $box-shadow;
+        margin-bottom: .7px;
+        width: 500px;
+        display: flex;
+        align-items: center;
+        display: none;
+        animation: fadeIn .2s linear;
+        background: $white;
+
+        &.active {
+            display: flex;
+        }
+
+        @media(max-width:576px) {
+            width: 80%;
+        }
+
+        input {
+            background-color: $light-bg;
+            padding: 1rem;
+            width: 100%;
+            color: $light-color;
+            font-size: 1.1rem;
+
+            @media(max-width:576px) {
+                padding: 10px;
+            }
+        }
+
+        i {
+            font-size: 2rem;
+            margin-left: .7rem;
+            cursor: pointer;
+
+            &:hover {
+                color: $yellow;
+            }
+        }
+    }
+
+    .login-form {
+        @include positioning(absolute, 140%, auto, auto, 50%);
+        transform: translateX(-50%);
+        border: $border;
+        padding: 1rem;
+        width: 350px;
+        @include flex(center, center, column);
+        text-align: center;
+        background-color: $white;
+        display: none;
+
+        @media(max-width:576px) {
+            width: 80%;
+        }
+
+        &.active {
+            display: block;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .form-control {
+            margin-bottom: 1rem;
+            background: $light-bg;
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+        }
+
+
+        .form-flex {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            margin: .7rem 0rem;
+
+            label {
+                color: var(--light-color);
+                cursor: pointer;
+            }
+
+            a {
+                font-size: 1rem;
+                font-weight: 600;
+                color: $black;
+
+                &:hover {
+                    color: $yellow;
+                }
+            }
+        }
+
+        .btn {
+            width: 100%;
+        }
+
+        P {
+            margin-top: 1rem;
+
+            span {
+                color: $yellow;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .contact-info {
+        @include positioning(fixed, 0, 0, 0, 0);
+        background: rgba(0, 0, 0, .5);
+        display: none;
+
+        &.active {
+            display: block;
+            box-shadow: 0 0 0 100vw rgba(0, 0, 0, .7);
+        }
+
+        .contact-info-box {
+            @include positioning(fixed, 0, 0, 0);
+            width: 450px;
+            background: $white;
+            text-align: center;
+            z-index: 1000;
+            @include flex(center, center, column nowrap);
+
+            @media(max-width:768px) {
+                width: 350px;
+            }
+
+            @media(max-width:576px) {
+                width: 200px;
+            }
+
+            &>i {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                font-size: 2.5rem;
+                cursor: pointer;
+
+                &:hover {
+                    transform: rotate(360deg);
+                }
+            }
+
+            article {
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+
+                i {
+                    @include iconBox();
+                }
+
+                h4 {
+                    font-size: 1.3rem;
+                    margin: .7rem;
+
+                    @media(max-width:576px) {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+
+            .contact-social {
+                border-top: $border;
+                width: 100%;
+
+                a {
+                    @include iconBox();
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+    }
+}

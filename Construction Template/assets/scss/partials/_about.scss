@@ -1,0 +1,47 @@
+.about {
+
+    .about-wrapper {
+        @include flex(flex-start, center, row wrap, 2rem);
+
+        .about-video {
+            flex: 1 1 30rem;
+
+            video {
+                width: 100%;
+            }
+        }
+
+        .about-content {
+            flex: 1 1 30rem;
+
+            h3 {
+                @include titleText();
+            }
+
+            p {
+                @include graphText(1rem);
+                padding-bottom: 1rem;
+            }
+        }
+    }
+
+    .about-number {
+        margin-top: 3rem;
+        @include grid(14rem);
+        gap: 2rem;
+
+        .number-item {
+            padding: 2rem 3rem;
+            text-align: center;
+            background-color: $light-bg;
+
+            h3 {
+                @include titleText(2rem, 1rem, 1.8rem);
+            }
+
+            p {
+                @include graphText(1rem);
+            }
+        }
+    }
+}

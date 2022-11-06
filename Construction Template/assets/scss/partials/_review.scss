@@ -1,0 +1,30 @@
+.reviews {
+
+    p {
+        background-color: $light-bg;
+        padding: 1rem 1.5rem;
+        @include graphText();
+        margin-bottom: 1.5rem;
+    }
+
+    .user {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+            width: 6rem;
+            height: 6rem
+        }
+
+        h3 {
+            @include titleText(1.2rem, 1rem, 1rem);
+        }
+
+        .stars {
+            i {
+                color: $yellow;
+            }
+        }
+    }
+}

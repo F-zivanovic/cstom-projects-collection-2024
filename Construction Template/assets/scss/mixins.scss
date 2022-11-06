@@ -1,0 +1,60 @@
+@mixin flex($justify: center, $align: center, $flow: row wrap, $gap: 0px) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-flow: $flow;
+    gap: $gap;
+}
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 2rem;
+}
+
+@mixin positioning($position, $top: auto, $right: auto, $bottom: auto, $left: auto) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin graphText($graphSize: 1rem) {
+    font-size: $graphSize;
+    color: $light-color;
+    line-height: 1.5;
+
+    @media(max-width:576px) {
+        font-size: 1rem;
+    }
+}
+
+@mixin titleText($titleSize: 2.5rem, $marginBottom: 1rem, $titleSize1: 2rem) {
+    font-size: $titleSize;
+    margin-bottom: $marginBottom;
+    color: $black;
+    text-transform: capitalize;
+
+    @media(max-width:576px) {
+        font-size: $titleSize1;
+    }
+}
+
+@mixin iconBox($height: 3rem, $width: 3rem, $lineHeight: 3rem, $borderRadius: 0px, $fontSize: 1.1rem) {
+    height: $height;
+    width: $width;
+    line-height: $lineHeight;
+    border-radius: $borderRadius;
+    font-size: $fontSize;
+    text-align: center;
+    cursor: pointer;
+    background: $light-bg;
+    color: $black;
+
+    &:hover {
+        background: $black;
+        color: $white;
+    }
+
+}

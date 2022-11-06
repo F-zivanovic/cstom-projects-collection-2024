@@ -1,0 +1,73 @@
+.home {
+    padding: 0px;
+
+    .slide {
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-size: cover !important;
+        background-position: center !important;
+        padding: 0 10%;
+
+        @media(max-width:768px) {
+            justify-content: center;
+        }
+
+        &::before {
+            content: '';
+            @include positioning(absolute, 0, auto, auto, 0);
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, $white, transparent);
+        }
+
+        .content {
+            width: 45rem;
+            position: relative;
+
+            @media(max-width:768px) {
+                text-align: center;
+            }
+
+            h3 {
+                font-size: 4rem;
+                text-transform: uppercase;
+
+                @media(max-width:768px) {
+                    font-size: 3rem;
+                }
+
+                @media(max-width:576px) {
+                    font-size: 2rem;
+                }
+            }
+
+            p {
+                @include graphText(1.3rem);
+                padding: 1rem 0;
+            }
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        @include positioning(absolute, auto, 0, 0, auto);
+        @include iconBox(5rem, 5rem, 5rem, 0px);
+        background-color: $white;
+
+        &:hover {
+            background-color: $yellow;
+        }
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 2rem;
+        color: $black;
+    }
+
+    .swiper-button-prev {
+        right: 5rem;
+    }
+}

@@ -1,0 +1,53 @@
+.contact {
+
+    background-color: $black;
+
+    .section-title {
+        margin-bottom: 1.5rem;
+        color: $white;
+    }
+
+    .contact-wrapper {
+        @include flex(flex-start, center, row wrap, 3rem);
+
+        .map {
+            height: 25rem;
+            flex: 1 1 41rem;
+            width: 100%;
+
+            @media(max-width:576px) {
+                height: 15rem;
+            }
+        }
+
+        form {
+            flex: 1 1 41rem;
+            background-color: $white;
+            padding: 2rem;
+
+            h3 {
+                @include titleText(2rem);
+            }
+
+            .form-component {
+                display: block;
+                border-bottom: $border;
+                width: 100%;
+                margin-bottom: 1rem;
+                padding: 1rem 1.5rem;
+                color: $light-color;
+                text-transform: capitalize;
+                font-size: 1.1rem;
+
+                &:focus {
+                    border-bottom-color: $yellow;
+                }
+            }
+
+            textarea {
+                resize: none;
+                height: 10rem;
+            }
+        }
+    }
+}

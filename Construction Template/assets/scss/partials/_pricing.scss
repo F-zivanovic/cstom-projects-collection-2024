@@ -1,0 +1,67 @@
+.pricing {
+
+    background-color: $light-bg;
+
+    .section-title {
+        margin-bottom: 1.5rem;
+    }
+
+    .pricing-wrapper {
+        @include grid(30rem);
+
+        @media(max-width:1250px) {
+            @include grid(20rem)
+        }
+
+        @media(max-width:992px) {
+            @include grid(30rem)
+        }
+
+        @media(max-width:400px) {
+            @include grid(20rem)
+        }
+
+        .pricing-item {
+            background-color: $white;
+            padding: 2rem;
+            text-align: center;
+            border: $border;
+            box-shadow: $box-shadow;
+
+            i {
+                @include iconBox(5rem, 5rem, 5rem, 5rem, 2rem);
+                background-color: $yellow;
+                margin-bottom: 1.5rem;
+            }
+
+            h3 {
+                @include titleText(1.5rem, 1.5rem, 1.5rem);
+                font-weight: 400;
+            }
+
+            .price {
+                margin-bottom: 1rem;
+                @include graphText(2.5rem);
+                color: $black;
+                letter-spacing: 1.5px;
+
+                @media(max-width:576px) {
+                    font-size: 2rem;
+                }
+
+                span {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .list {
+
+                p {
+                    margin-bottom: 1rem;
+                    @include graphText();
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,41 @@
+/*----------------------------------
+Google fonts
+----------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+
+
+/*----------------------------------
+External files
+----------------------------------*/
+@import 'variables';
+@import 'mixins';
+
+
+/*----------------------------------
+Partials
+----------------------------------*/
+@import 'partials/default';
+@import 'partials/nav';
+@import 'partials/home';
+@import 'partials/about';
+@import 'partials/services';
+@import 'partials/projects';
+@import 'partials/review';
+@import 'partials/pricing';
+@import 'partials/contact';
+@import 'partials/clients';
+@import 'partials/footer';
+
+
+
+/*----------------------------------
+Animation
+----------------------------------*/
+@keyframes fadeIn {
+
+    0% {
+        top: 50%;
+        opacity: 0;
+    }
+}
