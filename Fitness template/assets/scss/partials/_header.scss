@@ -1,0 +1,67 @@
+header {
+
+    @include position(fixed, 0, 0, auto, 0);
+    padding: 2rem 0;
+
+    .header-content {
+        @include flex(space-between);
+
+        .logo {
+            @include text(2rem, $secondaryColor, 0, 600, uppercase, 1.8rem);
+
+            span {
+                color: $white;
+
+                &:hover {
+                    color: $secondaryColor;
+                }
+            }
+        }
+
+        nav {
+
+            &.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+
+            a {
+                padding: 1rem 1.5rem;
+                display: inline-block;
+                @include text(1.2rem, $white, 0);
+
+                @include breakpoints(992px) {
+                    display: block;
+                }
+
+                &:hover {
+                    background-color: $secondaryColor;
+                }
+            }
+
+            @include breakpoints(992px) {
+                @include position(absolute, 100%, 0, auto, 0);
+                background-color: $light-bg;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            }
+        }
+
+        #menu-btn {
+            color: $white;
+            font-size: 2rem;
+            cursor: pointer;
+            display: none;
+
+            &.fa-times {
+                transform: rotate(180deg);
+            }
+
+            @include breakpoints(992px) {
+                display: block;
+            }
+
+            @include breakpoints(576px) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

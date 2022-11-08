@@ -20,10 +20,11 @@
     left: $left;
 }
 
-@mixin text($textSize, $color, $margin, $textWeight: 400, $textSize1: 1rem) {
+@mixin text($textSize, $color, $margin: 0, $textWeight: 400, $textTransform: capitalize, $textSize1: 1rem) {
     font-size: $textSize;
     color: $color;
     margin: $margin;
+    text-transform: $textTransform;
     font-weight: $textWeight;
 
     @media(max-width:576px) {
