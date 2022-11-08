@@ -9,3 +9,21 @@ menuBtn.onclick = () => {
 menuBtn.addEventListener('click', () => {
     nav.classList.toggle('active');
 });
+
+window.onscroll = () => {
+    menuBtn.classList.remove('fa-times');
+    nav.classList.remove('active');
+}
+
+// Home swiper
+var swiper = new Swiper(".home-slider", {
+    spaceBetween: 20,
+    effect: "fade",
+    grabCursor: true,
+    loop: true,
+    centeredSlides: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
