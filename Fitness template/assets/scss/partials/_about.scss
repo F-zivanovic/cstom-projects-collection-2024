@@ -1,0 +1,85 @@
+.about {
+    @include flex(flex-start, center, row wrap, 8rem);
+
+    @include breakpoints(992px) {
+        gap: 4rem;
+    }
+
+    &-img {
+        flex: 1 1 41rem;
+        position: relative;
+
+        @include breakpoints(576px) {
+            order: 2;
+        }
+
+        img {
+            padding: 1.5rem;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            z-index: -1;
+            background: $secondaryColor;
+            width: 10rem;
+            height: 10rem;
+
+            @include breakpoints(576px) {
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+
+        &::before {
+            top: 0;
+            left: 0;
+        }
+
+        &::after {
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    &-content {
+        flex: 1 1 41rem;
+
+        span {
+            @include text(1.5rem, $secondaryColor);
+        }
+
+        &>h3 {
+            @include text(2.5rem, $white, 1rem 0, 500, capitalize, 1.5rem);
+
+        }
+
+        &>p {
+            color: $light-white;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-wrapper {
+            @include flex(flex-start, center, row wrap, 2rem);
+
+            article {
+                margin-bottom: 1rem;
+                flex: 1 1 10rem;
+
+                h3 {
+                    @include text(1.5rem, $white, 0 0 1rem 0, 500);
+
+                    i {
+                        margin-right: .7rem;
+                        color: $secondaryColor;
+                    }
+                }
+
+                P {
+                    color: $light-white;
+                }
+            }
+        }
+    }
+}

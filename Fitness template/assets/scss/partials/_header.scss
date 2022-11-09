@@ -1,5 +1,5 @@
 header {
-
+    background-color: $primaryColor;
     @include position(fixed, 0, 0, auto, 0);
     padding: 2rem 0;
     z-index: 10000;

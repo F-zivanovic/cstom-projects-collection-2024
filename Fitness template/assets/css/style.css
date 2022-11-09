@@ -21,7 +21,8 @@ Google fonts link
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
-  font-family: 'Popins', sans-serif; }
+  font-family: 'Popins', sans-serif;
+  line-height: 1.5; }
   html::-webkit-scrollbar {
     width: 1rem; }
   html::-webkit-scrollbar-track {
@@ -46,6 +47,10 @@ h4,
 h5,
 h6 {
   text-transform: capitalize; }
+
+img {
+  width: 100%;
+  vertical-align: middle; }
 
 .container {
   width: 80%;
@@ -92,6 +97,7 @@ h6 {
         font-size: 2rem; } }
 
 header {
+  background-color: #000;
   position: fixed;
   top: 0;
   right: 0;
@@ -198,5 +204,86 @@ header {
     border-radius: 0; }
     .home .swiper-pagination-bullet.swiper-pagination-bullet-active {
       background: #f00; }
+
+.about {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+  gap: 8rem; }
+  @media (max-width: 992px) {
+    .about {
+      gap: 4rem; } }
+  .about-img {
+    flex: 1 1 41rem;
+    position: relative; }
+    @media (max-width: 576px) {
+      .about-img {
+        order: 2; } }
+    .about-img img {
+      padding: 1.5rem; }
+    .about-img::before, .about-img::after {
+      position: absolute;
+      content: "";
+      z-index: -1;
+      background: #f00;
+      width: 10rem;
+      height: 10rem; }
+      @media (max-width: 576px) {
+        .about-img::before, .about-img::after {
+          width: 5rem;
+          height: 5rem; } }
+    .about-img::before {
+      top: 0;
+      left: 0; }
+    .about-img::after {
+      bottom: 0;
+      right: 0; }
+  .about-content {
+    flex: 1 1 41rem; }
+    .about-content span {
+      font-size: 1.5rem;
+      color: #f00;
+      margin: 0;
+      text-transform: capitalize;
+      font-weight: 400; }
+      @media (max-width: 576px) {
+        .about-content span {
+          font-size: 1rem; } }
+    .about-content > h3 {
+      font-size: 2.5rem;
+      color: #fff;
+      margin: 1rem 0;
+      text-transform: capitalize;
+      font-weight: 500; }
+      @media (max-width: 576px) {
+        .about-content > h3 {
+          font-size: 1.5rem; } }
+    .about-content > p {
+      color: #aaa;
+      margin-bottom: 1.5rem; }
+    .about-content .about-wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-flow: row wrap;
+      gap: 2rem; }
+      .about-content .about-wrapper article {
+        margin-bottom: 1rem;
+        flex: 1 1 10rem; }
+        .about-content .about-wrapper article h3 {
+          font-size: 1.5rem;
+          color: #fff;
+          margin: 0 0 1rem 0;
+          text-transform: capitalize;
+          font-weight: 500; }
+          @media (max-width: 576px) {
+            .about-content .about-wrapper article h3 {
+              font-size: 1rem; } }
+          .about-content .about-wrapper article h3 i {
+            margin-right: .7rem;
+            color: #f00; }
+        .about-content .about-wrapper article P {
+          color: #aaa; }
 
 /*# sourceMappingURL=style.css.map */
