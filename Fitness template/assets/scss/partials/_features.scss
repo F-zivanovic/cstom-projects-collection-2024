@@ -1,0 +1,63 @@
+.features {
+
+    &-wrapper {
+        @include flex(flex-start, center, row wrap);
+
+        .features-item {
+            flex: 1 1 20rem;
+
+            &:hover>.feature-img>img {
+                transform: scale(1.2);
+            }
+
+            .feature-img {
+                overflow: hidden;
+                height: 21rem;
+
+                @include breakpoints(576px) {
+                    height: 15rem;
+                }
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .feature-content {
+                background-color: $light-bg;
+                text-align: center;
+                padding: 1.5rem;
+                color: $white;
+
+                img {
+                    height: 5rem;
+                    width: auto;
+                    margin-top: 1rem;
+                    filter: invert(1);
+
+                    @include breakpoints(576px) {
+                        height: 3rem;
+                    }
+                }
+
+                h3 {
+                    @include text(1.5rem, $secondaryColor, 1rem 0);
+                }
+
+                P {
+                    color: $light-white;
+                }
+            }
+
+            &.second {
+                display: flex;
+                flex-direction: column-reverse;
+
+                @include breakpoints(992px) {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
