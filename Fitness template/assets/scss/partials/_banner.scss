@@ -1,0 +1,23 @@
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../../assets/img/banner-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+
+    span {
+        @include text(1.5rem, $secondaryColor);
+    }
+
+    h3 {
+        @include text(2.5rem, $white, .7rem 0, 600, uppercase, 1.5rem);
+    }
+
+    P {
+        color: $light-white;
+        line-height: 2;
+        max-width: 40rem;
+        margin: auto;
+    }
+}

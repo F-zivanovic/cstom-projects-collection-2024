@@ -438,4 +438,35 @@ header {
           .trainers-wrapper article .trainers-content .trainers-share a:hover {
             color: #f00; }
 
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../assets/img/banner-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center; }
+  .banner span {
+    font-size: 1.5rem;
+    color: #f00;
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: 400; }
+    @media (max-width: 576px) {
+      .banner span {
+        font-size: 1rem; } }
+  .banner h3 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin: 0.7rem 0;
+    text-transform: uppercase;
+    font-weight: 600; }
+    @media (max-width: 576px) {
+      .banner h3 {
+        font-size: 1.5rem; } }
+  .banner P {
+    color: #aaa;
+    line-height: 2;
+    max-width: 40rem;
+    margin: auto; }
+
 /*# sourceMappingURL=style.css.map */
