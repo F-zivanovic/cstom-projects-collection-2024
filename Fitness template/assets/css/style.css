@@ -392,4 +392,48 @@ header {
       color: #aaa;
       margin-bottom: 1.5rem; }
 
+.trainers-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem; }
+  @media (max-width: 400px) {
+    .trainers-wrapper {
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); } }
+  .trainers-wrapper article {
+    height: 30rem;
+    position: relative;
+    overflow: hidden; }
+    .trainers-wrapper article:hover > .trainers-content {
+      transform: translateY(0); }
+    .trainers-wrapper article img {
+      height: 100%;
+      object-fit: cover; }
+    .trainers-wrapper article .trainers-content {
+      position: absolute;
+      top: auto;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #111;
+      padding: 1rem;
+      transform: translateY(55px); }
+      .trainers-wrapper article .trainers-content h4 {
+        color: #f00; }
+      .trainers-wrapper article .trainers-content h3 {
+        margin: .7rem 0; }
+      .trainers-wrapper article .trainers-content .trainers-share {
+        border-top: 0.1rem solid #aaa;
+        margin-top: 1rem; }
+        .trainers-wrapper article .trainers-content .trainers-share a {
+          font-size: 1.3rem;
+          color: #fff;
+          margin: 0.8rem 0.9rem 0 0;
+          text-transform: capitalize;
+          font-weight: 400; }
+          @media (max-width: 576px) {
+            .trainers-wrapper article .trainers-content .trainers-share a {
+              font-size: 1rem; } }
+          .trainers-wrapper article .trainers-content .trainers-share a:hover {
+            color: #f00; }
+
 /*# sourceMappingURL=style.css.map */

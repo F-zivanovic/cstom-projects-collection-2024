@@ -1,0 +1,53 @@
+.trainers {
+
+    &-wrapper {
+        @include grid(20rem);
+
+        @include breakpoints(400px) {
+            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        }
+
+        article {
+            height: 30rem;
+            position: relative;
+            overflow: hidden;
+
+            &:hover>.trainers-content {
+                transform: translateY(0);
+            }
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .trainers-content {
+                @include position(absolute, auto, 0, 0, 0);
+                background-color: $light-bg;
+                padding: 1rem;
+                transform: translateY(55px);
+
+                h4 {
+                    color: $secondaryColor;
+                }
+
+                h3 {
+                    margin: .7rem 0;
+                }
+
+                .trainers-share {
+                    border-top: .1rem solid $light-white;
+                    margin-top: 1rem;
+
+                    a {
+                        @include text(1.3rem, $white, .8rem .9rem 0 0);
+
+                        &:hover {
+                            color: $secondaryColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
