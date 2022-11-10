@@ -561,4 +561,56 @@ header {
     .blog-slide .blog-content P {
       color: #aaa; }
 
+footer {
+  padding: 70px 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem; }
+  @media (max-width: 400px) {
+    footer {
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); } }
+  footer .footer-item h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 0 0.9rem 0;
+    text-transform: capitalize;
+    font-weight: 600; }
+    @media (max-width: 576px) {
+      footer .footer-item h3 {
+        font-size: 1rem; } }
+  footer .footer-item .links {
+    display: block;
+    text-transform: capitalize;
+    color: #aaa;
+    margin-bottom: .8rem; }
+    footer .footer-item .links:hover {
+      color: #f00; }
+  footer .footer-item p {
+    color: #aaa;
+    margin-bottom: .8rem; }
+    footer .footer-item p span {
+      color: #f00;
+      font-style: italic; }
+    footer .footer-item p i {
+      color: #f00;
+      margin: 0 .5rem; }
+  footer .footer-item .footer-social a {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    background-color: #111;
+    color: #fff;
+    margin-right: .6rem; }
+    footer .footer-item .footer-social a:hover {
+      background-color: #f00; }
+  footer .footer-item form input[type="text"] {
+    margin-bottom: 1rem;
+    width: 100%;
+    background: #111;
+    padding: 1rem;
+    color: #fff;
+    text-transform: none; }
+
 /*# sourceMappingURL=style.css.map */
