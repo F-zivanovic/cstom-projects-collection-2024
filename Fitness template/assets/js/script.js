@@ -27,3 +27,23 @@ var swiper = new Swiper(".home-slider", {
         clickable: true,
     },
 });
+
+
+// Reviews swiper
+var swiper = new Swiper(".reviews-slider", {
+    spaceBetween: 20,
+    grabCursor: true,
+    loop: true,
+    autoplay: {
+        delay: 7500,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+    },
+});

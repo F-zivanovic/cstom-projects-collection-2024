@@ -1,0 +1,67 @@
+.reviews {
+    @include flex(flex-start, center, row wrap, 2rem);
+
+    &-info {
+        flex: 1 1 30rem;
+
+        span {
+            @include text(1.5rem, $secondaryColor);
+        }
+
+        h3 {
+            @include text(2.5rem, $white, 1rem 0, 500, capitalize, 1.5rem);
+        }
+
+        P {
+            @include text(1rem, $light-white, 0 0 1rem 0);
+            line-height: 2;
+        }
+    }
+
+    &-slider {
+        flex: 1 1 60rem;
+
+        .reviews-slide {
+            background: linear-gradient(130deg, $light-bg 93%, transparent 90%);
+            padding: 1.5rem;
+
+            p {
+                color: $light-white;
+                margin-bottom: 1rem;
+            }
+
+            .user {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                img {
+                    width: 5rem;
+                    height: 5rem;
+                    border-radius: 50%;
+
+                    @include breakpoints(576px) {
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                }
+
+                &-info {
+                    h3 {
+                        font-size: 1.4rem;
+
+                        @include breakpoints(576px) {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    P {
+                        color: $secondaryColor;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
+
+}
