@@ -1,0 +1,59 @@
+.pricing {
+    @include grid(20rem);
+
+    @include breakpoints(400px) {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+
+    i {
+        margin-right: .7rem;
+        color: $secondaryColor;
+    }
+
+    .pricing-info {
+
+        span {
+            @include text(1.5rem, $secondaryColor);
+        }
+
+        h3 {
+            @include text(2.5rem, $white, 1rem 0, 500, capitalize, 1.5rem);
+        }
+
+        P {
+            color: $light-white;
+            margin-bottom: 1rem;
+            text-transform: capitalize;
+        }
+    }
+
+    .pricing-item {
+        padding: 1.5rem;
+        text-align: center;
+
+        &.basic {
+            background: linear-gradient(130deg, $light-bg 93%, transparent 90%);
+        }
+
+        h4 {
+            font-size: 1.5rem;
+        }
+
+        &>p {
+            @include text(1.5rem, $white, 1rem 0, 500);
+
+            span {
+                color: $secondaryColor;
+                font-size: 2.5rem;
+            }
+        }
+
+        .list {
+
+            P {
+                color: $light-white;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}

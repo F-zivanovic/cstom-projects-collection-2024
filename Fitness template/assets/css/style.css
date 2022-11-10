@@ -22,7 +22,8 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   font-family: 'Popins', sans-serif;
-  line-height: 1.5; }
+  line-height: 1.5;
+  color: #fff; }
   html::-webkit-scrollbar {
     width: 1rem; }
   html::-webkit-scrollbar-track {
@@ -335,5 +336,60 @@ header {
       @media (max-width: 992px) {
         .features-wrapper .features-item.second {
           flex-direction: column; } }
+
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem; }
+  @media (max-width: 400px) {
+    .pricing {
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); } }
+  .pricing i {
+    margin-right: .7rem;
+    color: #f00; }
+  .pricing .pricing-info span {
+    font-size: 1.5rem;
+    color: #f00;
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: 400; }
+    @media (max-width: 576px) {
+      .pricing .pricing-info span {
+        font-size: 1rem; } }
+  .pricing .pricing-info h3 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin: 1rem 0;
+    text-transform: capitalize;
+    font-weight: 500; }
+    @media (max-width: 576px) {
+      .pricing .pricing-info h3 {
+        font-size: 1.5rem; } }
+  .pricing .pricing-info P {
+    color: #aaa;
+    margin-bottom: 1rem;
+    text-transform: capitalize; }
+  .pricing .pricing-item {
+    padding: 1.5rem;
+    text-align: center; }
+    .pricing .pricing-item.basic {
+      background: linear-gradient(130deg, #111 93%, transparent 90%); }
+    .pricing .pricing-item h4 {
+      font-size: 1.5rem; }
+    .pricing .pricing-item > p {
+      font-size: 1.5rem;
+      color: #fff;
+      margin: 1rem 0;
+      text-transform: capitalize;
+      font-weight: 500; }
+      @media (max-width: 576px) {
+        .pricing .pricing-item > p {
+          font-size: 1rem; } }
+      .pricing .pricing-item > p span {
+        color: #f00;
+        font-size: 2.5rem; }
+    .pricing .pricing-item .list P {
+      color: #aaa;
+      margin-bottom: 1.5rem; }
 
 /*# sourceMappingURL=style.css.map */
