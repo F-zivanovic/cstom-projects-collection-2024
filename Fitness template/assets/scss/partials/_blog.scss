@@ -1,0 +1,47 @@
+.blog {
+
+    &-slide {
+        margin-bottom: 3rem;
+
+        &:hover>.blog-img>img {
+            transform: scale(1.2);
+        }
+
+        .blog-img {
+            overflow: hidden;
+            height: 20rem;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+            background-color: $light-bg;
+
+            @include breakpoints(576px) {
+                padding: 1rem;
+            }
+
+            div {
+                span {
+                    color: $secondaryColor;
+                }
+            }
+
+            h3 {
+                margin: 1rem 0;
+                font-size: 1.3rem;
+
+                @include breakpoints(576px) {
+                    font-size: 1rem;
+                }
+            }
+
+            P {
+                color: $light-white;
+            }
+        }
+    }
+}
