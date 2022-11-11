@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    text-decoration: none;
+    transition: all 0.4s linear;
+    border: none;
+    outline: none;
+}
+
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    color: $white;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+      }
+      
+    &::-webkit-scrollbar-track {
+        background: #111;
+      }
+      
+    &::-webkit-scrollbar-thumb {
+        background: #29d9d5;
+        border-radius: 5rem;
+      } 
+}
+
+body{
+    background-color: $black;
+    color: #aaa;
+    font-size: 100%;
+
+    @include breakpoints(576px) {
+        font-size: 70%;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: capitalize;
+}
+
+section {
+    padding: 70px 0px;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+.section-title{
+    font-size: 1.2rem;
+    color: $primaryColor;
+    text-transform: capitalize;
+}
+
+.section-subtitle{
+    font-size: 2rem;
+    color: $white;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    color: $primaryColor;
+    border: 0.2rem solid $primaryColor;
+    border-radius: 5rem;
+    cursor: pointer;
+    background: none;
+
+    &:hover{
+        background: #29d9d5;
+        color: $black; 
+    }
+
+    @include breakpoints(576px){
+        font-size: 0.9rem;
+        padding: 1rem 1.3rem;
+    }
+}
+  
