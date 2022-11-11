@@ -1,0 +1,29 @@
+/*----------------------------------
+Google fonts link
+----------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+
+/*----------------------------------
+External files
+----------------------------------*/
+@import 'variables';
+@import 'mixins';
+
+
+
+/*----------------------------------
+Partials
+----------------------------------*/
+@import 'partials/default';
+@import 'partials/nav';
+@import 'partials/home';
+@import 'partials/about';
+@import 'partials/booking';
+@import 'partials/destination';
+@import 'partials/services';
+@import 'partials/gallery';
+@import 'partials/review';
+@import 'partials/blog';
+@import 'partials/banner';
+@import 'partials/footer';
