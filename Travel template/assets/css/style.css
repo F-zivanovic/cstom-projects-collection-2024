@@ -75,13 +75,14 @@ img {
 .btn {
   margin-top: 1rem;
   display: inline-block;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
+  padding: .8rem 2rem;
+  font-size: 1rem;
   color: #29d9d5;
   border: 0.2rem solid #29d9d5;
   border-radius: 5rem;
   cursor: pointer;
-  background: none; }
+  background: none;
+  text-transform: capitalize; }
   .btn:hover {
     background: #29d9d5;
     color: #111; }
@@ -89,5 +90,73 @@ img {
     .btn {
       font-size: 0.9rem;
       padding: 1rem 1.3rem; } }
+
+.nav {
+  background-color: #222;
+  padding: 1.2rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 0; }
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
+    gap: 0; }
+    .nav-wrapper .nav-hamburger {
+      font-size: 2.5rem;
+      color: #fff;
+      cursor: pointer;
+      display: none; }
+      @media (max-width: 992px) {
+        .nav-wrapper .nav-hamburger {
+          display: block; } }
+      @media (max-width: 576px) {
+        .nav-wrapper .nav-hamburger {
+          font-size: 2rem; } }
+    .nav-wrapper .nav-logo {
+      font-size: 2rem;
+      color: #fff;
+      margin: 0;
+      text-transform: capitalize;
+      font-weight: 600; }
+      @media (max-width: 576px) {
+        .nav-wrapper .nav-logo {
+          font-size: 1.5rem; } }
+      .nav-wrapper .nav-logo i {
+        margin-right: .5rem;
+        color: #29d9d5; }
+    .nav-wrapper .nav-list {
+      display: flex;
+      align-items: center; }
+      @media (max-width: 992px) {
+        .nav-wrapper .nav-list {
+          position: absolute;
+          top: 100%;
+          right: 0;
+          bottom: auto;
+          left: 0;
+          background-color: #222;
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          padding-left: 10%;
+          flex-direction: column;
+          align-items: flex-start; } }
+      .nav-wrapper .nav-list.show {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+      .nav-wrapper .nav-list li:not(:last-child) {
+        margin-right: 1rem; }
+      @media (max-width: 992px) {
+        .nav-wrapper .nav-list li {
+          margin-bottom: 1rem; } }
+      .nav-wrapper .nav-list li a {
+        color: #fff;
+        text-transform: capitalize; }
+        .nav-wrapper .nav-list li a:hover {
+          color: #29d9d5; }
+    @media (max-width: 576px) {
+      .nav-wrapper .btn {
+        display: none; } }
 
 /*# sourceMappingURL=style.css.map */

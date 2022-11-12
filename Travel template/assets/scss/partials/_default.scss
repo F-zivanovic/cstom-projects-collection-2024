@@ -82,13 +82,14 @@ img {
 .btn {
     margin-top: 1rem;
     display: inline-block;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
+    padding: .8rem 2rem;
+    font-size: 1rem;
     color: $primaryColor;
     border: 0.2rem solid $primaryColor;
     border-radius: 5rem;
     cursor: pointer;
     background: none;
+    text-transform: capitalize;
 
     &:hover{
         background: #29d9d5;
