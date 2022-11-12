@@ -205,4 +205,33 @@ img {
         .home-content p {
           max-width: 90%; } }
 
+.booking {
+  background-color: #222;
+  padding: 1rem;
+  margin-top: -4rem;
+  border-radius: 1rem; }
+  .booking form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-flow: row wrap;
+    gap: 2rem; }
+    .booking form div {
+      flex: 1 1 10rem; }
+      .booking form div label {
+        display: block;
+        margin-bottom: .8rem;
+        text-transform: capitalize; }
+      .booking form div .form-input {
+        width: 100%;
+        border: 1px solid #29d9d5;
+        border-radius: 5rem;
+        background: transparent;
+        padding: 1rem;
+        color: #fff; }
+        .booking form div .form-input::placeholder {
+          color: #fff; }
+    .booking form .btn {
+      flex: 1 1 10rem; }
+
 /*# sourceMappingURL=style.css.map */
