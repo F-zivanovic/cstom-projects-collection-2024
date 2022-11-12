@@ -1,0 +1,43 @@
+.home{
+    background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('../../assets/img/home-bg.jpg') no-repeat center/cover;
+    height: 80vh;
+    border-radius: 1rem;
+    @include flex(center,center, column nowrap);
+    text-align: center;
+    margin: 7rem 5% 0 5%;
+
+    &-content{
+        @include flex(center,center, column nowrap);
+
+        span{
+            @include text(3rem, transparent, 0, 600, capitalize, 1.8rem);
+            -webkit-text-stroke: 0.1rem #fff;
+        }
+
+        h3{
+            font-size: 5rem;
+            color: #fff;
+
+            @include breakpoints(992px){
+                font-size: 3.5rem;
+            }
+
+            @include breakpoints(992px){
+                font-size: 2.5rem;
+            }
+
+            @include breakpoints(400px){
+                font-size: 1.5rem;
+            }
+        }
+
+        p{
+            max-width: 650px;
+            line-height: 2;
+
+            @include breakpoints(576px){
+                max-width: 90%;
+            }
+        }
+    }
+}
