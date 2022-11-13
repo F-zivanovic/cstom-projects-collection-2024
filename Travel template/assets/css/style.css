@@ -488,4 +488,72 @@ img {
       max-width: 650px;
       margin: auto; }
 
+footer {
+  padding: 70px 0; }
+  footer .footer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem; }
+    footer .footer-wrapper .footer-item h3 {
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: .6rem; }
+      @media (max-width: 576px) {
+        footer .footer-wrapper .footer-item h3 {
+          font-size: 1.5rem; } }
+    footer .footer-wrapper .footer-item p {
+      padding: 1rem 0; }
+    footer .footer-wrapper .footer-item i {
+      padding-right: .5rem;
+      color: #29d9d5; }
+    footer .footer-wrapper .footer-item .logo {
+      font-size: 2rem;
+      color: #fff;
+      margin: 0;
+      text-transform: capitalize;
+      font-weight: 600; }
+      @media (max-width: 576px) {
+        footer .footer-wrapper .footer-item .logo {
+          font-size: 1rem; } }
+      footer .footer-wrapper .footer-item .logo i {
+        margin-right: 10px;
+        color: #29d9d5; }
+    footer .footer-wrapper .footer-item .footer-social a {
+      height: 2.5rem;
+      width: 2.5rem;
+      line-height: 2.5rem;
+      border-radius: 50%;
+      border: 0.1rem solid #29d9d5;
+      color: #29d9d5;
+      margin-right: .5rem;
+      text-align: center; }
+      footer .footer-wrapper .footer-item .footer-social a:hover {
+        background-color: #29d9d5;
+        color: #111; }
+    footer .footer-wrapper .footer-item .links {
+      font-size: 1rem;
+      color: #fff;
+      margin: 1rem 0;
+      text-transform: capitalize;
+      font-weight: 400;
+      display: block; }
+      @media (max-width: 576px) {
+        footer .footer-wrapper .footer-item .links {
+          font-size: 1rem; } }
+      footer .footer-wrapper .footer-item .links:hover {
+        padding-left: 20px;
+        color: #29d9d5; }
+    footer .footer-wrapper .footer-item .email {
+      width: 100%;
+      border-radius: 5rem;
+      border: 0.2rem solid #29d9d5;
+      background: none;
+      text-transform: none;
+      color: #fff;
+      margin-bottom: 1rem;
+      padding: 1.2rem 1.4rem; }
+      @media (max-width: 576px) {
+        footer .footer-wrapper .footer-item .email {
+          padding: 1rem; } }
+
 /*# sourceMappingURL=style.css.map */
