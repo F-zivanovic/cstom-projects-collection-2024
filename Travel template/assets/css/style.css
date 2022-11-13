@@ -344,4 +344,23 @@ img {
       max-width: 400px;
       margin: auto; }
 
+.gallery .section-title,
+.gallery .section-subtitle {
+  text-align: center; }
+.gallery-wrapper {
+  columns: 3 15rem; }
+  .gallery-wrapper .gallery-item {
+    border-radius: 1rem;
+    break-inside: avoid;
+    overflow: hidden;
+    margin-bottom: 1.5rem; }
+    .gallery-wrapper .gallery-item .gallery-content {
+      background-color: #222;
+      padding: 1rem; }
+      .gallery-wrapper .gallery-item .gallery-content span {
+        margin-bottom: 1rem; }
+      .gallery-wrapper .gallery-item .gallery-content h3 {
+        font-size: 1.3rem;
+        color: #fff; }
+
 /*# sourceMappingURL=style.css.map */

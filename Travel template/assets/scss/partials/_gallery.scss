@@ -1,0 +1,32 @@
+.gallery {
+
+    .section-title,
+    .section-subtitle {
+        text-align: center;
+    }
+
+    &-wrapper {
+        columns: 3 15rem;
+
+        .gallery-item {
+            border-radius: 1rem;
+            break-inside: avoid;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+
+            .gallery-content {
+                background-color: $secondaryColor;
+                padding: 1rem;
+
+                span {
+                    margin-bottom: 1rem;
+                }
+
+                h3 {
+                    font-size: 1.3rem;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
