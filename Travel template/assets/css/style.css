@@ -410,4 +410,60 @@ img {
           .reviews-item .reviews-wrapper .reviews-box .reviews-user h3 {
             color: #fff; }
 
+.blog-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem; }
+  @media (max-width: 576px) {
+    .blog-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem; } }
+  .blog-wrapper .blog-item {
+    border-radius: 1rem;
+    background-color: #222;
+    overflow: hidden; }
+    .blog-wrapper .blog-item:hover img {
+      transform: scale(1.2); }
+    .blog-wrapper .blog-item .blog-img {
+      height: 20rem;
+      overflow: hidden; }
+      @media (max-width: 576px) {
+        .blog-wrapper .blog-item .blog-img {
+          height: 15rem; } }
+      .blog-wrapper .blog-item .blog-img img {
+        height: 100%; }
+    .blog-wrapper .blog-item .blog-content {
+      padding: 1rem; }
+      .blog-wrapper .blog-item .blog-content > a {
+        font-size: 1.2rem;
+        color: #fff;
+        margin: 0;
+        text-transform: capitalize;
+        font-weight: 400; }
+        @media (max-width: 576px) {
+          .blog-wrapper .blog-item .blog-content > a {
+            font-size: 1rem; } }
+        .blog-wrapper .blog-item .blog-content > a:hover {
+          color: #29d9d5; }
+      .blog-wrapper .blog-item .blog-content P {
+        font-size: 0.9rem;
+        margin: 1rem 0; }
+      .blog-wrapper .blog-item .blog-content .icon {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row nowrap;
+        gap: 0; }
+        .blog-wrapper .blog-item .blog-content .icon a {
+          color: #fff;
+          font-size: 0.9rem; }
+          @media (max-width: 576px) {
+            .blog-wrapper .blog-item .blog-content .icon a {
+              font-size: 0.7rem; } }
+          .blog-wrapper .blog-item .blog-content .icon a:hover {
+            color: #29d9d5; }
+          .blog-wrapper .blog-item .blog-content .icon a i {
+            color: #29d9d5; }
+
 /*# sourceMappingURL=style.css.map */

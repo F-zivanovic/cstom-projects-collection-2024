@@ -1,0 +1,72 @@
+.blog {
+
+    &-wrapper {
+        @include grid(300px);
+
+        @include breakpoints(576px) {
+            @include grid(200px);
+        }
+
+        .blog-item {
+            border-radius: 1rem;
+            background-color: $secondaryColor;
+            overflow: hidden;
+
+            &:hover img {
+                transform: scale(1.2);
+            }
+
+            .blog-img {
+                height: 20rem;
+                overflow: hidden;
+
+                @include breakpoints(576px) {
+                    height: 15rem;
+                }
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .blog-content {
+                padding: 1rem;
+
+                &>a {
+                    @include text(1.2rem, $white);
+
+                    &:hover {
+                        color: $primaryColor;
+                    }
+                }
+
+                P {
+                    font-size: 0.9rem;
+                    margin: 1rem 0;
+                }
+
+                .icon {
+                    @include flex(space-between);
+
+                    a {
+                        color: $white;
+                        font-size: 0.9rem;
+
+                        @include breakpoints(576px) {
+                            font-size: 0.7rem;
+                        }
+
+                        &:hover {
+                            color: $primaryColor;
+                        }
+
+                        i {
+                            color: $primaryColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
