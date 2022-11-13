@@ -10,6 +10,9 @@
     <!-- Font awesome CDN link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+    <!-- AOS - Animations On Scroll CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -21,16 +24,16 @@
     <nav class="nav">
         <div class="nav-wrapper container">
             <div class="fas fa-bars nav-hamburger" id="menu-btn"></div>
-            <a href="index.html" class="nav-logo"> <i class="fas fa-paper-plane"></i>travel </a>
+            <a href="index.html" class="nav-logo" data-aos="zoom-in-left" data-aos-delay="150"> <i class="fas fa-paper-plane"></i>travel </a>
             <ul class="nav-list" id="mobile-menu">
-                <li><a href="#home" class="nav-link">home</a></li>
-                <li><a href="#about" class="nav-link">about</a></li>
-                <li><a href="#destination" class="nav-link">destination</a></li>
-                <li><a href="#services" class="nav-link">services</a></li>
-                <li><a href="#gallery" class="nav-link">gallery</a></li>
-                <li><a href="#blog" class="nav-link">blog</a></li>
+                <li><a href="#home" class="nav-link" data-aos="zoom-in-left" data-aos-delay="150">home</a></li>
+                <li><a href="#about" class="nav-link" data-aos="zoom-in-left" data-aos-delay="300">about</a></li>
+                <li><a href="#destination" class="nav-link" data-aos="zoom-in-left" data-aos-delay="450">destination</a></li>
+                <li><a href="#services" class="nav-link" data-aos="zoom-in-left" data-aos-delay="600">services</a></li>
+                <li><a href="#gallery" class="nav-link" data-aos="zoom-in-left" data-aos-delay="750">gallery</a></li>
+                <li><a href="#blog" class="nav-link" data-aos="zoom-in-left" data-aos-delay="900">blog</a></li>
             </ul>
-            <a href="#book-form" class="btn">book now</a>
+            <a href="#book-form" class="btn" data-aos="zoom-in-left" data-aos-delay="1100">book now</a>
         </div>
     </nav>
     <!-- Nav section ends -->
@@ -39,11 +42,11 @@
     <!-- Home section starts -->
     <section class="home" id="home">
         <div class="home-content">
-            <span>follow us</span>
-            <h3>to the unknown</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quia illum quod perspiciatis
+            <span data-aos="fade-up" data-aos-delay="150">follow us</span>
+            <h3 data-aos="fade-up" data-aos-delay="300">to the unknown</h3>
+            <p data-aos="fade-up" data-aos-delay="400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quia illum quod perspiciatis
                 harum in possimus? Totam consequuntur officia quia?</p>
-            <a href="##book-form" class="btn">book now</a>
+            <a href="##book-form" class="btn" data-aos="fade-up" data-aos-delay="550">book now</a>
         </div>
     </section>
     <!-- Home section ends -->
@@ -52,19 +55,19 @@
     <!-- Booking section starts -->
     <section class="booking container" id="book-form">
         <form action="" method="">
-            <div>
+            <div data-aos="zoom-in" data-aos-delay="150">
                 <label for="place">Where to?</label>
                 <input type="text" id="place" placeholder="place name" class="form-input" required>
             </div>
-            <div>
+            <div data-aos="zoom-in" data-aos-delay="300">
                 <label for="time">When</label>
                 <input type="date" id="time" class="form-input" required>
             </div>
-            <div>
+            <div data-aos="zoom-in" data-aos-delay="450">
                 <label for="number">how many?</label>
                 <input type="text" id="place" placeholder="numbers of travelers" class="form-input" required>
             </div>
-            <input type="submit" class="btn" value="find now">
+            <input type="submit" class="btn" value="find now" data-aos="zoom-in" data-aos-delay="600">
         </form>
 
     </section>
@@ -73,7 +76,7 @@
 
     <!-- About section starts -->
     <section class="about container" id="about">
-        <article class="about-item">
+        <article class="about-item"  data-aos="fade-right" data-aos-delay="300">
             <video src="assets/img/about-vid-1.mp4" loop muted autoplay id="video"> </video>
             <div class="video-controls">
                 <span class="control-btn" data-src="assets/img/about-vid-1.mp4"></span>
@@ -81,7 +84,7 @@
                 <span class="control-btn" data-src="assets/img/about-vid-3.mp4"></span>
             </div>
         </article>
-        <article class="about-item">
+        <article class="about-item"  data-aos="fade-left" data-aos-delay="600">
             <span class="section-title">why choose us?</span>
             <h3 class="section-subtitle">Nature's Majesty Awaits You</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde fugit repellat error deserunt nam aperiam
@@ -97,7 +100,7 @@
         <div class="section-title" style="text-align:center ;">our destination</div>
         <div class="section-subtitle" style="text-align:center ;">Make Yours Destination</div>
         <div class="destination-wrapper">
-            <div class="destination-item">
+            <div class="destination-item" data-aos="fade-up" data-aos-delay="150">
                 <div class="dest-img">
                     <img src="assets/img/des-1.jpg" alt="dest img">
                 </div>
@@ -107,7 +110,7 @@
                     <a href="#">read more <i class="fas fa-angle-right"></i></a>
                 </div>
             </div>
-            <div class="destination-item">
+            <div class="destination-item" data-aos="fade-up" data-aos-delay="150">
                 <div class="dest-img">
                     <img src="assets/img/des-2.jpg" alt="dest img">
                 </div>
@@ -117,7 +120,7 @@
                     <a href="#">read more <i class="fas fa-angle-right"></i></a>
                 </div>
             </div>
-            <div class="destination-item">
+            <div class="destination-item" data-aos="fade-up" data-aos-delay="150">
                 <div class="dest-img">
                     <img src="assets/img/des-3.jpg" alt="dest img">
                 </div>
@@ -127,7 +130,7 @@
                     <a href="#">read more <i class="fas fa-angle-right"></i></a>
                 </div>
             </div>
-            <div class="destination-item">
+            <div class="destination-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="dest-img">
                     <img src="assets/img/des-4.jpg" alt="dest img">
                 </div>
@@ -137,7 +140,7 @@
                     <a href="#">read more <i class="fas fa-angle-right"></i></a>
                 </div>
             </div>
-            <div class="destination-item">
+            <div class="destination-item" data-aos="fade-up" data-aos-delay="450">
                 <div class="dest-img">
                     <img src="assets/img/des-5.jpg" alt="dest img">
                 </div>
@@ -147,7 +150,7 @@
                     <a href="#">read more <i class="fas fa-angle-right"></i></a>
                 </div>
             </div>
-            <div class="destination-item">
+            <div class="destination-item" data-aos="fade-up" data-aos-delay="600">
                 <div class="dest-img">
                     <img src="assets/img/des-6.jpg" alt="dest img">
                 </div>
@@ -157,7 +160,7 @@
                     <a href="#">read more <i class="fas fa-angle-right"></i></a>
                 </div>
             </div>
-            <div class="destination-item">
+            <div class="destination-item" data-aos="fade-up" data-aos-delay="750">
                 <div class="dest-img">
                     <img src="assets/img/des-7.jpg" alt="dest img">
                 </div>
@@ -167,7 +170,7 @@
                     <a href="#">read more <i class="fas fa-angle-right"></i></a>
                 </div>
             </div>
-            <div class="destination-item">
+            <div class="destination-item" data-aos="fade-up" data-aos-delay="900">
                 <div class="dest-img">
                     <img src="assets/img/des-8.jpg" alt="dest img">
                 </div>
@@ -187,32 +190,32 @@
         <div class="section-title" style="text-align:center ;">our services</div>
         <div class="section-subtitle" style="text-align:center ;">countless experincess</div>
         <div class="services-wrapper">
-            <article class="services-item">
+            <article class="services-item" data-aos="zoom-in-up" data-aos-delay="150">
                 <i class="fas fa-globe"></i>
                 <h3>worldwide</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, cumque.</p>
             </article>
-            <article class="services-item">
+            <article class="services-item" data-aos="zoom-in-up" data-aos-delay="300">
                 <i class="fas fa-hiking"></i>
                 <h3>adventures</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, cumque.</p>
             </article>
-            <article class="services-item">
+            <article class="services-item" data-aos="zoom-in-up" data-aos-delay="450">
                 <i class="fas fa-utensils"></i>
                 <h3>food & drinks</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, cumque.</p>
             </article>
-            <article class="services-item">
+            <article class="services-item" data-aos="zoom-in-up" data-aos-delay="600">
                 <i class="fas fa-hotel"></i>
                 <h3>affordable hotels</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, cumque.</p>
             </article>
-            <article class="services-item">
+            <article class="services-item" data-aos="zoom-in-up" data-aos-delay="750">
                 <i class="fas fa-wallet"></i>
                 <h3>affordable price</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, cumque.</p>
             </article>
-            <article class="services-item">
+            <article class="services-item" data-aos="zoom-in-up" data-aos-delay="900">
                 <i class="fas fa-headset"></i>
                 <h3>24/7 support</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, cumque.</p>
@@ -227,63 +230,63 @@
         <div class="section-title">our gallery</div>
         <div class="section-subtitle">we record memories</div>
         <div class="gallery-wrapper">
-            <article class="gallery-item">
+            <article class="gallery-item" data-aos="zoom-in-up" data-aos-delay="150">
                 <img src="assets/img/gallery-img-1.jpg" alt="gallery img">
                 <div class="gallery-content">
                     <span>travel spot</span>
                     <h3>iceland</h3>
                 </div>
             </article>
-            <article class="gallery-item">
+            <article class="gallery-item" data-aos="zoom-in-up" data-aos-delay="150">
                 <img src="assets/img/gallery-img-2.jpg" alt="gallery img">
                 <div class="gallery-content">
                     <span>travel spot</span>
                     <h3>iceland</h3>
                 </div>
             </article>
-            <article class="gallery-item">
+            <article class="gallery-item" data-aos="zoom-in-up" data-aos-delay="150">
                 <img src="assets/img/gallery-img-3.jpg" alt="gallery img">
                 <div class="gallery-content">
                     <span>travel spot</span>
                     <h3>iceland</h3>
                 </div>
             </article>
-            <article class="gallery-item">
+            <article class="gallery-item" data-aos="zoom-in-up" data-aos-delay="300">
                 <img src="assets/img/gallery-img-4.jpg" alt="gallery img">
                 <div class="gallery-content">
                     <span>travel spot</span>
                     <h3>iceland</h3>
                 </div>
             </article>
-            <article class="gallery-item">
+            <article class="gallery-item" data-aos="zoom-in-up" data-aos-delay="450">
                 <img src="assets/img/gallery-img-5.jpg" alt="gallery img">
                 <div class="gallery-content">
                     <span>travel spot</span>
                     <h3>iceland</h3>
                 </div>
             </article>
-            <article class="gallery-item">
+            <article class="gallery-item" data-aos="zoom-in-up" data-aos-delay="600">
                 <img src="assets/img/gallery-img-6.jpg" alt="gallery img">
                 <div class="gallery-content">
                     <span>travel spot</span>
                     <h3>iceland</h3>
                 </div>
             </article>
-            <article class="gallery-item">
+            <article class="gallery-item" data-aos="zoom-in-up" data-aos-delay="750">
                 <img src="assets/img/gallery-img-7.jpg" alt="gallery img">
                 <div class="gallery-content">
                     <span>travel spot</span>
                     <h3>iceland</h3>
                 </div>
             </article>
-            <article class="gallery-item">
+            <article class="gallery-item" data-aos="zoom-in-up" data-aos-delay="900">
                 <img src="assets/img/gallery-img-8.jpg" alt="gallery img">
                 <div class="gallery-content">
                     <span>travel spot</span>
                     <h3>iceland</h3>
                 </div>
             </article>
-            <article class="gallery-item">
+            <article class="gallery-item" data-aos="zoom-in-up" data-aos-delay="1050">
                 <img src="assets/img/gallery-img-9.jpg" alt="gallery img">
                 <div class="gallery-content">
                     <span>travel spot</span>
@@ -297,14 +300,14 @@
 
     <!-- Testimonial section starts -->
     <section class="reviews container">
-        <article class="reviews-item">
+        <article class="reviews-item" data-aos="fade-right" data-aos-delay="300">
             <div class="section-title">testimonial</div>
             <div class="section-subtitle">Good News From Our Clients</div>
             <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Assumenda Laudantium Corporis Fugiat Quae Unde
                 Perspiciatis Similique Ab Modi Enim Consequatur Aperiam Cumque Distinctio Facilis Sit, Debitis Possimus
                 Asperiores Non Harum.</p>
         </article>
-        <article class="reviews-item">
+        <article class="reviews-item" data-aos="fade-left" data-aos-delay="600">
             <div class="reviews-wrapper">
                 <div class="reviews-box">
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, ratione.</p>
@@ -359,7 +362,7 @@
         <div class="section-title" style="text-align: center;">our blog</div>
         <div class="section-subtitle" style="text-align: center;">untold stories</div>
         <div class="blog-wrapper">
-            <article class="blog-item">
+            <article class="blog-item" data-aos="fade-up" data-aos-delay="150">
                 <div class="blog-img">
                     <img src="assets/img/blog-1.jpg" alt="blog img">
                 </div>
@@ -372,7 +375,7 @@
                     </div>
                 </div>
             </article>
-            <article class="blog-item">
+            <article class="blog-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="blog-img">
                     <img src="assets/img/blog-2.jpg" alt="blog img">
                 </div>
@@ -385,7 +388,7 @@
                     </div>
                 </div>
             </article>
-            <article class="blog-item">
+            <article class="blog-item" data-aos="fade-up" data-aos-delay="450">
                 <div class="blog-img">
                     <img src="assets/img/blog-3.jpg" alt="blog img">
                 </div>
@@ -405,7 +408,7 @@
 
     <!-- Banner section starts -->
     <div class="banner">
-        <div class="banner-content container">
+        <div class="banner-content container" data-aos="zoom-in-up" data-aos-delay="300">
             <span>start your adventures</span>
             <h3>Let's Explore This World</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatum praesentium amet quibusdam quam
@@ -421,7 +424,7 @@
     <!-- Footer section starts -->
     <footer class="container">
         <div class="footer-wrapper">
-            <article class="footer-item">
+            <article class="footer-item"  data-aos="fade-up" data-aos-delay="150">
                 <a href="#" class="logo"> <i class="fas fa-paper-plane"></i>travel </a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, ad?</p>
                 <div class="footer-social">
@@ -432,7 +435,7 @@
                 </div>
             </article>
     
-            <article class="footer-item">
+            <article class="footer-item"  data-aos="fade-up" data-aos-delay="300">
                 <h3>quick links</h3>
                 <a href="#home" class="links"> <i class="fas fa-arrow-right"></i> home </a>
                 <a href="#about" class="links"> <i class="fas fa-arrow-right"></i> about </a>
@@ -442,7 +445,7 @@
                 <a href="#blog" class="links"> <i class="fas fa-arrow-right"></i> blog </a>
             </article>
     
-            <article class="footer-item">
+            <article class="footer-item"  data-aos="fade-up" data-aos-delay="400">
                 <h3>contact info</h3>
                 <p> <i class="fas fa-map"></i> beograd, srbija </p>
                 <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
@@ -450,7 +453,7 @@
                 <p> <i class="fas fa-clock"></i> 7:00am - 10:00pm </p>
             </article>
     
-            <article class="footer-item">
+            <article class="footer-item"  data-aos="fade-up" data-aos-delay="550">
                 <h3>newsletter</h3>
                 <p>subscribe for latest updates</p>
                 <form action="" method="">
@@ -464,6 +467,18 @@
 
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
+
+    <!-- AOS - Animations On Scroll JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+
+        AOS.init({
+            duration: 800,
+            offset:150,
+        });
+
+    </script>
 </body>
 
 </html>
