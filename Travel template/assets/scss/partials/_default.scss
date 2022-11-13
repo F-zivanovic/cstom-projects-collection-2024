@@ -64,6 +64,10 @@ img {
     font-size: 1.2rem;
     color: $primaryColor;
     text-transform: capitalize;
+
+    @include breakpoints(576px){
+        font-size: 1.1rem;
+    }
 }
 
 .section-subtitle {
@@ -72,6 +76,10 @@ img {
     text-transform: capitalize;
     margin-bottom: 1.5rem;
     font-weight: 700;
+
+    @include breakpoints(576px){
+        font-size: 1.5rem;
+    }
 }
 
 .container {

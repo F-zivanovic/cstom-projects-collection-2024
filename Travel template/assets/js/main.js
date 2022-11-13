@@ -15,6 +15,11 @@ navLinks.forEach((item) => {
     });
 });
 
+// Close mobile menu when scroll
+window.onscroll = () =>{
+    mobileMenu.classList.remove('show');
+};
+
 
 // Change video in About section
 
