@@ -2,7 +2,7 @@
 let menuBtn = document.getElementById('menu-btn');
 let mobileMenu = document.getElementById('mobile-menu');
 
-menuBtn.addEventListener('click', () =>{
+menuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('show');
 });
 
@@ -10,7 +10,20 @@ menuBtn.addEventListener('click', () =>{
 let navLinks = document.querySelectorAll('.nav-link');
 
 navLinks.forEach((item) => {
-    item.addEventListener('click', () =>{
+    item.addEventListener('click', () => {
         mobileMenu.classList.remove('show');
     });
 });
+
+
+// Change video in About section
+
+let video = document.getElementById('video');
+let controlBtns = document.querySelectorAll('.control-btn');
+
+for (let btn of controlBtns) {
+    btn.addEventListener('click', () => {
+        let src = btn.getAttribute('data-src');
+        video.src = src;
+    })
+}

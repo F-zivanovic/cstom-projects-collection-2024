@@ -1,0 +1,37 @@
+.about {
+    @include flex(flex-start, center, row wrap, 1.5rem);
+
+    &-item {
+        flex: 1 1 25rem;
+
+        video {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 1rem
+        }
+
+        .video-controls {
+            text-align: center;
+
+            span {
+                display: inline-block;
+                height: 1.5rem;
+                width: 1.5rem;
+                border-radius: 50%;
+                background: $white;
+                cursor: pointer;
+                margin: .7rem;
+
+                &:hover {
+                    background-color: $primaryColor;
+                }
+
+                @include breakpoints(576px) {
+                    height: 1rem;
+                    width: 1rem;
+                    margin: .5rem;
+                }
+            }
+        }
+    }
+}

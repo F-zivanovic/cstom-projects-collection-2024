@@ -19,19 +19,19 @@ html {
 
     &::-webkit-scrollbar {
         width: 1rem;
-      }
-      
+    }
+
     &::-webkit-scrollbar-track {
         background: #111;
-      }
-      
+    }
+
     &::-webkit-scrollbar-thumb {
         background: #29d9d5;
         border-radius: 5rem;
-      } 
+    }
 }
 
-body{
+body {
     background-color: $black;
     color: #aaa;
     font-size: 100%;
@@ -60,13 +60,13 @@ img {
     object-fit: cover;
 }
 
-.section-title{
+.section-title {
     font-size: 1.2rem;
     color: $primaryColor;
     text-transform: capitalize;
 }
 
-.section-subtitle{
+.section-subtitle {
     font-size: 2rem;
     color: $white;
     text-transform: capitalize;
@@ -91,14 +91,13 @@ img {
     background: none;
     text-transform: capitalize;
 
-    &:hover{
+    &:hover {
         background: #29d9d5;
-        color: $black; 
+        color: $black;
     }
 
-    @include breakpoints(576px){
+    @include breakpoints(576px) {
         font-size: 0.9rem;
         padding: 1rem 1.3rem;
     }
 }
-  
