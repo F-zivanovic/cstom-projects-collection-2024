@@ -466,4 +466,26 @@ img {
           .blog-wrapper .blog-item .blog-content .icon a i {
             color: #29d9d5; }
 
+.banner {
+  background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url(../../assets/img/banner-bg.jpg) no-repeat top/cover fixed;
+  text-align: center; }
+  .banner-content {
+    padding: 2.5rem 0;
+    text-transform: capitalize; }
+    .banner-content span {
+      color: #29d9d5;
+      font-size: 1.3rem; }
+    .banner-content h3 {
+      font-size: 2rem;
+      color: #fff;
+      margin: 1rem 0;
+      text-transform: capitalize;
+      font-weight: 700; }
+      @media (max-width: 576px) {
+        .banner-content h3 {
+          font-size: 1rem; } }
+    .banner-content P {
+      max-width: 650px;
+      margin: auto; }
+
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,23 @@
+.banner {
+    background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url(../../assets/img/banner-bg.jpg) no-repeat top/cover fixed;
+    text-align: center;
+
+    &-content {
+        padding: 2.5rem 0;
+        text-transform: capitalize;
+
+        span {
+            color: $primaryColor;
+            font-size: 1.3rem;
+        }
+
+        h3 {
+            @include text(2rem, $white, 1rem 0, 700);
+        }
+
+        P {
+            max-width: 650px;
+            margin: auto;
+        }
+    }
+}
