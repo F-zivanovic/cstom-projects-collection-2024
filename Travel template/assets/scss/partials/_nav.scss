@@ -1,76 +1,77 @@
-.nav{
+.nav {
     background-color: $secondaryColor;
     padding: 1.2rem;
     @include position(fixed, 0, 0, auto, 0);
+    z-index: 1000;
 
-    &-wrapper{
+    &-wrapper {
         @include flex(space-between);
 
-        .nav-hamburger{
+        .nav-hamburger {
             font-size: 2.5rem;
             color: $white;
             cursor: pointer;
             display: none;
 
-            @include breakpoints(992px){
+            @include breakpoints(992px) {
                 display: block;
             }
 
-            @include breakpoints(576px){
+            @include breakpoints(576px) {
                 font-size: 2rem;
             }
         }
 
-        .nav-logo{
+        .nav-logo {
             @include text(2rem, $white, 0, 600, capitalize, 1.5rem);
 
-            i{
+            i {
                 margin-right: .5rem;
                 color: $primaryColor;
             }
         }
 
-        .nav-list{
+        .nav-list {
             display: flex;
             align-items: center;
 
-            @include breakpoints(992px){
+            @include breakpoints(992px) {
                 @include position(absolute, 100%, 0, auto, 0);
                 background-color: $secondaryColor;
                 clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-                padding-left: 10%; 
-                flex-direction: column;  
-                align-items: flex-start;         
+                padding-left: 10%;
+                flex-direction: column;
+                align-items: flex-start;
             }
 
-            &.show{
+            &.show {
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             }
 
-            li{
-      
-                &:not(:last-child){
+            li {
+
+                &:not(:last-child) {
                     margin-right: 1rem;
                 }
 
-                @include breakpoints(992px){
+                @include breakpoints(992px) {
                     margin-bottom: 1rem;
                 }
 
-                a{
+                a {
                     color: $white;
                     text-transform: capitalize;
 
-                    &:hover{
+                    &:hover {
                         color: $primaryColor;
                     }
                 }
             }
         }
 
-        .btn{
-            @include breakpoints(576px){
-               display: none;
+        .btn {
+            @include breakpoints(576px) {
+                display: none;
             }
         }
     }

@@ -1,0 +1,56 @@
+.destination {
+
+    &-wrapper {
+        @include grid(300px);
+
+        @include breakpoints(576px) {
+            @include grid(200px);
+        }
+
+        .destination-item {
+            border-radius: 1rem;
+            overflow: hidden;
+            text-align: center;
+
+            &:hover>.dest-img>img {
+                transform: scale(1.2);
+            }
+
+            .dest-img {
+                height: 20rem;
+                overflow: hidden;
+
+                @include breakpoints(576px) {
+                    height: 15rem;
+                }
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .dest-content {
+                background-color: $secondaryColor;
+                padding: 1rem;
+
+                h3 {
+                    @include text(1.2rem, $white, 0, 600);
+                }
+
+                p {
+                    max-width: 280px;
+                    margin: .7rem auto;
+                }
+
+                a {
+                    color: $primaryColor;
+                    text-transform: capitalize;
+
+                    &:hover {
+                        transform: translateX(-20px);
+                    }
+                }
+            }
+        }
+    }
+}
