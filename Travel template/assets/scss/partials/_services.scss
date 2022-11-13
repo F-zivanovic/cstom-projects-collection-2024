@@ -1,0 +1,40 @@
+.services {
+
+    &-wrapper {
+        @include grid(350px);
+
+        @include breakpoints(576px) {
+            @include grid(200px);
+        }
+
+        .services-item {
+            background-color: $secondaryColor;
+            padding: 1rem;
+            text-align: center;
+            border: 0.2rem solid $secondaryColor;
+
+            &:hover {
+                border: 0.2rem solid #29d9d5;
+            }
+
+            i {
+                font-size: 2.5rem;
+                color: $primaryColor;
+
+                @include breakpoints(576px) {
+                    font-size: 2rem;
+
+                }
+            }
+
+            h3 {
+                @include text(1.5rem, $white, 1rem 0, 500);
+            }
+
+            P {
+                max-width: 400px;
+                margin: auto;
+            }
+        }
+    }
+}
