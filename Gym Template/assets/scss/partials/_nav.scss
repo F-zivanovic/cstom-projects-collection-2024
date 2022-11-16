@@ -1,0 +1,109 @@
+.nav {
+    background: transparent;
+    @include position(fixed, 0, 0, auto, 0);
+    z-index: 1000;
+    padding: 2rem 0;
+
+
+    &.bg-nav {
+        background-color: $body-color
+    }
+
+    &__wrapper {
+        @include flex();
+
+        .nav__logo {
+            @include flex(flex-start, center, row nowrap, 1rem);
+            @include text(2rem, $white, 0, 700, uppercase, 1rem);
+
+            @include breakpoints(576px) {
+                gap: .6rem;
+            }
+
+            img {
+                width: 4rem;
+
+                @include breakpoints(576px) {
+                    width: 2rem;
+                }
+            }
+        }
+
+        .nav__menu {
+
+            @include breakpoints(1200px) {
+                @include position(fixed, 0, -100%, 0, auto);
+                border-left: 2px solid $white;
+                width: 40%;
+                background-color: $body-color;
+            }
+
+            .nav__list {
+                display: flex;
+                align-items: center;
+
+                @include breakpoints(1200px) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin: 5rem 0 0 2rem;
+                }
+
+                .nav__item {
+                    margin-right: 2rem;
+
+                    @include breakpoints(1200px) {
+                        margin-bottom: 2.5rem;
+                    }
+
+                    .nav__link {
+                        @include text(1.2rem, $white, 0, 400, capitalize, 1rem);
+
+                        &:hover {
+                            color: $primaryColor;
+                        }
+
+                        &.nav__button {
+                            @include btn($white, $primaryColor);
+                            color: black;
+                        }
+                    }
+                }
+            }
+
+            .nav__close {
+                display: none;
+                @include position(absolute, 1rem, 1.5rem, auto, auto);
+                font-size: 2.5rem;
+
+                @include breakpoints(1200px) {
+                    display: block;
+                }
+
+                @include breakpoints(576px) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            &.show-menu {
+                right: 0%;
+            }
+
+            @include breakpoints(600px) {
+                width: 70%;
+            }
+        }
+
+        .nav__toggle {
+            font-size: 2.5rem;
+            display: none;
+
+            @include breakpoints(1200px) {
+                display: block;
+            }
+
+            @include breakpoints(576px) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
