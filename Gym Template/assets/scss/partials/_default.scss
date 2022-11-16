@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    transition: all .5s linear;
+    list-style-type: none;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    overflow-x: hidden;
+    font-size: 100%;
+    background-color: $body-color;
+    color: $white;
+    line-height: 1.5;
+    font-family: 'Red Hat Display', sans-serif;
+
+    @include breakpoints(576px) {
+        font-size: 70%;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: capitalize;
+    color: hsl(180, 4%, 98%);
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+i {
+    cursor: pointer;
+}
+
+section {
+    padding: 70px 0px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.section__title {
+    font-family: 'Kaushan Script', cursive;
+    letter-spacing: 1.5px;
+    color: $primaryColor;
+    text-transform: capitalize;
+    font-weight: 400;
+    transform: rotate(2deg);
+    font-size: 2rem;
+    text-align: center;
+
+    @include breakpoints(576px) {
+        font-size: 1.6rem;
+    }
+}
+
+.section__subtitle {
+    -webkit-text-stroke: 1px $primaryColor;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: transparent;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin: 1rem 0;
+
+    span {
+        -webkit-text-stroke: 1px $white;
+        color: $white;
+    }
+
+    @include breakpoints(576px) {
+        font-size: 1.8rem;
+    }
+}

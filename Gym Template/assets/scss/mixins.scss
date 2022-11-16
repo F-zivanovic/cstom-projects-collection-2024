@@ -1,0 +1,60 @@
+@mixin flex($justify: space-between, $align: center, $flow: row nowrap, $gap: 0) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-flow: $flow;
+    gap: $gap;
+}
+
+@mixin grid($value) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($value, 1fr));
+    gap: 2rem;
+}
+
+@mixin text($textSize, $color, $margin: 0, $textWeight: 400, $textTransform: capitalize, $textSize1: 1rem) {
+    font-size: $textSize;
+    color: $color;
+    margin: $margin;
+    text-transform: $textTransform;
+    font-weight: $textWeight;
+
+    @media(max-width:576px) {
+        font-size: $textSize1;
+    }
+}
+
+@mixin position($position, $top: auto, $right: auto, $bottom: auto, $left: auto) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin btn($bg, $bg1) {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    background-color: $bg;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+
+    @include breakpoints(576px) {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+
+    &:hover {
+        background-color: $bg1;
+    }
+}
+
+
+@mixin breakpoints($bp) {
+    @media(max-width:$bp) {
+        @content;
+    }
+}
