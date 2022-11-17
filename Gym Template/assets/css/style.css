@@ -342,4 +342,60 @@ section {
       .program__wrapper .program__item .program__btn:hover {
         background-color: #fff; }
 
+.choose__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2rem;
+  align-items: center; }
+  @media (max-width: 450px) {
+    .choose__wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem; } }
+  .choose__wrapper .choose__images {
+    position: relative;
+    margin: 0 auto; }
+    .choose__wrapper .choose__images .choose__img {
+      position: relative;
+      z-index: 1;
+      width: 450px; }
+      @media (max-width: 768px) {
+        .choose__wrapper .choose__images .choose__img {
+          width: 100%; } }
+    .choose__wrapper .choose__images .choose__triangle {
+      clip-path: polygon(0 0, 0 100%, 100% 100%);
+      background-color: #abdf3a;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0; }
+  @media (max-width: 1164px) {
+    .choose__wrapper .choose__content {
+      text-align: center; } }
+  .choose__wrapper .choose__content .section__title,
+  .choose__wrapper .choose__content .section__subtitle {
+    text-align: left; }
+    @media (max-width: 1164px) {
+      .choose__wrapper .choose__content .section__title,
+      .choose__wrapper .choose__content .section__subtitle {
+        text-align: center; } }
+  .choose__wrapper .choose__content .choose__desc {
+    max-width: 450px; }
+    @media (max-width: 1164px) {
+      .choose__wrapper .choose__content .choose__desc {
+        margin: auto; } }
+  .choose__wrapper .choose__content .choose__box {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 576px) {
+      .choose__wrapper .choose__content .choose__box {
+        text-align: center; } }
+    .choose__wrapper .choose__content .choose__box .choose__group .choose__number {
+      font-weight: 400;
+      font-family: 'Kaushan Script', cursiv;
+      margin-bottom: .4rem;
+      font-size: 2rem; }
+
 /*# sourceMappingURL=style.css.map */
