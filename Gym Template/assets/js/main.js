@@ -82,3 +82,40 @@ window.addEventListener('scroll', function () {
     this.scrollY >= 350 ? scrollUp.classList.add('show')
         : scrollUp.classList.remove('show');
 });
+
+
+
+// Email JS
+const contactForm = document.getElementById('contact-form'),
+    contactUser = document.getElementById('contact-user'),
+    contactMessage = document.getElementById('contact-message');
+
+
+contactForm.addEventListener('submit', sendEmail);
+
+function sendEmail(e) {
+
+    e.preventDefault();
+
+    if (contactUser.value === '') {
+        contactMessage.textContent = 'Please enter your email'
+
+        setTimeout(function () {
+            contactMessage.textContent = '';
+        }, 3000);
+    }
+    else {
+        emailjs.sendForm('service_3r34r1r', 'template_9fkeybm', '#contact-form', '6YxKlxGeytAZV2O1r')
+            .then(() => {
+
+                contactMessage.textContent = 'You registered successfuly';
+                setTimeout(function () {
+                    contactMessage.textContent = '';
+                }, 3000)
+            }, (error) => {
+                alert('FAILED...', error);
+            })
+
+        contactUser.value = '';
+    }
+}
