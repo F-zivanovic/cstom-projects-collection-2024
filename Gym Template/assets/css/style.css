@@ -398,4 +398,68 @@ section {
       margin-bottom: .4rem;
       font-size: 2rem; }
 
+.pricing__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem; }
+  @media (max-width: 400px) {
+    .pricing__wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem; } }
+  .pricing__wrapper .pricing__card {
+    padding: 2rem;
+    background-color: rgba(165, 169, 158, 0.07); }
+    .pricing__wrapper .pricing__card .pricing__images {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: #abdf3a;
+      line-height: 70px;
+      text-align: center; }
+      .pricing__wrapper .pricing__card .pricing__images img {
+        width: 50px; }
+    .pricing__wrapper .pricing__card .pricing__package {
+      margin-top: 1rem;
+      text-transform: uppercase; }
+      @media (max-width: 576px) {
+        .pricing__wrapper .pricing__card .pricing__package {
+          font-size: 1rem; } }
+    .pricing__wrapper .pricing__card .pricing__price {
+      font-size: 2rem;
+      color: #fff;
+      margin: 1rem 0;
+      text-transform: capitalize;
+      font-weight: 700; }
+      @media (max-width: 576px) {
+        .pricing__wrapper .pricing__card .pricing__price {
+          font-size: 1.4rem; } }
+    .pricing__wrapper .pricing__card .pricing__list {
+      margin-bottom: 1.5rem; }
+      .pricing__wrapper .pricing__card .pricing__list .pricing__item {
+        margin-bottom: 1rem;
+        text-transform: capitalize; }
+        .pricing__wrapper .pricing__card .pricing__list .pricing__item--opacity {
+          opacity: .3; }
+        .pricing__wrapper .pricing__card .pricing__list .pricing__item i {
+          color: #abdf3a;
+          margin-right: .5rem;
+          font-size: 1.1rem; }
+    .pricing__wrapper .pricing__card .pricing__btn {
+      display: inline-block;
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      text-transform: capitalize;
+      background-color: #fff;
+      color: black;
+      font-weight: 600;
+      cursor: pointer; }
+      @media (max-width: 576px) {
+        .pricing__wrapper .pricing__card .pricing__btn {
+          font-size: 0.9rem;
+          padding: 1rem; } }
+      .pricing__wrapper .pricing__card .pricing__btn:hover {
+        background-color: #abdf3a; }
+
 /*# sourceMappingURL=style.css.map */

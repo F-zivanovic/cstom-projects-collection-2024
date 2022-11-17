@@ -1,0 +1,65 @@
+.pricing {
+
+    &__wrapper {
+        @include grid(350px);
+        margin-top: 2.5rem;
+
+        @include breakpoints(400px) {
+            @include grid(200px);
+        }
+
+        .pricing__card {
+            padding: 2rem;
+            background-color: $secondaryColor;
+
+            .pricing__images {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                background-color: $primaryColor;
+                line-height: 70px;
+                text-align: center;
+
+                img {
+                    width: 50px;
+                }
+            }
+
+            .pricing__package {
+                margin-top: 1rem;
+                text-transform: uppercase;
+
+                @include breakpoints(576px) {
+                    font-size: 1rem;
+                }
+            }
+
+            .pricing__price {
+                @include text(2rem, $white, 1rem 0, 700, capitalize, 1.4rem);
+            }
+
+            .pricing__list {
+                margin-bottom: 1.5rem;
+
+                .pricing__item {
+                    margin-bottom: 1rem;
+                    text-transform: capitalize;
+
+                    &--opacity {
+                        opacity: .3;
+                    }
+
+                    i {
+                        color: $primaryColor;
+                        margin-right: .5rem;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+
+            .pricing__btn {
+                @include btn($white, $primaryColor);
+            }
+        }
+    }
+}
