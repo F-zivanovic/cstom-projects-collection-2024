@@ -20,3 +20,50 @@ for (let navLink of navLinks) {
         menu.classList.remove('show-menu');
     });
 }
+
+// Calculate BMI
+let calculateForm = document.getElementById('calculate-form'),
+    calculateCM = document.getElementById('calculate-cm'),
+    calculateKG = document.getElementById('calculate-kg'),
+    formMessage = document.getElementById('calculate-message');
+
+calculateForm.addEventListener('submit', calculateBMI);
+
+function calculateBMI(e) {
+    e.preventDefault();
+
+    if (calculateCM.value === '' || calculateKG.value === '') {
+        formMessage.textContent = 'Fill both input fields';
+
+        setTimeout(() => {
+            formMessage.textContent = '';
+        }, 3000);
+    }
+    else {
+
+        console.log(calculateCM.value);
+        console.log(calculateKG.value);
+
+
+        let cm = calculateCM.value / 100;
+        let kg = calculateKG.value;
+        let bmi = Math.round(kg / (cm * cm));
+
+        if (bmi < 18.5) {
+            formMessage.textContent = `Your BMI is ${bmi} and you are skiny`;
+        }
+        else if (bmi < 25) {
+            formMessage.textContent = `Your BMI is ${bmi} and you are health`;
+        }
+        else {
+            formMessage.textContent = `Your BMI is ${bmi} and you are overweight`;
+        }
+
+        calculateCM.value = '';
+        calculateKG.value = '';
+
+        setTimeout(() => {
+            formMessage.textContent = '';
+        }, 3000);
+    }
+}

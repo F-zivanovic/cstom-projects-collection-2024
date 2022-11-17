@@ -462,4 +462,70 @@ section {
       .pricing__wrapper .pricing__card .pricing__btn:hover {
         background-color: #abdf3a; }
 
+.calculate {
+  padding-bottom: 0;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem; }
+  @media (max-width: 350px) {
+    .calculate {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      gap: 4rem; } }
+  .calculate__content .section__subtitle {
+    text-align: left; }
+  .calculate__content .calculate__desc {
+    margin-bottom: 2rem;
+    max-width: 550px; }
+  .calculate__content .calculate__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; }
+    .calculate__content .calculate__form .calculate__box {
+      position: relative;
+      border: 2px solid #abdf3a;
+      flex: 1; }
+      .calculate__content .calculate__form .calculate__box .calculate__input {
+        background: transparent;
+        padding: 1.5rem;
+        color: #fff; }
+        .calculate__content .calculate__form .calculate__box .calculate__input::-webkit-inner-spin-button {
+          appearance: none; }
+      .calculate__content .calculate__form .calculate__box .calculate__label {
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%); }
+    .calculate__content .calculate__form .calculate__button {
+      display: inline-block;
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      text-transform: capitalize;
+      background-color: #abdf3a;
+      color: black;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%; }
+      @media (max-width: 576px) {
+        .calculate__content .calculate__form .calculate__button {
+          font-size: 0.9rem;
+          padding: 1rem; } }
+      .calculate__content .calculate__form .calculate__button:hover {
+        background-color: #fff; }
+  .calculate__content .calculate__meassage {
+    margin-top: 1rem;
+    color: #abdf3a;
+    font-size: 1.1rem;
+    position: absolute;
+    transform: translate(0); }
+  .calculate__image {
+    margin: 0 auto; }
+    .calculate__image img {
+      width: 350px; }
+      @media (max-width: 576px) {
+        .calculate__image img {
+          width: 250px; } }
+
 /*# sourceMappingURL=style.css.map */
