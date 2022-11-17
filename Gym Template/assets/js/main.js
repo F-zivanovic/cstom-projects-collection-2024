@@ -21,6 +21,20 @@ for (let navLink of navLinks) {
     });
 }
 
+
+
+// Change color of NAV section
+window.addEventListener('scroll', scrollNav);
+
+function scrollNav() {
+    let nav = document.getElementById('navbar');
+
+    this.scrollY >= 50 ? nav.classList.add('bg-nav')
+        : nav.classList.remove('bg-nav')
+}
+
+
+
 // Calculate BMI
 let calculateForm = document.getElementById('calculate-form'),
     calculateCM = document.getElementById('calculate-cm'),
