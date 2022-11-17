@@ -1,0 +1,103 @@
+.home {
+    position: relative;
+    margin-top: 7rem;
+    padding: 0;
+
+    &__wrapper {
+        @include grid(400px);
+        align-items: center;
+
+        @include breakpoints(500px) {
+            @include grid(200px);
+        }
+
+        .home__content {
+
+            @include breakpoints(1100px) {
+                text-align: center;
+            }
+
+            .home__subtitle {
+                color: transparent;
+                -webkit-text-stroke: 1px $primaryColor;
+                font-size: 2.5rem;
+                letter-spacing: 1.2px;
+
+                @include breakpoints(1120px) {
+                    font-size: 2rem;
+                }
+
+                @include breakpoints(576px) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .home__title {
+                margin: 0.5rem 0;
+                font-size: 4rem;
+                font-weight: bolder;
+                letter-spacing: 1.2px;
+
+                @include breakpoints(1120px) {
+                    font-size: 3.5rem;
+                }
+
+                @include breakpoints(576px) {
+                    font-size: 2rem;
+                }
+            }
+
+            .home__desc {
+                font-size: 1.1rem;
+                max-width: 500px;
+
+                @include breakpoints(1120px) {
+                    margin: auto
+                }
+
+                @include breakpoints(576px) {
+                    font-size: 1rem;
+                }
+            }
+
+            .home__btn {
+                @include btn($primaryColor, $white);
+                margin-top: 1rem;
+
+                i {
+                    transform: translateX(5px);
+                }
+
+                &.btn__flex {
+                    display: inline-flex;
+                    align-items: center;
+
+                    &:hover i {
+                        transform: translateX(10px);
+                    }
+                }
+            }
+        }
+
+        .home__images {
+            position: relative;
+            margin: 0 auto;
+
+            .home__img {
+                position: relative;
+                z-index: 1;
+                width: 550px;
+
+                @include breakpoints(768px) {
+                    width: 100%;
+                }
+            }
+
+            .home__triangle {
+                @include position(absolute, 0, 0, 0, 0);
+                clip-path: polygon(100% 0, 0 100%, 100% 100%);
+                background-color: $primaryColor;
+            }
+        }
+    }
+}
