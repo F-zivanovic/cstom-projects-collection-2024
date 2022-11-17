@@ -79,9 +79,31 @@ section {
   .section__subtitle span {
     -webkit-text-stroke: 1px #fff;
     color: #fff; }
+  @media (max-width: 768px) {
+    .section__subtitle {
+      display: flex;
+      flex-direction: column; } }
   @media (max-width: 576px) {
     .section__subtitle {
       font-size: 1.8rem; } }
+
+.scrollup {
+  position: fixed;
+  top: auto;
+  right: 25px;
+  bottom: 25px;
+  left: auto;
+  background-color: #abdf3a;
+  padding: .7rem;
+  transform: translateX(200px); }
+  .scrollup:hover {
+    transform: translateY(-15px); }
+  .scrollup.show {
+    transform: translateX(0); }
+  .scrollup i {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700; }
 
 .nav {
   background: transparent;

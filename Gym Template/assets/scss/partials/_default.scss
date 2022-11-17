@@ -83,7 +83,34 @@ section {
         color: $white;
     }
 
+    @include breakpoints(768px) {
+        display: flex;
+        flex-direction: column;
+    }
+
     @include breakpoints(576px) {
         font-size: 1.8rem;
+    }
+}
+
+
+.scrollup {
+    @include position(fixed, auto, 25px, 25px, auto);
+    background-color: $primaryColor;
+    padding: .7rem;
+    transform: translateX(200px);
+
+    &:hover {
+        transform: translateY(-15px);
+    }
+
+    &.show {
+        transform: translateX(0);
+    }
+
+    i {
+        color: $white;
+        font-size: 1.5rem;
+        font-weight: 700;
     }
 }

@@ -67,3 +67,18 @@ function calculateBMI(e) {
         }, 3000);
     }
 }
+
+
+// Scoll up
+let scrollUp = document.getElementById('scroll-up');
+
+scrollUp.addEventListener('click', function () {
+    window.scroll({ top: 0 });
+});
+
+window.addEventListener('scroll', function () {
+    let scrollUp = document.getElementById('scroll-up');
+
+    this.scrollY >= 350 ? scrollUp.classList.add('show')
+        : scrollUp.classList.remove('show');
+});
