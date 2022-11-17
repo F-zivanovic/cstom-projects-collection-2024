@@ -119,3 +119,13 @@ function sendEmail(e) {
         contactUser.value = '';
     }
 }
+
+
+// Scroll reveal
+ScrollReveal().reveal('.choose__content', { delay: 300, origin: 'top' });
+ScrollReveal().reveal('.home__content', { delay: 300, origin: 'top' });
+ScrollReveal().reveal('.calculate__content', { delay: 300, origin: 'top' });
+
+ScrollReveal().reveal('.choose__img', { delay: 700, origin: 'bottom' });
+ScrollReveal().reveal('.home__img', { delay: 700, origin: 'bottom' });
+ScrollReveal().reveal('.calculate__img', { delay: 700, origin: 'bottom' });
