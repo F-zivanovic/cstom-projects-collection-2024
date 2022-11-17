@@ -1,0 +1,88 @@
+.footer {
+    padding: 70px 0px;
+    @include grid(400px);
+
+    @include breakpoints(450px) {
+        @include grid(200px);
+    }
+
+    @include breakpoints(1000px) {
+        gap: 4rem;
+    }
+
+    &__register {
+
+        .footer__logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            img {
+                width: 3rem;
+            }
+
+            span {
+                @include text(1.1rem, $white, 0, 700, uppercase, 1rem);
+            }
+        }
+
+        .footer__desc {
+            max-width: 200px;
+            line-height: 1.5;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .footer__form {
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+            flex-wrap: wrap;
+
+            @include breakpoints(576px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer__input {
+                background: transparent;
+                padding: 1rem;
+                color: $white;
+                border: 2px solid $primaryColor;
+            }
+
+            .footer__submit {
+                @include btn($white, $primaryColor);
+            }
+        }
+
+        .footer__message {
+            position: absolute;
+            transform: translate(0);
+            margin-top: .8rem;
+            letter-spacing: 1.2px
+        }
+    }
+
+    &__info {
+        @include grid(120px);
+
+        .footer__title {
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer__links {
+            display: block;
+            color: $primaryColor;
+            margin-bottom: .8rem;
+            text-transform: capitalize;
+
+            &:hover {
+                color: $white;
+                transform: translateX(10px);
+            }
+        }
+    }
+}
