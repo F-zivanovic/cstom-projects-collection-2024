@@ -28,71 +28,45 @@
 
 
     <!-- Nav section -->
-    <nav>
+    <nav class="nav">
         <div class="nav__top container">
-            <a href="index.html" class="nav__top__logo">Builderz</a href="index.html">
-            <div class="nav__top__item">
-                <i class="far fa-calendar-alt"></i>
-                <div>
-                    <p>Opening Hour</p>
-                    <span>Mon - Fri, 8:00 - 9:00</span>
+            <a href="index.html" class="nav__logo">builderz</a>
+            <div class="nav__item">
+                <i class="far fa-calendar-alt nav__icon"></i>
+                <div class="nav__content">
+                    <p class="nav__text">opening hour</p>
+                    <span class="nav__info">Mon - Fri, 8:00 - 9:00</span>
                 </div>
             </div>
-            <div class="nav__top__item">
-                <i class="far fa-phone-volume"></i>
-                <div>
-                    <p>Call Us</p>
-                    <span>+012 345 6789</span>
+            <div class="nav__item">
+                <i class="far fa-phone-volume nav__icon"></i>
+                <div class="nav__content">
+                    <p class="nav__text">call us</p>
+                    <span class="nav__info">+012 345 6789</span>
                 </div>
             </div>
-            <div class="nav__top__item">
-                <i class="far fa-mail-bulk"></i>
-                <div>
-                    <p>Email Us</p>
-                    <span>info@domain.com</span>
+            <div class="nav__item">
+                <i class="far fa-mail-bulk nav__icon"></i>
+                <div class="nav__content">
+                    <p class="nav__text">email us</p>
+                    <span class="nav__info">info@domain.com</span>
                 </div>
             </div>
         </div>
-        <div class="nav__bottom container">
-            <ul class="nav__list">
-                <li class="nav__list__item"><a href="index.html" class="nav__list__item__link">Home</a></li>
-                <li class="nav__list__item"><a href="#about" class="nav__list__item__link">About</a></li>
-                <li class="nav__list__item"><a href="#services" class="nav__list__item__link">Services</a></li>
-                <li class="nav__list__item"><a href="#team" class="nav__list__item__link">Team</a></li>
-                <li class="nav__list__item"><a href="#blog" class="nav__list__item__link">Blog</a></li>
-                <li class="nav__list__item"><a href="#contact" class="nav__list__item__link">Contact</a></li>
-                <li class="nav__list__item">
-                    <a href="#" class="nav__list__item__link">
-                        Pages <i class="fas fa-caret-down"></i>
-                    </a>
-                    <div class="nav__item__dropdown open">
-                        <a href="#about">About</a>
-                        <a href="#services">Services</a>
-                        <a href="#team">Team</a>
-                    </div>
-                </li>
+
+        <div class="nav__bottom container" id="nav-bottom">
+            <ul class="nav__list" id="nav-list">
+                <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                <li class="nav__item"><a href="#team" class="nav__link">Team</a></li>
+                <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
             </ul>
             <div class="nav__mobile container">
-                <h4 class="nav__mobile__heading">Menu</h4>
-                <i class="far fa-bars" id="hamburger"></i>
+                <h4 class="nav__heading">Menu</h4>
+                <i class="far fa-bars" id="nav-hamburger"></i>
             </div>
-        </div>
-        <div class="nav__mobile__menu openMobileMenu" id="mobileMenu">
-            <ul class="container">
-                <li id="navItem"><a href="index.html">Home</a></li>
-                <li id="navItem"><a href="#about">About</a></li>
-                <li id="navItem"><a href="#services">Services</a></li>
-                <li id="navItem"><a href="#team">Team</a></li>
-                <li id="navItem"><a href="#blog">Blog</a></li>
-                <li id="drpdwn"><a href="#">Pages <i class="fas fa-caret-down"></i></a>
-                    <div class="open" id="dropdown">
-                        <a href="#about">About</a>
-                        <a href="#services">Services</a>
-                        <a href="#team">Team</a>
-                    </div>
-                </li>
-                <li id="navItem"><a href="#contact">Contact</a></li>
-            </ul>
         </div>
     </nav>
     <!-- End Nav section -->

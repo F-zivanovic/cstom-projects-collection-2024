@@ -16,6 +16,18 @@
     align-items: $align;
 }
 
+@mixin text($textSize, $color: $primaryColor, $margin: 0, $textWeight: 400, $textTransform: capitalize, $textSize1: 1rem) {
+    font-size: $textSize;
+    color: $color;
+    margin: $margin;
+    text-transform: $textTransform;
+    font-weight: $textWeight;
+
+    @media(max-width:576px) {
+        font-size: $textSize1;
+    }
+}
+
 @mixin positioning($position, $top, $right, $bottom, $left, $width: auto, $height: auto) {
     position: $position;
     top: $top;

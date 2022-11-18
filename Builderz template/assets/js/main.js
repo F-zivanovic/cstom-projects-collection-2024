@@ -1,31 +1,36 @@
-const navItem = document.querySelector('.nav__list__item:last-child');
-const navItemDropdown = document.querySelector('.nav__item__dropdown');
+// Open/Close mobile menu
+const navList = document.getElementById('nav-list');
+navHamburger = document.getElementById('nav-hamburger');
 
-navItem.addEventListener('click', openDropdown);
+navHamburger.addEventListener('click', () => {
+    navList.classList.toggle('active');
+});
 
-function openDropdown() {
-    navItemDropdown.classList.toggle('open');
+
+// Close mobile menu when we click on nav link
+const navLink = document.querySelectorAll('.nav__link');
+
+for (let item of navLink) {
+    item.addEventListener('click', () => {
+        navList.classList.remove('active');
+    });
 }
 
-//Open Dropdown Mobile Menu
-const navMobileItem = document.querySelector('#drpdwn');
-const navMobileItemDropdown = document.querySelector('#dropdown');
 
-navMobileItem.addEventListener('click', openMobileDropdown);
+// Close mobile menu when we scroll
+window.addEventListener('scroll', () => {
+    navList.classList.remove('active');
+});
 
-function openMobileDropdown() {
-    navMobileItemDropdown.classList.toggle('open');
-}
 
-// Open Main Mobile Menu
-const hamburgerIcon = document.querySelector('#hamburger');
-const mobileMenu = document.querySelector('#mobileMenu');
+// Add Fixed class on Nav when we scroll
+window.addEventListener('scroll', function () {
+    let nav = document.getElementById('nav-bottom');
 
-hamburgerIcon.addEventListener('click', openMobileMenu);
+    this.scrollY >= 150 ? nav.classList.add('fixed')
+        : nav.classList.remove('fixed');
+});
 
-function openMobileMenu() {
-    mobileMenu.classList.toggle('openMobileMenu');
-}
 
 
 // Services section filer

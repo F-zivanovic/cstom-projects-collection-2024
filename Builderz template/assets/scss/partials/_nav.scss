@@ -1,44 +1,34 @@
-nav {
+.nav {
     background-color: $secondaryColor;
 
-    .nav__top {
+    &__top {
         @include flex(space-between, center);
-        padding: 15px 0px;
+        padding: 1rem 0;
 
-        @include breakpoint(lg) {
+        @include breakpoint(xl) {
             justify-content: center;
         }
 
-        &__logo {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: $primaryColor;
+        .nav__logo {
+            @include text(3.5rem, $primaryColor, 0, 800, capitalize, 2.2rem);
 
             @include breakpoint(lg) {
                 text-align: center;
             }
-
-            @include breakpoint(xs) {
-                font-size: 2rem;
-            }
         }
 
-        &__item {
+        .nav__item {
             color: $primaryColor;
-            @include flex(center, center);
+            text-transform: capitalize;
+            @include flex(center, center, row, nowrap, 1rem);
 
-            @include breakpoint(lg) {
+            @include breakpoint(xl) {
                 display: none;
             }
 
-            i {
-                font-size: 2rem;
+            .nav__icon {
+                font-size: 2.2rem;
                 font-weight: 300;
-            }
-
-            div {
-                margin-left: 15px;
-                font-size: 0.8rem;
             }
         }
     }
@@ -46,15 +36,12 @@ nav {
     .nav__bottom {
         background-color: $primaryColor;
         color: $whiteColor;
-        padding: 20px 0px;
+        padding: 2rem 0;
+        position: relative;
+        z-index: 1000;
 
         &.fixed {
-            position: fixed;
-            transition: $transition;
-            top: 0px;
-            right: 0px;
-            left: 0px;
-            width: 100%;
+            @include positioning(fixed, 0, 0, auto, 0, 100%);
         }
 
         @include breakpoint(lg) {
@@ -64,46 +51,31 @@ nav {
         .nav__list {
             @include flex(center, center);
 
-            @include breakpoint(lg) {
-                display: none;
+            &.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             }
 
-            &__item {
+            @include breakpoint(lg) {
+                @include positioning(absolute, 99%, 0, auto, 0);
+                background-color: $primaryColor;
+                flex-direction: column;
+                align-items: flex-start;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            }
+
+            .nav__item {
+
+                @include breakpoint(lg) {
+                    margin-bottom: 1rem;
+                    margin-left: 10%;
+                }
 
                 &:not(:last-child) {
-                    margin-right: 10px;
+                    margin-right: 1rem;
                 }
 
-                &:last-child {
-                    position: relative;
-                    transition: $transition;
-
-                    .nav__item__dropdown {
-                        @include positioning(absolute, 80%, auto, auto, 0px, 150px);
-                        background-color: $whiteColor;
-                        padding: 15px;
-                        z-index: 100;
-
-                        &.open {
-                            display: none;
-                        }
-
-                        a {
-                            display: block;
-                            color: $primaryColor;
-
-                            &:hover {
-                                color: $secondaryColor;
-                            }
-                        }
-                    }
-                }
-
-                &__link {
-                    color: $whiteColor;
-                    text-transform: uppercase;
-                    font-weight: 600;
-                    font-size: 0.9rem;
+                .nav__link {
+                    @include text(1rem, $whiteColor, 0, 600, uppercase, 0.9rem);
 
                     &:hover {
                         color: $secondaryColor;
@@ -120,66 +92,12 @@ nav {
                 display: flex;
             }
 
-            &__heading {
-                color: $whiteColor;
-                text-transform: uppercase;
-                font-weight: 400;
-                font-size: 1.2rem;
+            .nav__heading {
+                @include text(1.2rem, $whiteColor, 0, 400, uppercase, 1.2rem);
             }
 
             i {
                 font-size: 1.5rem;
-                z-index: 101;
-            }
-        }
-    }
-
-    .nav__mobile__menu {
-        background-color: $whiteColor;
-
-        @media(min-width:992px) {
-            display: none;
-        }
-
-        &.openMobileMenu {
-            display: none;
-        }
-
-        ul {
-            li {
-                margin-bottom: 10px;
-
-                &:nth-child(6) {
-
-                    div {
-                        background-color: $primaryColor;
-                        padding: 15px;
-                        width: 100%;
-                        margin: 10px 0px;
-
-                        &.open {
-                            display: none;
-                        }
-
-                        a {
-                            color: $whiteColor;
-                            display: block;
-
-                            &:hover {
-                                color: $secondaryColor;
-                            }
-                        }
-                    }
-                }
-
-                a {
-                    color: $primaryColor;
-                    display: block;
-
-                    &:hover {
-                        color: $secondaryColor;
-                    }
-                }
             }
         }
     }
