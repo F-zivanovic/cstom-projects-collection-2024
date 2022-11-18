@@ -7,13 +7,11 @@
     gap: $gap;
 }
 
-@mixin grid($rows, $gap, $justify: center, $align: center) {
+@mixin grid($value, $gap: 0) {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: $rows;
-    grid-gap: $gap;
-    justify-content: $justify;
-    align-items: $align;
+    grid-template-columns: repeat(auto-fit, minmax($value, 1fr));
+    gap: $gap;
+
 }
 
 @mixin text($textSize, $color: $primaryColor, $margin: 0, $textWeight: 400, $textTransform: capitalize, $textSize1: 1rem) {

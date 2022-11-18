@@ -1,13 +1,21 @@
 .sub-hero {
-    @include grid(auto, 0px, flex-start);
+    @include grid(300px);
+
+    @include breakpoint(xs) {
+        @include grid(250px);
+    }
 
     &__item {
-        grid-column: span 4;
-        padding: 30px;
-        @include grid(auto, 0px, flex-start);
+        @include flex(flex-start, center, row, nowrap, 1rem);
+        padding: 2rem;
         background-color: $primaryColor;
         transform: translateY(50%);
         opacity: 0;
+
+        @include breakpoint(lg) {
+            flex-direction: column;
+            text-align: center;
+        }
 
         &.animated {
             transform: translateY(0);
@@ -16,20 +24,8 @@
         }
 
         i {
-            grid-column: span 3;
             font-size: 2.5rem;
-            justify-self: center;
             color: $secondaryColor;
-
-            @include breakpoint(lg) {
-                grid-column: span 1;
-                justify-self: flex-start;
-            }
-
-            @include breakpoint(md) {
-                grid-column: span 12;
-                justify-self: center;
-            }
 
             @include breakpoint(sm) {
                 font-size: 2rem;
@@ -37,20 +33,9 @@
             }
         }
 
-        &__text {
-            color: $secondaryColor;
-            grid-column: span 9;
+        .sub-hero__content {
 
-            @include breakpoint(lg) {
-                grid-column: span 11;
-            }
-
-            @include breakpoint(md) {
-                text-align: center;
-                grid-column: span 12;
-            }
-
-            h3 {
+            .sub-hero__title {
                 color: $secondaryColor;
                 font-size: 1.4rem;
 
@@ -59,16 +44,11 @@
                 }
             }
 
-            p {
-                margin-top: 10px;
-                font-size: 1.1rem;
+            .sub-hero__desc {
+                @include text(1.1rem, $secondaryColor, .5rem 0 0 0);
+                max-width: 450px;
             }
         }
-
-        @include breakpoint(lg) {
-            grid-column: span 12;
-        }
-
 
         &--mod {
             background-color: $secondaryColor;
@@ -77,11 +57,16 @@
                 color: $primaryColor;
             }
 
-            .sub-hero__item__text {
-                color: $primaryColor;
+            .sub-hero__content {
 
-                h3 {
+                .sub-hero__title {
                     color: $primaryColor;
+                    font-size: 1.4rem;
+                }
+
+                .sub-hero__desc {
+                    @include text(1.1rem, $primaryColor, .5rem 0 0 0);
+                    max-width: 450px;
                 }
             }
         }
