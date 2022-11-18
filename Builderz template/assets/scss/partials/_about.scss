@@ -1,11 +1,8 @@
 .about {
-    @include flex(space-around, center, row, wrap);
-
-    @include breakpoint(lg) {
-        justify-content: center;
-    }
+    @include flex(flex-start, center, row, wrap, 3rem);
 
     &__item {
+        flex: 1 1 400px;
         transform: translateY(50%);
         opacity: 0;
 
@@ -15,67 +12,23 @@
             transition: $transition-out;
         }
 
-
-        &:nth-child(1) {
-            flex: 0 0 35%;
-
-            @include breakpoint(lg) {
-                flex: 0 0 70%;
-                order: 3;
-            }
-
-            @include breakpoint(md) {
-                flex: 0 0 90%;
-            }
-        }
-
-        &:nth-child(2) {
-            flex: 0 0 55%;
-
-            @include breakpoint(lg) {
-                flex: 0 0 70%;
-                margin-bottom: 20px;
-                order: 2;
-            }
-
-            @include breakpoint(md) {
-                flex: 0 0 90%;
-            }
-        }
-
-        &__img {
-            width: 100%;
+        .about__img {
+            height: 30rem;
             resize: both;
-            object-fit: cover;
-            vertical-align: middle;
-            height: 500px;
-
-            @include breakpoint(lg) {
-                height: 450px;
-            }
 
             @include breakpoint(sm) {
-                height: 350px;
-            }
-
-            @include breakpoint(xs) {
-                height: 300px;
+                height: 20rem;
             }
         }
 
-        &__text {
-            margin-bottom: 10px;
+        .about__desc {
+            margin-bottom: 1rem;
             text-align: justify;
-            font-size: 1.1rem;
-
-            @include breakpoint(sm) {
-                font-size: 0.8rem;
-
-            }
         }
 
         button {
             @include btn($secondaryColor, $secondaryColor, $primaryColor, $primaryColor, $secondaryColor);
         }
+
     }
 }
