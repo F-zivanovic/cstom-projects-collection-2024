@@ -246,12 +246,9 @@ i {
         font-size: 1.5rem; }
 
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/img/carousel-3.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../assets/img/carousel-3.jpg") no-repeat center/cover;
   height: 80vh;
   width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -259,6 +256,9 @@ i {
   flex-wrap: nowrap;
   gap: 0px;
   text-align: center; }
+  @media (max-width: 450px) {
+    .hero {
+      height: 60vh; } }
   .hero__headings {
     display: flex;
     justify-content: center;
@@ -266,33 +266,35 @@ i {
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 0px; }
-    .hero__headings-1 {
-      color: #fff;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
+    .hero__headings .hero__heading1 {
       font-size: 2rem;
+      color: #fff;
+      margin: 0;
+      text-transform: capitalize;
       font-weight: 400;
+      letter-spacing: 1px;
       animation: heroHeadingAnimation 1s 0.15s ease-in-out; }
       @media (max-width: 576px) {
-        .hero__headings-1 {
+        .hero__headings .hero__heading1 {
           font-size: 1.5rem; } }
       @media (max-width: 450px) {
-        .hero__headings-1 {
+        .hero__headings .hero__heading1 {
           font-size: 1rem; } }
-    .hero__headings-2 {
-      color: #fff;
+    .hero__headings .hero__heading2 {
       font-size: 3.5rem;
-      margin-bottom: 10px;
-      font-weight: 800;
+      color: #fff;
+      margin: 1rem 0;
+      text-transform: capitalize;
+      font-weight: 900;
       animation: heroHeadingAnimation1 1s 0.15s ease-in-out; }
-      @media (max-width: 768px) {
-        .hero__headings-2 {
-          font-size: 3rem; } }
       @media (max-width: 576px) {
-        .hero__headings-2 {
+        .hero__headings .hero__heading2 {
           font-size: 2rem; } }
+      @media (max-width: 768px) {
+        .hero__headings .hero__heading2 {
+          font-size: 3rem; } }
       @media (max-width: 450px) {
-        .hero__headings-2 {
+        .hero__headings .hero__heading2 {
           font-size: 1.8rem; } }
   .hero button {
     text-transform: uppercase;
