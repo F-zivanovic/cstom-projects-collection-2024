@@ -35,14 +35,22 @@ PARTIALS
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  text-decoration: none;
+  transition: all 0.5s linear;
+  border: 0;
+  outline: none;
+  list-style-type: none; }
 
 body {
   color: #666666;
   line-height: 1.5;
   font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-size: 100%; }
+  @media (max-width: 576px) {
+    body {
+      font-size: 70%; } }
 
 h1,
 h2,
@@ -52,40 +60,16 @@ h5,
 h6 {
   color: #030f27; }
 
-a {
-  text-decoration: none;
-  transition: 0.15s ease-in-out;
-  color: #666666; }
-  a:hover, a:focus, a:active {
-    cursor: pointer;
-    transition: 0.35s ease-in;
-    outline: none;
-    color: #fdbe33; }
-
-ul {
-  list-style-type: none; }
-
 img {
-  width: 100%; }
-
-p {
-  font-size: 1rem; }
-  @media (max-width: 768px) {
-    p {
-      font-size: 0.8rem; } }
+  width: 100%;
+  vertical-align: middle;
+  object-fit: cover; }
 
 i {
-  cursor: pointer;
-  transition: 0.15s ease-in-out; }
-  i:hover {
-    transition: 0.35s ease-in; }
-
-input {
-  outline: none;
-  border: none; }
+  cursor: pointer; }
 
 .container {
-  width: 90%;
+  width: 75%;
   margin: 0px auto; }
 
 .section {
