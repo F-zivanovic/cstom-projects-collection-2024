@@ -2,7 +2,11 @@
     background-color: $light-bg;
 
     &-wrapper {
-        @include grid(20rem);
+        @include grid(18rem);
+
+        @media(max-width:576px){
+            @include grid(200px);
+        }
 
         .services-item {
             text-align: center;

@@ -1,5 +1,4 @@
 .contact {
-
     background-color: $black;
 
     .section-title {
@@ -12,7 +11,7 @@
 
         .map {
             height: 25rem;
-            flex: 1 1 41rem;
+            flex: 1 1 35rem;
             width: 100%;
 
             @media(max-width:576px) {
@@ -21,7 +20,7 @@
         }
 
         form {
-            flex: 1 1 41rem;
+            flex: 1 1 35rem;
             background-color: $white;
             padding: 2rem;
 

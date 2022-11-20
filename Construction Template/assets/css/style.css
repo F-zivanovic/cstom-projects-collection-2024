@@ -442,8 +442,13 @@ nav {
   background-color: #eee; }
   .services-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     gap: 2rem; }
+    @media (max-width: 576px) {
+      .services-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem; } }
     .services-wrapper .services-item {
       text-align: center;
       background-color: #fff;
@@ -561,22 +566,12 @@ nav {
     margin-bottom: 1.5rem; }
   .pricing .pricing-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     gap: 2rem; }
-    @media (max-width: 1250px) {
+    @media (max-width: 576px) {
       .pricing .pricing-wrapper {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        gap: 2rem; } }
-    @media (max-width: 992px) {
-      .pricing .pricing-wrapper {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-        gap: 2rem; } }
-    @media (max-width: 400px) {
-      .pricing .pricing-wrapper {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 2rem; } }
     .pricing .pricing-wrapper .pricing-item {
       background-color: #fff;
@@ -645,13 +640,13 @@ nav {
     gap: 3rem; }
     .contact .contact-wrapper .map {
       height: 25rem;
-      flex: 1 1 41rem;
+      flex: 1 1 35rem;
       width: 100%; }
       @media (max-width: 576px) {
         .contact .contact-wrapper .map {
           height: 15rem; } }
     .contact .contact-wrapper form {
-      flex: 1 1 41rem;
+      flex: 1 1 35rem;
       background-color: #fff;
       padding: 2rem; }
       .contact .contact-wrapper form h3 {
@@ -690,7 +685,7 @@ footer {
   background-color: #eee; }
   footer .footer-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 2rem; }
     footer .footer-wrapper .footer-item h4 {
       font-size: 1.3rem;

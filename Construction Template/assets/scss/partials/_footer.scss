@@ -3,7 +3,7 @@ footer {
     background-color: $light-bg;
 
     .footer-wrapper {
-        @include grid(20rem);
+        @include grid(15rem);
 
         .footer-item {
 

@@ -7,19 +7,12 @@
     }
 
     .pricing-wrapper {
-        @include grid(30rem);
+        @include grid(18rem);
 
-        @media(max-width:1250px) {
-            @include grid(20rem)
+        @media(max-width:576px){
+            @include grid(200px);
         }
 
-        @media(max-width:992px) {
-            @include grid(30rem)
-        }
-
-        @media(max-width:400px) {
-            @include grid(20rem)
-        }
 
         .pricing-item {
             background-color: $white;
