@@ -1,9 +1,9 @@
 footer {
     padding: 70px 0px;
-    @include grid(20rem);
+    @include grid(15rem);
 
     @include breakpoints(400px) {
-        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
     .footer-item {

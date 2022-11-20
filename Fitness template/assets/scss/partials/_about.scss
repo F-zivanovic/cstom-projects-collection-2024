@@ -1,12 +1,8 @@
 .about {
-    @include flex(flex-start, center, row wrap, 8rem);
-
-    @include breakpoints(992px) {
-        gap: 4rem;
-    }
+    @include flex(flex-start, center, row wrap, 3rem);
 
     &-img {
-        flex: 1 1 41rem;
+        flex: 1 1 450px;
         position: relative;
 
         @include breakpoints(576px) {
@@ -44,7 +40,7 @@
     }
 
     &-content {
-        flex: 1 1 41rem;
+        flex: 1 1 450px;
 
         span {
             @include text(1.5rem, $secondaryColor);
@@ -52,7 +48,6 @@
 
         &>h3 {
             @include text(2.5rem, $white, 1rem 0, 500, capitalize, 1.5rem);
-
         }
 
         &>p {
@@ -65,7 +60,7 @@
 
             article {
                 margin-bottom: 1rem;
-                flex: 1 1 10rem;
+                flex: 1 1 13rem;
 
                 h3 {
                     @include text(1.5rem, $white, 0 0 1rem 0, 500);

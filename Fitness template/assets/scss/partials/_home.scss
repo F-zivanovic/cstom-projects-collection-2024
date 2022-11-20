@@ -10,8 +10,14 @@
         display: flex;
         align-items: center;
 
+        @include breakpoints(576px) {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
         .slide-content {
-            max-width: 60rem;
+            max-width: 50rem;
 
             @include breakpoints(576px) {
                 max-width: 100%;
