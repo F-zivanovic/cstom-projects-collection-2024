@@ -2,7 +2,7 @@
 Error: Mixin grid takes 2 arguments but 4 were passed.
         on line 5 of assets/scss/partials/_footer.scss, in `grid'
         from line 5 of assets/scss/partials/_footer.scss
-        from line 22 of assets/scss/style.scss
+        from line 21 of assets/scss/style.scss
 
 1: /*----------------------------------------
 2: EXTERNAL FILES
@@ -18,7 +18,7 @@ Error: Mixin grid takes 2 arguments but 4 were passed.
 Backtrace:
 assets/scss/partials/_footer.scss:5:in `grid'
 assets/scss/partials/_footer.scss:5
-assets/scss/style.scss:22
+assets/scss/style.scss:21
 C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:57:in `perform_arguments'
 C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:358:in `block in visit_mixin'
 C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/stack.rb:98:in `block in with_mixin'
@@ -99,4 +99,4 @@ C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/interna
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Mixin grid takes 2 arguments but 4 were passed.\A         on line 5 of assets/scss/partials/_footer.scss, in `grid'\A         from line 5 of assets/scss/partials/_footer.scss\A         from line 22 of assets/scss/style.scss\A \A 1: /*----------------------------------------\A 2: EXTERNAL FILES\A 3: ----------------------------------------*/\A 4: @import 'variables';\A 5: @import 'mixins';\A 6: @import 'animations';\A 7: \A 8: \A 9: /*----------------------------------------\A 10: PARTIALS"; }
+  content: "Error: Mixin grid takes 2 arguments but 4 were passed.\A         on line 5 of assets/scss/partials/_footer.scss, in `grid'\A         from line 5 of assets/scss/partials/_footer.scss\A         from line 21 of assets/scss/style.scss\A \A 1: /*----------------------------------------\A 2: EXTERNAL FILES\A 3: ----------------------------------------*/\A 4: @import 'variables';\A 5: @import 'mixins';\A 6: @import 'animations';\A 7: \A 8: \A 9: /*----------------------------------------\A 10: PARTIALS"; }
