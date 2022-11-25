@@ -1,22 +1,16 @@
-footer {
+.footer {
     background-color: $primaryColor;
 
-    .footer__content {
-        @include grid(auto, 10px, center, flex-start);
+    &__content {
+        @include grid(250px, 2rem);
 
-        &__item {
-            grid-column: span 3;
+        @include breakpoint(xs) {
+            @include grid(200px, 2rem);
+        }
 
-            @include breakpoint(xl) {
-                grid-column: span 6;
-                margin-top: 15px;
-            }
+        .footer__item {
 
-            @include breakpoint(md) {
-                grid-column: span 12;
-            }
-
-            &__social {
+            .footer__social {
                 margin-top: 10px;
 
                 a {
@@ -45,34 +39,40 @@ footer {
                 }
             }
 
-            &__heading {
+            .footer__heading {
                 color: $secondaryColor;
                 font-size: 1.3rem;
 
                 &::after {
                     display: block;
                     content: "";
-                    margin: 10px 0px;
+                    margin: 10px 0px 20px 0px;
                     height: 2px;
                     background-color: $secondaryColor;
                     width: 50px;
                 }
             }
 
-            ul {
+            .footer__list {
                 margin-top: 15px;
 
                 li {
+
+                    &:hover {
+                        transform: translateX(10px);
+                    }
+
+                    &:hover i,
+                    &:hover a {
+                        color: $secondaryColor;
+                    }
+
                     &:not(:last-child) {
                         margin-bottom: 10px;
                     }
 
                     a {
                         color: $whiteColor;
-
-                        &:hover {
-                            color: $secondaryColor;
-                        }
 
                         i {
                             margin-right: 10px;

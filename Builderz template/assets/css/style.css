@@ -663,4 +663,55 @@ i {
         .team__content .team__item .team__icons i.linkedin {
           background: #0e76a8; }
 
+.footer {
+  background-color: #030f27; }
+  .footer__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem; }
+    @media (max-width: 450px) {
+      .footer__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem; } }
+    .footer__content .footer__item .footer__social {
+      margin-top: 10px; }
+      .footer__content .footer__item .footer__social a {
+        color: #fff; }
+        .footer__content .footer__item .footer__social a:not(:last-child) {
+          margin-right: 10px; }
+        .footer__content .footer__item .footer__social a:hover {
+          color: #030f27; }
+        .footer__content .footer__item .footer__social a i {
+          width: 35px;
+          height: 35px;
+          line-height: 35px;
+          text-align: center;
+          border-radius: 50%;
+          border: 1px solid #fff; }
+          .footer__content .footer__item .footer__social a i:hover {
+            background-color: #fdbe33; }
+    .footer__content .footer__item .footer__heading {
+      color: #fdbe33;
+      font-size: 1.3rem; }
+      .footer__content .footer__item .footer__heading::after {
+        display: block;
+        content: "";
+        margin: 10px 0px 20px 0px;
+        height: 2px;
+        background-color: #fdbe33;
+        width: 50px; }
+    .footer__content .footer__item .footer__list {
+      margin-top: 15px; }
+      .footer__content .footer__item .footer__list li:hover {
+        transform: translateX(10px); }
+      .footer__content .footer__item .footer__list li:hover i, .footer__content .footer__item .footer__list li:hover a {
+        color: #fdbe33; }
+      .footer__content .footer__item .footer__list li:not(:last-child) {
+        margin-bottom: 10px; }
+      .footer__content .footer__item .footer__list li a {
+        color: #fff; }
+        .footer__content .footer__item .footer__list li a i {
+          margin-right: 10px; }
+
 /*# sourceMappingURL=style.css.map */
