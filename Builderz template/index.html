@@ -377,23 +377,23 @@
 
 
     <!-- Login modal -->
-    <div class="modal hidden">
+    <div class="modal hidden" id="modal">
         <div class="modal__box">
-            <div class="modal__box__tittle">
+            <div class="modal__heading">
                 <h3>Login</h3>
-                <i class="far fa-times close"></i>
+                <i class="far fa-times" id="close"></i>
             </div>
-            <div class="modal__box__body">
+            <div class="modal__body">
                 <form action="" method="" name="">
-                    <div class="form-control">
+                    <div class="modal__group">
                         <label for="text">Username</label>
-                        <input type="text" class="form-input" required>
+                        <input type="text" class="modal__input" required>
                     </div>
-                    <div class="form-control">
+                    <div class="modal__group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-input" required>
+                        <input type="password" class="modal__input" required>
                     </div>
-                    <button type="submit">Login</button>
+                    <input type="submit" value="Login">
                 </form>
             </div>
         </div>

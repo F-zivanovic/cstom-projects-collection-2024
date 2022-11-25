@@ -1,7 +1,7 @@
 .modal {
     @include positioning(fixed, 0px, 0px, 0px, 0px 100%, 100%);
-    background: rgba(0, 0, 0, .5);
-    transition: 0.5s ease-in-out;
+    background: rgba(0, 0, 0, .8);
+    z-index: 2000;
 
     &.hidden {
         transform: translateX(100%);
@@ -25,7 +25,7 @@
             width: 90%;
         }
 
-        &__tittle {
+        .modal__heading {
             @include flex(space-between, center);
             background: $secondaryColor;
             padding: 15px;
@@ -48,12 +48,12 @@
             }
         }
 
-        &__body {
+        .modal__body {
             padding: 10px 15px;
 
             form {
 
-                .form-control {
+                .modal__group {
                     padding: 10px 0px;
 
                     label {
@@ -62,7 +62,7 @@
                         font-weight: 500;
                     }
 
-                    .form-input {
+                    .modal__input {
                         width: 100%;
                         border-radius: 5px;
                         font-size: 1.2rem;
@@ -76,7 +76,7 @@
                     }
                 }
 
-                button[type="submit"] {
+                input[type="submit"] {
                     @include btn($primaryColor, $primaryColor, $whiteColor, transparent, $primaryColor );
                     width: 100%;
                 }
