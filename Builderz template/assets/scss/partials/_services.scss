@@ -4,88 +4,73 @@
         text-align: center;
     }
 
+    .services__categories {
+        text-align: center;
+        margin: 20px 0px;
+
+        button {
+            @include btn($primaryColor, $primaryColor, $whiteColor, transparent, $primaryColor);
+        }
+    }
+
     &__content {
-        @include flex(space-between, center, row, wrap);
+        @include grid(350px, 1rem);
 
-        @include breakpoint(sm) {
-            justify-content: center;
+        @include breakpoint(lg) {
+            @include grid(300px, 1rem);
         }
 
-        &__categories {
-            flex: 0 0 100%;
-            text-align: center;
-            margin: 20px 0px;
-
-            button {
-                @include btn($primaryColor, $primaryColor, $whiteColor, transparent, $primaryColor);
-            }
+        @include breakpoint(xs) {
+            @include grid(200px, 1rem);
         }
 
-        &__item {
-            flex: 0 0 31%;
+        .services__item {
             margin-top: 20px;
-
             transform: translateY(50%);
             opacity: 0;
 
             &.animated {
                 transform: translateY(0);
                 opacity: 1;
-                transition: $transition-out;
             }
 
-            &:hover .overlay {
-                visibility: visible;
-                transition: $transition;
-            }
-
-            @include breakpoint(lg) {
-                flex: 0 0 47%;
-            }
-
-            @include breakpoint(sm) {
-                flex: 0 0 100%;
+            &:hover .services__img .services__overlay {
+                opacity: 1;
             }
 
 
-            &__img {
+            .services__img {
                 position: relative;
 
-                img {
-                    resize: both;
-                    vertical-align: middle;
-                    object-fit: cover;
+                .services__image {
+                    height: 25rem;
+
+                    @include breakpoint(sm) {
+                        height: 17rem;
+                    }
                 }
 
-                .overlay {
+                .services__overlay {
                     @include positioning(absolute, 0px, 0px, 0px, 0px);
                     background-color: $primaryColor;
-                    opacity: 0.75;
+                    opacity: 0;
                     color: $whiteColor;
                     text-align: center;
                     padding: 15px;
                     @include flex(center, center);
-                    visibility: hidden;
                 }
             }
 
-            &__group {
+            .services__content {
                 background-color: $primaryColor;
                 padding: 15px;
                 text-align: center;
                 color: $secondaryColor;
+                font-weight: 600;
+                font-size: 1.1rem;
 
-                p {
-                    font-weight: 700;
-                    font-size: 1.3rem;
-
-                    @include breakpoint(sm) {
-                        font-size: 1rem;
-                    }
-
-                    @include breakpoint(xs) {
-                        font-size: 0.8rem;
-                    }
+                @include breakpoint(xs) {
+                    font-size: 0.9rem;
                 }
             }
         }

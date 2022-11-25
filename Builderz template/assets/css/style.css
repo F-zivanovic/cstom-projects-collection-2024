@@ -433,64 +433,59 @@ i {
 
 .services__header {
   text-align: center; }
+.services .services__categories {
+  text-align: center;
+  margin: 20px 0px; }
+  .services .services__categories button {
+    margin-top: 15px;
+    padding: 15px 35px;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: 2px solid #030f27;
+    background: #030f27;
+    color: #fff;
+    transition: 0.15s ease-in-out; }
+    .services .services__categories button:hover {
+      transition: 0.35s ease-in;
+      cursor: pointer;
+      background-color: transparent;
+      color: #030f27; }
+    @media (max-width: 576px) {
+      .services .services__categories button {
+        padding: 10px 25px;
+        font-size: 0.9rem; } }
 .services__content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0px; }
-  @media (max-width: 576px) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem; }
+  @media (max-width: 992px) {
     .services__content {
-      justify-content: center; } }
-  .services__content__categories {
-    flex: 0 0 100%;
-    text-align: center;
-    margin: 20px 0px; }
-    .services__content__categories button {
-      margin-top: 15px;
-      padding: 15px 35px;
-      font-size: 1rem;
-      font-weight: 500;
-      letter-spacing: 1px;
-      border: 2px solid #030f27;
-      background: #030f27;
-      color: #fff;
-      transition: 0.15s ease-in-out; }
-      .services__content__categories button:hover {
-        transition: 0.35s ease-in;
-        cursor: pointer;
-        background-color: transparent;
-        color: #030f27; }
-      @media (max-width: 576px) {
-        .services__content__categories button {
-          padding: 10px 25px;
-          font-size: 0.9rem; } }
-  .services__content__item {
-    flex: 0 0 31%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem; } }
+  @media (max-width: 450px) {
+    .services__content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem; } }
+  .services__content .services__item {
     margin-top: 20px;
     transform: translateY(50%);
     opacity: 0; }
-    .services__content__item.animated {
+    .services__content .services__item.animated {
       transform: translateY(0);
-      opacity: 1;
-      transition: 0.35s ease-in; }
-    .services__content__item:hover .overlay {
-      visibility: visible;
-      transition: 0.15s ease-in-out; }
-    @media (max-width: 992px) {
-      .services__content__item {
-        flex: 0 0 47%; } }
-    @media (max-width: 576px) {
-      .services__content__item {
-        flex: 0 0 100%; } }
-    .services__content__item__img {
+      opacity: 1; }
+    .services__content .services__item:hover .services__img .services__overlay {
+      opacity: 1; }
+    .services__content .services__item .services__img {
       position: relative; }
-      .services__content__item__img img {
-        resize: both;
-        vertical-align: middle;
-        object-fit: cover; }
-      .services__content__item__img .overlay {
+      .services__content .services__item .services__img .services__image {
+        height: 25rem; }
+        @media (max-width: 576px) {
+          .services__content .services__item .services__img .services__image {
+            height: 17rem; } }
+      .services__content .services__item .services__img .services__overlay {
         position: absolute;
         top: 0px;
         right: 0px;
@@ -499,7 +494,7 @@ i {
         width: auto;
         height: auto;
         background-color: #030f27;
-        opacity: 0.75;
+        opacity: 0;
         color: #fff;
         text-align: center;
         padding: 15px;
@@ -508,22 +503,17 @@ i {
         align-items: center;
         flex-direction: row;
         flex-wrap: nowrap;
-        gap: 0px;
-        visibility: hidden; }
-    .services__content__item__group {
+        gap: 0px; }
+    .services__content .services__item .services__content {
       background-color: #030f27;
       padding: 15px;
       text-align: center;
-      color: #fdbe33; }
-      .services__content__item__group p {
-        font-weight: 700;
-        font-size: 1.3rem; }
-        @media (max-width: 576px) {
-          .services__content__item__group p {
-            font-size: 1rem; } }
-        @media (max-width: 450px) {
-          .services__content__item__group p {
-            font-size: 0.8rem; } }
+      color: #fdbe33;
+      font-weight: 600;
+      font-size: 1.1rem; }
+      @media (max-width: 450px) {
+        .services__content .services__item .services__content {
+          font-size: 0.9rem; } }
 
 .contact__header {
   text-align: center; }

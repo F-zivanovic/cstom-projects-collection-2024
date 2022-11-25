@@ -34,7 +34,7 @@ window.addEventListener('scroll', function () {
 
 
 // Services section filer
-const buttons = document.querySelectorAll('.services__content__categories > button');
+const buttons = document.querySelectorAll('.services__categories > button');
 
 buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -138,7 +138,7 @@ function services() {
     const servicesSection = document.querySelector('.services');
     const positionServicesSection = servicesSection.getBoundingClientRect().top;
     const screenPosition = window.innerHeight / 1.8;
-    const servicesItems = document.querySelectorAll('.services  .services__content__item');
+    const servicesItems = document.querySelectorAll('.services  .services__item');
 
     for (servicesItem of servicesItems) {
         if (positionServicesSection < screenPosition) {
