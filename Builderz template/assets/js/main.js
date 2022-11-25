@@ -85,7 +85,6 @@ window.onscroll = function () {
     subHero();
     about();
     services();
-    blog();
     contact();
     team();
 };
@@ -148,18 +147,6 @@ function services() {
     }
 }
 
-function blog() {
-    const blogSection = document.querySelector('.blog');
-    const positionBlogSection = blogSection.getBoundingClientRect().top;
-    const screenPosition = window.innerHeight / 1.8;
-    const blogItems = document.querySelectorAll('.blog  .blog__content__item');
-
-    for (blogItem of blogItems) {
-        if (positionBlogSection < screenPosition) {
-            blogItem.classList.add('animated');
-        }
-    }
-}
 
 function contact() {
     const contactSection = document.querySelector('.contact');
