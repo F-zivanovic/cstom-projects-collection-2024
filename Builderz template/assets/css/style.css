@@ -519,100 +519,76 @@ i {
   text-align: center; }
 .contact__content {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: stretch;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0px;
   margin-top: 20px; }
-  .contact__content__item {
-    flex: 1;
-    height: 500px;
+  .contact__content .contact__item {
+    flex: 1 1 350px;
     transform: translateY(50%);
-    opacity: 0; }
-    .contact__content__item.animated {
+    opacity: 0;
+    background-color: #fdbe33;
+    padding: 30px; }
+    .contact__content .contact__item.animated {
       transform: translateY(0);
-      opacity: 1;
-      transition: 0.35s ease-in; }
+      opacity: 1; }
     @media (max-width: 576px) {
-      .contact__content__item {
-        height: 450px; } }
-    @media (max-width: 768px) {
-      .contact__content__item {
-        flex: 0 0 70%; } }
-    @media (max-width: 576px) {
-      .contact__content__item {
-        flex: 0 0 80%; } }
-    @media (max-width: 450px) {
-      .contact__content__item {
-        flex: 0 0 100%; } }
-    .contact__content__item:nth-child(1) {
-      background-color: #030f27;
-      padding: 30px; }
+      .contact__content .contact__item {
+        padding: 15px; } }
+    .contact__content .contact__item .contact__input {
+      width: 100%;
+      border: 2px solid #fff;
+      background: transparent;
+      padding: 15px;
+      margin-bottom: 15px;
+      color: #fff; }
+      .contact__content .contact__item .contact__input::placeholder {
+        color: #fff; }
+    .contact__content .contact__item textarea {
+      height: 185px; }
       @media (max-width: 576px) {
-        .contact__content__item:nth-child(1) {
-          padding: 20px; } }
-      .contact__content__item:nth-child(1) div {
+        .contact__content .contact__item textarea {
+          height: 150px; } }
+    .contact__content .contact__item input[type="submit"] {
+      margin-top: 15px;
+      padding: 15px 35px;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      border: 2px solid #030f27;
+      background: #030f27;
+      color: #fdbe33;
+      transition: 0.15s ease-in-out; }
+      .contact__content .contact__item input[type="submit"]:hover {
+        transition: 0.35s ease-in;
+        cursor: pointer;
+        background-color: #fff;
+        color: #030f27; }
+      @media (max-width: 576px) {
+        .contact__content .contact__item input[type="submit"] {
+          padding: 10px 25px;
+          font-size: 0.9rem; } }
+    .contact__content .contact__item--primary {
+      background-color: #030f27; }
+      .contact__content .contact__item--primary .contact__info {
         border: 2px solid #fdbe33;
         padding: 30px; }
-        @media (max-width: 576px) {
-          .contact__content__item:nth-child(1) div {
-            padding: 20px; } }
-        .contact__content__item:nth-child(1) div:not(:last-child) {
+        .contact__content .contact__item--primary .contact__info:not(:last-child) {
           margin-bottom: 25px; }
-        .contact__content__item:nth-child(1) div h3 {
-          color: #fdbe33;
-          font-size: 1.3rem; }
-        .contact__content__item:nth-child(1) div p {
+        @media (max-width: 576px) {
+          .contact__content .contact__item--primary .contact__info {
+            padding: 15px; } }
+        .contact__content .contact__item--primary .contact__info h3 {
+          color: #fdbe33; }
+          @media (max-width: 450px) {
+            .contact__content .contact__item--primary .contact__info h3 {
+              font-size: 1.1rem; } }
+        .contact__content .contact__item--primary .contact__info p {
           color: #fff;
           margin-top: 10px;
-          font-size: 1.1rem;
           font-weight: 500; }
-          @media (max-width: 576px) {
-            .contact__content__item:nth-child(1) div p {
-              font-size: 0.9rem; } }
-    .contact__content__item:nth-child(2) {
-      background-color: #fdbe33;
-      padding: 30px; }
-      @media (max-width: 576px) {
-        .contact__content__item:nth-child(2) {
-          padding: 20px; } }
-      .contact__content__item:nth-child(2) .form-input {
-        width: 100%;
-        border: 2px solid #fff;
-        background: transparent;
-        padding: 10px 15px;
-        margin-bottom: 15px; }
-        .contact__content__item:nth-child(2) .form-input::placeholder {
-          color: #fff;
-          font-size: 1.2rem; }
-          @media (max-width: 576px) {
-            .contact__content__item:nth-child(2) .form-input::placeholder {
-              font-size: 1rem; } }
-      .contact__content__item:nth-child(2) textarea {
-        height: 185px; }
-        @media (max-width: 576px) {
-          .contact__content__item:nth-child(2) textarea {
-            height: 150px; } }
-      .contact__content__item:nth-child(2) button[type="submit"] {
-        margin-top: 15px;
-        padding: 15px 35px;
-        font-size: 1rem;
-        font-weight: 500;
-        letter-spacing: 1px;
-        border: 2px solid #030f27;
-        background: #030f27;
-        color: #fdbe33;
-        transition: 0.15s ease-in-out; }
-        .contact__content__item:nth-child(2) button[type="submit"]:hover {
-          transition: 0.35s ease-in;
-          cursor: pointer;
-          background-color: #fff;
-          color: #030f27; }
-        @media (max-width: 576px) {
-          .contact__content__item:nth-child(2) button[type="submit"] {
-            padding: 10px 25px;
-            font-size: 0.9rem; } }
 
 .team__header {
   text-align: center; }

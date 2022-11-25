@@ -224,8 +224,6 @@
 
 
 
-
-
     <!-- Contact section -->
     <section class="section container contact" id="contact">
         <header class="contact__header">
@@ -233,28 +231,27 @@
             <div class="section__subtitle">For Any Query</div>
         </header>
         <div class="contact__content">
-            <div class="contact__content__item">
-                <div>
+            <form class="contact__item" action="" method="" name="">
+                <input type="text" class="contact__input" name="" placeholder="Your Name" required>
+                <input type="email" class="contact__input" name="" placeholder="Your Email" required>
+                <input type="text" class="contact__input" name="" placeholder="Subject" required>
+                <textarea name="" class="contact__input" placeholder="Message" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+            <div class="contact__item contact__item--primary">
+                <div class="contact__info">
                     <h3>Location</h3>
-                    <p>123 Street, Jasenica, SER</p>
+                    <p>123 Street, Belgrade, Serbia</p>
                 </div>
-                <div>
+                <div class="contact__info">
                     <h3>Phone</h3>
                     <p>+012 345 67890</p>
                 </div>
-                <div>
+                <div class="contact__info">
                     <h3>Email</h3>
                     <p>info@example.com</p>
                 </div>
             </div>
-
-            <form class="contact__content__item" action="" method="" name="">
-                <input type="text" class="form-input" name="" placeholder="Your Name">
-                <input type="email" class="form-input" name="" placeholder="Your Email">
-                <input type="text" class="form-input" name="" placeholder="Subject">
-                <textarea name="" class="form-input" placeholder="Message"></textarea>
-                <button type="submit">Send Message</button>
-            </form>
         </div>
     </section>
     <!-- End Contact section -->

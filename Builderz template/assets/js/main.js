@@ -152,7 +152,7 @@ function contact() {
     const contactSection = document.querySelector('.contact');
     const positionContactSection = contactSection.getBoundingClientRect().top;
     const screenPosition = window.innerHeight / 1.8;
-    const contactItems = document.querySelectorAll('.contact  .contact__content__item');
+    const contactItems = document.querySelectorAll('.contact  .contact__item');
 
     for (contactItem of contactItems) {
         if (positionContactSection < screenPosition) {
