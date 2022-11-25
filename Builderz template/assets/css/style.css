@@ -602,50 +602,41 @@ i {
   @media (max-width: 768px) {
     .team__content {
       justify-content: center; } }
-  .team__content__item {
+  .team__content .team__item {
     flex: 0 0 22%;
     margin-top: 20px;
     position: relative;
     transform: translateY(50%);
     opacity: 0; }
-    .team__content__item.animated {
+    .team__content .team__item.animated {
       transform: translateY(0);
-      opacity: 1;
-      transition: 0.35s ease-in; }
-    @media (max-width: 992px) {
-      .team__content__item {
+      opacity: 1; }
+    @media (max-width: 1200px) {
+      .team__content .team__item {
         flex: 0 0 47%; } }
     @media (max-width: 768px) {
-      .team__content__item {
+      .team__content .team__item {
         flex: 0 0 80%; } }
     @media (max-width: 450px) {
-      .team__content__item {
+      .team__content .team__item {
         flex: 0 0 100%; } }
-    .team__content__item:hover .team__content__item__text {
-      transition: 0.35s ease-in;
+    .team__content .team__item:hover .team__text {
       background-color: #fdbe33; }
-    .team__content__item:hover .team__content__item__text h3 {
+    .team__content .team__item:hover .team__text .team__name {
       color: #030f27;
-      transition: 0.35s ease-in;
       transform: scale(1.1); }
-    .team__content__item:hover .team__content__item__icons {
-      opacity: 1;
-      transition: 0.35s ease-in; }
-    .team__content__item img {
-      resize: both;
-      height: auto;
-      vertical-align: middle; }
-    .team__content__item__text {
+    .team__content .team__item:hover .team__icons {
+      opacity: 1; }
+    .team__content .team__item .team__text {
       background-color: #030f27;
       padding: 25px 0px;
       text-align: center; }
-      .team__content__item__text h3 {
-        color: #fdbe33;
-        transition: 0.15s ease-in-out; }
-      .team__content__item__text p {
+      .team__content .team__item .team__text .team__name {
+        color: #fdbe33; }
+      .team__content .team__item .team__text .team__position {
         color: #fff;
         font-weight: 600; }
-    .team__content__item__icons {
+    .team__content .team__item .team__icons {
       position: absolute;
       top: 0px;
       left: 0px;
@@ -655,22 +646,21 @@ i {
       flex-direction: column;
       flex-wrap: nowrap;
       gap: 0px;
-      opacity: 0;
-      transition: 0.15s ease-in-out; }
-      .team__content__item__icons i {
+      opacity: 0; }
+      .team__content .team__item .team__icons i {
         color: #fff;
         font-size: 1.2rem;
         width: 50px;
         height: 50px;
         line-height: 50px;
         text-align: center; }
-        .team__content__item__icons i.twitter {
+        .team__content .team__item .team__icons i.twitter {
           background: #00acee; }
-        .team__content__item__icons i.facebook {
+        .team__content .team__item .team__icons i.facebook {
           background: #3b5998; }
-        .team__content__item__icons i.instagram {
+        .team__content .team__item .team__icons i.instagram {
           background: #3f729b; }
-        .team__content__item__icons i.linkedin {
+        .team__content .team__item .team__icons i.linkedin {
           background: #0e76a8; }
 
 /*# sourceMappingURL=style.css.map */

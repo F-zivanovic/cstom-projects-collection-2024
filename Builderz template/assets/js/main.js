@@ -165,7 +165,7 @@ function team() {
     const teamSection = document.querySelector('.team');
     const positionTeamSection = teamSection.getBoundingClientRect().top;
     const screenPosition = window.innerHeight / 1.8;
-    const teamItems = document.querySelectorAll('.team  .team__content__item');
+    const teamItems = document.querySelectorAll('.team  .team__item');
 
     for (teamItem of teamItems) {
         if (positionTeamSection < screenPosition) {

@@ -11,21 +11,19 @@
             justify-content: center;
         }
 
-        &__item {
+        .team__item {
             flex: 0 0 22%;
             margin-top: 20px;
             position: relative;
-
             transform: translateY(50%);
             opacity: 0;
 
             &.animated {
                 transform: translateY(0);
                 opacity: 1;
-                transition: $transition-out;
             }
 
-            @include breakpoint(lg) {
+            @include breakpoint(xl) {
                 flex: 0 0 47%;
             }
 
@@ -38,51 +36,41 @@
             }
 
 
-            &:hover &__text {
-                transition: $transition-out;
+            &:hover .team__text {
                 background-color: $secondaryColor;
             }
 
-            &:hover &__text h3 {
+            &:hover .team__text .team__name {
                 color: $primaryColor;
-                transition: $transition-out;
                 transform: scale(1.1);
             }
 
-            &:hover &__icons {
+            &:hover .team__icons {
                 opacity: 1;
-                transition: $transition-out;
             }
 
-            img {
-                resize: both;
-                height: auto;
-                vertical-align: middle;
-            }
 
-            &__text {
+            .team__text {
                 background-color: $primaryColor;
                 padding: 25px 0px;
                 text-align: center;
 
-                h3 {
+                .team__name {
                     color: $secondaryColor;
-                    transition: $transition;
                 }
 
-                p {
+                .team__position {
                     color: $whiteColor;
                     font-weight: 600;
                 }
             }
 
-            &__icons {
+            .team__icons {
                 position: absolute;
                 top: 0px;
                 left: 0px;
                 @include flex(flex-start, flex-start, column);
                 opacity: 0;
-                transition: $transition;
 
                 i {
                     color: $whiteColor;
