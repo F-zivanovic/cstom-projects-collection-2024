@@ -593,33 +593,18 @@ i {
 .team__header {
   text-align: center; }
 .team__content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0px; }
-  @media (max-width: 768px) {
-    .team__content {
-      justify-content: center; } }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 20px; }
   .team__content .team__item {
-    flex: 0 0 22%;
-    margin-top: 20px;
     position: relative;
     transform: translateY(50%);
-    opacity: 0; }
+    opacity: 0;
+    place-self: center; }
     .team__content .team__item.animated {
       transform: translateY(0);
       opacity: 1; }
-    @media (max-width: 1200px) {
-      .team__content .team__item {
-        flex: 0 0 47%; } }
-    @media (max-width: 768px) {
-      .team__content .team__item {
-        flex: 0 0 80%; } }
-    @media (max-width: 450px) {
-      .team__content .team__item {
-        flex: 0 0 100%; } }
     .team__content .team__item:hover .team__text {
       background-color: #fdbe33; }
     .team__content .team__item:hover .team__text .team__name {
@@ -647,20 +632,20 @@ i {
       flex-wrap: nowrap;
       gap: 0px;
       opacity: 0; }
-      .team__content .team__item .team__icons i {
+      .team__content .team__item .team__icons a {
         color: #fff;
         font-size: 1.2rem;
         width: 50px;
         height: 50px;
         line-height: 50px;
         text-align: center; }
-        .team__content .team__item .team__icons i.twitter {
+        .team__content .team__item .team__icons a.twitter {
           background: #00acee; }
-        .team__content .team__item .team__icons i.facebook {
+        .team__content .team__item .team__icons a.facebook {
           background: #3b5998; }
-        .team__content .team__item .team__icons i.instagram {
+        .team__content .team__item .team__icons a.instagram {
           background: #3f729b; }
-        .team__content .team__item .team__icons i.linkedin {
+        .team__content .team__item .team__icons a.linkedin {
           background: #0e76a8; }
 
 .footer {

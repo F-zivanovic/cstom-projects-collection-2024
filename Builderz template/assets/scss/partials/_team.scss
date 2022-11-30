@@ -5,36 +5,19 @@
     }
 
     &__content {
-        @include flex(space-between, center, row, wrap);
-
-        @include breakpoint(md) {
-            justify-content: center;
-        }
+        @include grid(200px, 2rem);
+        margin-top: 20px;
 
         .team__item {
-            flex: 0 0 22%;
-            margin-top: 20px;
             position: relative;
             transform: translateY(50%);
             opacity: 0;
+            place-self: center;
 
             &.animated {
                 transform: translateY(0);
                 opacity: 1;
             }
-
-            @include breakpoint(xl) {
-                flex: 0 0 47%;
-            }
-
-            @include breakpoint(md) {
-                flex: 0 0 80%;
-            }
-
-            @include breakpoint(xs) {
-                flex: 0 0 100%;
-            }
-
 
             &:hover .team__text {
                 background-color: $secondaryColor;
@@ -72,7 +55,7 @@
                 @include flex(flex-start, flex-start, column);
                 opacity: 0;
 
-                i {
+                a {
                     color: $whiteColor;
                     font-size: 1.2rem;
                     width: 50px;
