@@ -1,0 +1,24 @@
+.services {
+
+    &__wrapper {
+        @include flex(flex-start, center, row, wrap, 1.5rem);
+
+        .services__item {
+            flex: 1 1 250px;
+            margin-top: 20px;
+
+            .services__img {
+                width: 80px;
+
+                @include breakpoint(576px) {
+                    width: 60px;
+                }
+            }
+
+            .services__heading {
+                margin: 10px 0px;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

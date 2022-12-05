@@ -1,5 +1,6 @@
-let hamburger = document.querySelector('.nav-hamburger');
-let mobileMenu = document.querySelector('.nav-mobile-menu')
+// Open / Close Nav
+let hamburger = document.getElementById('hamburger');
+let mobileMenu = document.querySelector('.nav__mobile-menu')
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('open');
@@ -16,8 +17,16 @@ links.forEach((link) => {
     });
 });
 
+
+// Close mobile menu when we scroll
+window.addEventListener('scroll', () => {
+    mobileMenu.classList.add('hidden');
+    hamburger.classList.remove('open');
+});
+
+
 // Counter section
-let counters = document.querySelectorAll('.counter');
+let counters = document.querySelectorAll('.numbers__counter');
 let scrollStarted = false;
 document.addEventListener('scroll', scrollPage);
 
@@ -86,20 +95,29 @@ videoPlayer.init();
 let submitBtn = document.getElementById('sendForm');
 submitBtn.addEventListener('click', validateForm);
 
-function validateForm() {
+function validateForm(e) {
 
-    let formElements = document.querySelectorAll('.form-input');
-    let message = document.querySelector('.form-messages');
+    e.preventDefault();
+    console.log(e.target);
+
+    let formElements = document.querySelectorAll('.contact__input');
+    let message = document.getElementById('message');
 
     formElements.forEach((element) => {
 
         if (element.value == null || element.value == "") {
             message.innerText = '* Please fill up all fields in form';
-            return false;
+            setTimeout(function () {
+                message.textContent = '';
+            }, 3000);
         }
 
         else {
-            message.innerText = 'The form was sent successfully';;
+            message.innerText = 'The form was sent successfully';
+            element.value = "";
+            setTimeout(function () {
+                message.textContent = '';
+            }, 3000);
         }
     });
 }

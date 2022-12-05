@@ -1,0 +1,79 @@
+.footer {
+    background-color: $dark;
+    color: $whiteColor;
+
+    .footer__wrapper {
+        @include grid(300px, 1.5rem);
+
+        @include breakpoint(450px){
+            @include grid(200px, 1.5rem);
+        }
+
+        .footer__item {
+
+            .footer__heading {
+                @include text($whiteColor, 1.4rem, 0 0 1rem 0, 700, capitalize, 1.4rem );
+
+                @include breakpoint(992px) {
+                    margin-top: 20px;
+                }
+            }
+
+            .footer__logo {
+                @include flex(flex-start, center);
+
+                &__img {
+                    width: 50px;
+                }
+
+                &__heading {
+                    color: $primaryColor;
+                    margin-left: 10px;
+                }
+            }
+
+            .footer__desc{
+                margin: 1rem 0;
+                max-width: 300px;
+            }
+
+            .footer__list{
+
+                &__item{
+
+                    &:not(:last-child){
+                        margin-bottom: 1rem;
+                    }
+
+                    .footer__icon{
+                        margin-right: .7rem;
+                    }
+
+                    a{
+                        color: $whiteColor;
+
+                        &:hover{
+                            color: $primaryColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__subcontent {
+        padding: 40px 0px;
+        border-top: 1px solid $light;
+        @include flex(space-between, center);
+
+        @include breakpoint(576px) {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        span {
+            font-weight: 800;
+            color: $primaryColor;
+        }
+    }
+}

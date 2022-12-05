@@ -1,0 +1,72 @@
+.price {
+
+    &__wrapper {
+        @include flex(flex-start, center, row, wrap, 2rem);
+
+        .price__item {
+            flex: 1 1 250px;
+
+            &:nth-child(1) {
+                background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.65)), url('../../assets/img/gallery-1.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+
+            &:nth-child(2) {
+                background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.65)), url('../../assets/img/gallery-2.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+
+            &:nth-child(3) {
+                background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.65)), url('../../assets/img/gallery-3.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+
+            .price__content {
+                padding: 20px;
+
+                .price__heading {
+                    color: transparent;
+                    font-size: 5rem;
+                    -webkit-text-stroke: 2px $primaryColor;
+                }
+
+                .price__title {
+                    @include text($light, 1.5rem, 0 0 10px 0, 700, capitalize, 1.5rem);
+                }
+
+                .price__money {
+                    @include text($primaryColor, 1.5rem, 0, 600, capitalize, 1.5rem);
+                }
+
+                .price__list {
+                    color: $light;
+                    margin-top: 20px;
+
+                    &__item {
+
+                        &:not(:last-child) {
+                            margin-bottom: 1rem;
+                        }
+
+                        i {
+                            margin-right: 1rem;
+                            color: $primaryColor;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+
+                .price__btn {
+                    display: inline-block;
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+    }
+}

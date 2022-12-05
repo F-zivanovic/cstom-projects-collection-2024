@@ -1,4 +1,4 @@
-@mixin flex($justify, $align, $direction: row, $wrap: nowrap, $gap: 0px) {
+@mixin flex($justify:center, $align:center, $direction: row, $wrap: nowrap, $gap: 0px) {
     display: flex;
     justify-content: $justify;
     align-items: $align;
@@ -7,13 +7,23 @@
     gap: $gap;
 }
 
-@mixin grid($rows, $gap, $justify: center, $align: center) {
+@mixin grid ($value, $gap) {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: $rows;
-    grid-gap: $gap;
-    justify-content: $justify;
-    align-items: $align;
+    grid-template-columns: repeat(auto-fit, minmax($value, 1fr));
+    gap: $gap;
+}
+
+
+@mixin text($color, $fontSize, $margin:0, $weight:400, $transform:capitalize, $fontSizeBp:1rem){
+    color: $color;
+    font-size: $fontSize;
+    margin: $margin;
+    font-weight: $weight;
+    text-transform: $transform;
+
+    @media(max-width:576px){
+        font-size:$fontSizeBp;
+    }
 }
 
 @mixin positioning($position, $top, $right, $bottom, $left, $width: auto, $height: auto) {

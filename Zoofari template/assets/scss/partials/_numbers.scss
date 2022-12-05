@@ -1,0 +1,29 @@
+.numbers {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../../assets/img/hedaer-bg2.jpg');
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+
+    &__wrapper {
+        @include grid(230px, 2rem);
+
+        .numbers__item {
+
+            i {
+                color: $primaryColor;
+                font-size: 3rem;
+            }
+
+            .numbers__counter {
+                @include text($light, 2.5rem, 10px 0 10px 0, 700, capitalize, 2rem);
+            }
+
+            .numbers__text {
+                color: $light;
+                font-weight: 500;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

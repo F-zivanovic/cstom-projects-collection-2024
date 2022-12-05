@@ -1,0 +1,46 @@
+.about {
+    @include flex(flex-start, center, row, wrap, 3rem);
+
+    &__item {
+        flex: 1 1 350px;
+
+        &__list {
+            margin: 20px 0px;
+
+            .about__item {
+                display: block;
+                font-weight: 500;
+
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+
+                i {
+                    @include text($primaryColor, 1.3rem, 0 10px 0 0);
+                }
+            }
+        }
+
+        .about__border {
+            position: relative;
+            width: 100%;
+            min-height: 400px;
+
+            @include breakpoint(576px){
+                min-height: 300px;
+            }
+
+            &::before {
+                content: "";
+                @include positioning(absolute, 0px, 2rem, 2rem, 0px);
+                border: 5px solid $primaryColor;
+            }
+        }
+
+        img {
+            @include positioning(absolute, 2rem, auto, auto, 2rem);
+            width: calc(100% - 3rem);
+            height: calc(100% - 3rem);
+        }
+    }
+}

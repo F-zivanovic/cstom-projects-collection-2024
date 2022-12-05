@@ -1,4 +1,4 @@
-header {
+.header {
     background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../../assets/img/hedaer-bg2.jpg');
     height: 100vh;
     background-position: center;
@@ -6,31 +6,23 @@ header {
     background-attachment: scroll;
     position: relative;
 
-    nav {
-        @include flex(space-between, center);
-        padding: 15px 0px;
+    .nav {
+        @include flex(space-between);
+        padding: 1.5rem 0;
 
-        .nav-logo {
-            @include flex(center, center);
+        &__logo {
+            @include flex();
 
-            img {
+            &__heading {
+                @include text($primaryColor, 2.5rem, 0 0 0 1rem, 700, capitalize, 1.8rem);
+                
                 @include breakpoint(576px) {
-                    width: 50px;
-                }
-            }
-
-            h1 {
-                margin-left: 10px;
-                color: $primaryColor;
-                font-size: 2.5rem;
-
-                @include breakpoint(576px) {
-                    font-size: 1.8rem;
+                    display: none;
                 }
             }
         }
 
-        .nav-hamburger {
+        .nav__hamburger {
             cursor: pointer;
             width: 30px;
             height: 30px;
@@ -42,63 +34,55 @@ header {
                 height: 25px;
             }
 
-            .hamburger-top,
-            .hamburger-middle,
-            .hamburger-bottom {
+            &__top,
+            &__middle,
+            &__bottom {
                 @include positioning(absolute, 0%, auto, auto, 0%, 100%, 3px);
                 background-color: $primaryColor;
                 transform: rotate(0);
-                transition: $transition-out;
             }
 
-            .hamburger-middle {
+            &__middle {
                 transform: translateY(10px);
             }
 
-            .hamburger-bottom {
+            &__bottom {
                 transform: translateY(20px);
             }
 
-            &.open .hamburger-top {
+            &.open .nav__hamburger__top {
                 transform: rotate(45deg) translateY(2px) translateX(1px);
             }
 
-            &.open .hamburger-middle {
+            &.open .nav__hamburger__middle {
                 display: none;
             }
 
-            &.open .hamburger-bottom {
+            &.open .nav__hamburger__bottom {
                 transform: rotate(-45deg) translateY(2px) translateY(1px);
             }
         }
 
-        .nav-mobile-menu {
+        .nav__mobile-menu {
             @include positioning(fixed, 0%, 0%, 0%, 0%, 100%, 100%);
             background-color: $dark;
-            @include flex(center, center);
+            @include flex();
             text-align: center;
-            transition: $transition;
             z-index: 99;
 
-            ul {
+            .nav__list {
 
-                li {
+                &__item {
 
                     &:not(:last-child) {
                         margin-bottom: 15px;
                     }
 
-                    a {
-                        color: $light;
-                        text-transform: uppercase;
-                        font-size: 1.5rem;
+                    .nav__link {
+                        @include text($light, 1.5rem, 0, 400, capitalize, 1.2rem);
 
                         &:hover {
                             color: $primaryColor;
-                        }
-
-                        @include breakpoint(576px) {
-                            font-size: 1.2rem;
                         }
                     }
                 }
@@ -110,69 +94,42 @@ header {
         }
     }
 
-    .header-content {
+    &__content {
         @include flex(center, center, column);
         text-align: center;
         height: 80vh;
 
-        h3 {
-            color: $light;
-            margin-bottom: 15px;
-            font-size: 2.5rem;
+        .header__heading {
+            @include text($light, 2.5rem, 0 0 1rem 0, 700, capitalize, 1.8rem);
             animation: fadeInUp 0.5s ease-in-out;
-
-            @include breakpoint(576px) {
-                font-size: 1.8rem;
-            }
         }
 
-        .header-social {
-            margin-bottom: 20px;
-            @include flex(center, center);
+        .header__social {
+            margin-bottom:1.5rem;
+            @include flex();
             animation: fadeInUp 0.5s ease-in-out 0.2s;
             animation-fill-mode: both;
-
-            a {
-                width: 45px;
-                height: 45px;
-                line-height: 45px;
-                text-align: center;
-                background-color: transparent;
-                border: 2px solid $primaryColor;
-                color: $primaryColor;
-
-                &:not(:last-child) {
-                    margin-right: 15px;
-                }
-
-                &:hover {
-                    border: 2px solid $light;
-                    color: $light;
-                }
-            }
         }
 
-        a {
+        .header__btn {
             animation: fadeInUp 0.5s ease-in-out 0.4s;
             animation-fill-mode: both;
         }
     }
 
-    .header-corner {
+    .header__corner {
         @include positioning(absolute, auto, 15px, 15px, auto);
         animation: fadeInUp 0.5s ease-in-out 0.2s;
         animation-fill-mode: both;
     }
 
-    .header-arrow {
+    .header__arrow {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        bottom: 40px;
         animation: fadeBounce 2s infinite;
-
-        i {
-            font-size: 3rem;
-            cursor: auto;
-        }
+        font-size: 3rem;
+        cursor: auto;
     }
 }

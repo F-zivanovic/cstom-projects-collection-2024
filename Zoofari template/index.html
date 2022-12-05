@@ -8,7 +8,7 @@
     <title>Zoofari tamplate</title>
 
     <!-- Favicon -->
-    <link href="" rel="icon" />
+    <link href="assets/img/icon/icon-3.png" rel="icon" />
 
     <!-- Meta tags -->
     <meta name="author" content="Filip Zivanovic">
@@ -37,104 +37,103 @@
 
 
 
-    <!-- Header section -->
-    <header>
+    <!-- Header section starts-->
+    <header class="header">
 
-        <!-- Nav section -->
-        <nav class="container">
-            <a href="index.html" class="nav-logo">
-                <img src="assets/img/icon/icon-10.png" alt="logo icon">
-                <h1>Zoofari</h1>
+        <!-- Nav section starts-->
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/img/icon/icon-10.png" alt="logo icon" class="nav__logo__img">
+                <h1 class="nav__logo__heading">Zoofari</h1>
             </a>
-            <div class="nav-hamburger">
-                <span class="hamburger-top"></span>
-                <span class="hamburger-middle"></span>
-                <span class="hamburger-bottom"> </span>
+            <div class="nav__hamburger" id="hamburger">
+                <span class="nav__hamburger__top"></span>
+                <span class="nav__hamburger__middle"></span>
+                <span class="nav__hamburger__bottom"> </span>
             </div>
 
-            <div class="nav-mobile-menu hidden">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#price">Price</a></li>
+            <div class="nav__mobile-menu hidden" id="mobile-nav">
+                <ul class="nav__list">
+                    <li class="nav__list__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__list__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__list__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__list__item"><a href="#gallery" class="nav__link">Gallery</a></li>
+                    <li class="nav__list__item"><a href="#price" class="nav__link">Price</a></li>
                 </ul>
             </div>
         </nav>
-        <!-- End nav section -->
+        <!-- Nav section ends -->
 
-        <div class="header-content container">
-            <h3>Enjoy Wonderful Day With Your Family</h3>
-            <div class="header-social">
-                <a href="#"><i class="fas fa-phone-alt"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"> <i class="fab fa-instagram"></i></a>
+        <div class="header__content container">
+            <h3 class="header__heading">Enjoy Wonderful Day With Your Family</h3>
+            <div class="header__social social">
+                <a href="#" class="fas fa-phone-alt"></a>
+                <a href="#" class="fas fa-envelope"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
             </div>
-            <a href="#about" class="btn">Read more</a>
+            <a href="#about" class="btn header__btn">Read more</a>
         </div>
 
-        <a href="#contact" class="btn header-corner">Contact us</a>
-        <div class="header-arrow">
-            <i class="fal fa-angle-down"></i>
+        <a href="#contact" class="btn header__corner">Contact us</a>
+        <div class="header__arrow fal fa-angle-down">
         </div>
 
     </header>
-    <!-- End header section -->
+    <!-- Header section ends-->
 
 
-    <!-- About section -->
+    <!-- About section starts -->
     <section class="section about container" id="about">
-        <article class="about-item">
+        <article class="about__item">
             <div class="section-title">Welcome To Zoofari</div>
             <div class="section-subtitle">Why You Should Visit <span>Zoofari</span> Park!</div>
-            <p>Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum.
+            <p class="about__item__desc">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum.
                 Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p>
-            <ul>
-                <li><i class="fal fa-check-circle"></i>Free Car Parking</li>
-                <li><i class="fal fa-check-circle"></i>Natural Environment</li>
-                <li><i class="fal fa-check-circle"></i>Professional Guide</li>
-                <li><i class="fal fa-check-circle"></i>World Best Animals</li>
+            <ul class="about__item__list">
+                <li class="about__item"><i class="fal fa-check-circle"></i> Free Car Parking</li>
+                <li class="about__item"><i class="fal fa-check-circle"></i> Natural Environment</li>
+                <li class="about__item"><i class="fal fa-check-circle"></i> Professional Guide</li>
+                <li class="about__item"><i class="fal fa-check-circle"></i> World Best Animals</li>
             </ul>
-            <button type="button" class="btn">Read more</button>
+            <a href="#" class="abut__btn btn">Read more</a>
         </article>
-        <article class="about-item">
-            <div class="img-border">
-                <img src="assets/img/about.jpg" alt="about img" />
+        <article class="about__item">
+            <div class="about__border">
+                <img src="assets/img/about.jpg" alt="about img" class="about__img">
             </div>
         </article>
     </section>
-    <!-- End about section -->
+    <!-- About section ends -->
 
 
 
-    <!-- Numbers section -->
+    <!-- Numbers section starts-->
     <section class="section numbers" id="numbers">
-        <div class="numbers-wrapper container">
-            <article class="numbers-item">
+        <div class="numbers__wrapper container">
+            <article class="numbers__item">
                 <i class="fas fa-paw"></i>
-                <div class="counter" data-target="35">0</div>
-                <p>Total animal</p>
+                <div class="numbers__counter" data-target="35">0</div>
+                <p class="numbers__text">Total animal</p>
             </article>
-            <article class="numbers-item">
+            <article class="numbers__item">
                 <i class="fas fa-user-friends"></i>
-                <div class="counter" data-target="42">0</div>
-                <p>Daily Visitors</p>
+                <div class="numbers__counter" data-target="42">0</div>
+                <p class="numbers__text">Daily Visitors</p>
             </article>
-            <article class="numbers-item">
+            <article class="numbers__item">
                 <i class="fas fa-certificate"></i>
-                <div class="counter" data-target="41">0</div>
-                <p>Total Membership</p>
+                <div class="numbers__counter" data-target="41">0</div>
+                <p class="numbers__text">Total Membership</p>
             </article>
-            <article class="numbers-item">
+            <article class="numbers__item">
                 <i class="fas fa-shield-alt"></i>
-                <div class="counter" data-target="55">0</div>
-                <p>Save Wild Life</p>
+                <div class="numbers__counter" data-target="55">0</div>
+                <p class="numbers__text">Save Wild Life</p>
             </article>
         </div>
     </section>
-    <!-- End Numbers section -->
+    <!-- Numbers section ends-->
 
 
 
@@ -144,44 +143,44 @@
     <section class="section price container" id="price">
         <div class="section-title">Membership</div>
         <div class="section-subtitle">You Can Be A Proud Member Of <span>Zoofari</span></div>
-        <div class="price-content">
-            <article class="price-card">
-                <div class="card-content">
-                    <h3>01</h3>
-                    <p class="card-title">Popular</p>
-                    <p class="card-price">$99.00</p>
-                    <ul>
-                        <li><i class="fal fa-check-circle"></i>10% discount</li>
-                        <li><i class="fal fa-check-circle"></i>2 adult and 2 child</li>
-                        <li><i class="fal fa-check-circle"></i>Free animal exhibition</li>
+        <div class="price__wrapper">
+            <article class="price__item">
+                <div class="price__content">
+                    <h3 class="price__heading">01</h3>
+                    <p class="price__title">Popular</p>
+                    <p class="price__money">$99.00</p>
+                    <ul class="price__list">
+                        <li class="price__list__item"><i class="fal fa-check-circle"></i>10% discount</li>
+                        <li class="price__list__item"><i class="fal fa-check-circle"></i>2 adult and 2 child</li>
+                        <li class="price__list__item"><i class="fal fa-check-circle"></i>Free animal exhibition</li>
                     </ul>
-                    <button type="button" class="btn">Read more</button>
+                    <a href="#" class="price__btn btn">Read more</a>
                 </div>
             </article>
-            <article class="price-card">
-                <div class="card-content">
-                    <h3>02</h3>
-                    <p class="card-title">Standard</p>
-                    <p class="card-price">$99.00</p>
-                    <ul>
-                        <li><i class="fal fa-check-circle"></i>10% discount</li>
-                        <li><i class="fal fa-check-circle"></i>2 adult and 2 child</li>
-                        <li><i class="fal fa-check-circle"></i>Free animal exhibition</li>
+            <article class="price__item">
+                <div class="price__content">
+                    <h3 class="price__heading">02</h3>
+                    <p class="price__title">Standard</p>
+                    <p class="price__money">$99.00</p>
+                    <ul class="price__list">
+                        <li class="price__list__item"><i class="fal fa-check-circle"></i>10% discount</li>
+                        <li class="price__list__item"><i class="fal fa-check-circle"></i>2 adult and 2 child</li>
+                        <li class="price__list__item"><i class="fal fa-check-circle"></i>Free animal exhibition</li>
                     </ul>
-                    <button type="button" class="btn">Read more</button>
+                    <a href="#" class="price__btn btn">Read more</a>
                 </div>
             </article>
-            <article class="price-card">
-                <div class="card-content">
-                    <h3>03</h3>
-                    <p class="card-title">Premium</p>
-                    <p class="card-price">$99.00</p>
-                    <ul>
-                        <li><i class="fal fa-check-circle"></i>10% discount</li>
-                        <li><i class="fal fa-check-circle"></i>2 adult and 2 child</li>
-                        <li><i class="fal fa-check-circle"></i>Free animal exhibition</li>
+            <article class="price__item">
+                <div class="price__content">
+                    <h3 class="price__heading">03</h3>
+                    <p class="price__title">Premium</p>
+                    <p class="price__money">$99.00</p>
+                    <ul class="price__list">
+                        <li class="price__list__item"><i class="fal fa-check-circle"></i>10% discount</li>
+                        <li class="price__list__item"><i class="fal fa-check-circle"></i>2 adult and 2 child</li>
+                        <li class="price__list__item"><i class="fal fa-check-circle"></i>Free animal exhibition</li>
                     </ul>
-                    <button type="button" class="btn">Read more</button>
+                    <a href="#" class="price__btn btn">Read more</a>
                 </div>
             </article>
         </div>
@@ -192,59 +191,48 @@
 
     <!-- Services section -->
     <section class="section services container" id="services">
-        <div class="services-header">
-            <article class="section-header">
-                <div class="section-title">Our Services</div>
-                <div class="section-subtitle">Special Services For <span>Zoofari</span> Visitors</div>
+        <div class="section-title">Our Services</div>
+        <div class="section-subtitle">Special Services For <span>Zoofari</span> Visitors</div>
+        <div class="services__wrapper">
+            <article class="services__item">
+                <img src="assets/img/icon/icon-1.png" alt="icon img" class="services__img">
+                <h4 class="services__heading">Car Parking</h4>
+                <p class="services__desc">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
             </article>
-            <article class="services-contact">
-                <i class="fas fa-mobile-alt"></i>
-                <div class="contact-info">
-                    <p>Call for more info</p>
-                    <h3>+012 345 6789</h3>
-                </div>
+            <article class="services__item">
+                <img src="assets/img/icon/icon-2.png" alt="icon img" class="services__img">
+                <h4 class="services__heading">Car Parking</h4>
+                <p class="services__desc">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
             </article>
-        </div>
-        <div class="services-content">
-            <article class="services-item">
-                <img src="assets/img/icon/icon-1.png" alt="icon img">
-                <h4>Car Parking</h4>
-                <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+            <article class="services__item">
+                <img src="assets/img/icon/icon-3.png" alt="icon img" class="services__img">
+                <h4 class="services__heading">Car Parking</h4>
+                <p class="services__desc">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
             </article>
-            <article class="services-item">
-                <img src="assets/img/icon/icon-2.png" alt="icon img">
-                <h4>Car Parking</h4>
-                <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+            <article class="services__item">
+                <img src="assets/img/icon/icon-4.png" alt="icon img" class="services__img">
+                <h4 class="services__heading">Car Parking</h4>
+                <p class="services__desc">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
             </article>
-            <article class="services-item">
-                <img src="assets/img/icon/icon-3.png" alt="icon img">
-                <h4>Car Parking</h4>
-                <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+            <article class="services__item">
+                <img src="assets/img/icon/icon-5.png" alt="icon img" class="services__img">
+                <h4 class="services__heading">Car Parking</h4>
+                <p class="services__desc">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
             </article>
-            <article class="services-item">
-                <img src="assets/img/icon/icon-4.png" alt="icon img">
-                <h4>Car Parking</h4>
-                <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+            <article class="services__item">
+                <img src="assets/img/icon/icon-6.png" alt="icon img" class="services__img">
+                <h4 class="services__heading">Car Parking</h4>
+                <p class="services__desc">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
             </article>
-            <article class="services-item">
-                <img src="assets/img/icon/icon-5.png" alt="icon img">
-                <h4>Car Parking</h4>
-                <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+            <article class="services__item">
+                <img src="assets/img/icon/icon-7.png" alt="icon img" class="services__img">
+                <h4 class="services__heading">Car Parking</h4>
+                <p class="services__desc">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
             </article>
-            <article class="services-item">
-                <img src="assets/img/icon/icon-6.png" alt="icon img">
-                <h4>Car Parking</h4>
-                <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-            </article>
-            <article class="services-item">
-                <img src="assets/img/icon/icon-7.png" alt="icon img">
-                <h4>Car Parking</h4>
-                <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-            </article>
-            <article class="services-item">
-                <img src="assets/img/icon/icon-9.png" alt="icon img">
-                <h4>Car Parking</h4>
-                <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+            <article class="services__item">
+                <img src="assets/img/icon/icon-8.png" alt="icon img" class="services__img">
+                <h4 class="services__heading">Car Parking</h4>
+                <p class="services__desc">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
             </article>
         </div>
     </section>
@@ -256,47 +244,47 @@
     <section class="section gallery container" id="gallery">
         <div class="section-title">Our Animals</div>
         <div class="section-subtitle">Let`s See Our<span>Zoofari</span> Awesome Animals</div>
-        <div class="gallery-content">
-            <article class="gallery-item">
-                <img src="assets/img/gallery-3.jpg" alt="gallery img">
-                <div class="gallery-overlay">
-                    <p>Animal</p>
-                    <h4>Elephant</h4>
+        <div class="gallery__wrapper">
+            <article class="gallery__item">
+                <img src="assets/img/gallery-3.jpg" alt="gallery img" class="gallery__img">
+                <div class="gallery__overlay">
+                    <p class="gallery__title">Animal</p>
+                    <h4 class="gallery__name">Elephant</h4>
                 </div>
             </article>
-            <article class="gallery-item">
-                <img src="assets/img/gallery-1.jpg" alt="gallery img">
-                <div class="gallery-overlay">
-                    <p>Animal</p>
-                    <h4>Elephant</h4>
+            <article class="gallery__item">
+                <img src="assets/img/gallery-1.jpg" alt="gallery img" class="gallery__img">
+                <div class="gallery__overlay">
+                    <p class="gallery__title">Animal</p>
+                    <h4 class="gallery__name">Elephant</h4>
                 </div>
             </article>
-            <article class="gallery-item">
-                <img src="assets/img/gallery-5.jpg" alt="gallery img">
-                <div class="gallery-overlay">
-                    <p>Animal</p>
-                    <h4>Elephant</h4>
+            <article class="gallery__item">
+                <img src="assets/img/gallery-5.jpg" alt="gallery img" class="gallery__img">
+                <div class="gallery__overlay">
+                    <p class="gallery__title">Animal</p>
+                    <h4 class="gallery__name">Elephant</h4>
                 </div>
             </article>
-            <article class="gallery-item">
-                <img src="assets/img/gallery-6.jpg" alt="gallery img">
-                <div class="gallery-overlay">
-                    <p>Animal</p>
-                    <h4>Elephant</h4>
+            <article class="gallery__item">
+                <img src="assets/img/gallery-6.jpg" alt="gallery img" class="gallery__img">
+                <div class="gallery__overlay">
+                    <p class="gallery__title">Animal</p>
+                    <h4 class="gallery__name">Elephant</h4>
                 </div>
             </article>
-            <article class="gallery-item">
-                <img src="assets/img/gallery-2.jpg" alt="gallery img">
-                <div class="gallery-overlay">
-                    <p>Animal</p>
-                    <h4>Elephant</h4>
+            <article class="gallery__item">
+                <img src="assets/img/gallery-2.jpg" alt="gallery img" class="gallery__img">
+                <div class="gallery__overlay">
+                    <p class="gallery__title">Animal</p>
+                    <h4 class="gallery__name">Elephant</h4>
                 </div>
             </article>
-            <article class="gallery-item">
-                <img src="assets/img/gallery-4.jpg" alt="gallery img">
-                <div class="gallery-overlay">
-                    <p>Animal</p>
-                    <h4>Elephant</h4>
+            <article class="gallery__item">
+                <img src="assets/img/gallery-4.jpg" alt="gallery img" class="gallery__img">
+                <div class="gallery__overlay">
+                    <p class="gallery__title">Animal</p>
+                    <h4 class="gallery__name">Elephant</h4>
                 </div>
             </article>
         </div>
@@ -307,9 +295,9 @@
 
     <!-- Video section -->
     <section class="video" id="video">
-        <video src="assets/img/video.mp4"></video>
-        <div class="video-overlay" loop muted autoplay></div>
-        <div class="video-holder">
+        <video src="assets/img/video.mp4" class="video__video" loop muted autoplay></video>
+        <div class="video__overlay"></div>
+        <div class="video__holder">
             <i id="play" class="fas fa-play-circle"></i>
             <i id="stop" class="fas fa-stop-circle"></i>
         </div>
@@ -320,24 +308,24 @@
 
     <!-- Contact section -->
     <section class="section contact container" id="contact">
-        <article class="contact-item">
+        <article class="contact__item">
             <div class="section-title">Contact Us</div>
             <div class="section-subtitle">Have Any Query? Please Contact Us!</div>
-            <p>The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a
+            <p class="contact__desc">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a
                 few minutes. Just copy and paste the files, add a little code and you're done</p>
-            <form action="" method="" name="contact">
-                <div class="input-group">
-                    <input type="text" placeholder="Your Name" required class="form-input">
-                    <input type="text" placeholder="Your Last Name" required class="form-input">
+            <form action="" method="" name="contact" class="contact__form">
+                <div class="contact__group">
+                    <input type="text" placeholder="Your Name"  class="contact__input">
+                    <input type="text" placeholder="Your Last Name"  class="contact__input">
                 </div>
-                <input type="text" placeholder="Subject" required class="form-input" style="width:100%">
-                <textarea placeholder="Message" class="form-input"></textarea>
-                <button type="submit" class="btn" id="sendForm">Send Messages</button>
-                <div class="form-messages"></div>
+                <input type="text" placeholder="Subject"  class="contact__input" style="width:100%">
+                <textarea placeholder="Message" class="contact__input"></textarea>
+                <input type="submit" value="Send message" class="btn" id="sendForm">
+                <div class="contact__messages" id="message"></div>
             </form>
         </article>
-        <article class="contact-item">
-            <iframe class="map"
+        <article class="contact__item">
+            <iframe class="contact__map"
                 src="//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
                 frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0">
             </iframe>
@@ -348,52 +336,44 @@
 
 
     <!-- Footer section -->
-    <footer>
-        <div class="footer-wrapper section container">
-            <article class="footer-item">
-                <a href="index.html" class="logo">
-                    <img src="assets/img/icon/icon-10.png" alt="logo icon">
-                    <h1>Zoofari</h1>
+    <footer class="footer">
+        <div class="footer__wrapper section container">
+            <article class="footer__item">
+                <a href="index.html" class="footer__logo">
+                    <img src="assets/img/icon/icon-10.png" alt="logo icon" class="footer__logo__img">
+                    <h2 class="footer__logo__heading">Zoofari</h2>
                 </a>
-                <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
+                <p class="footer__desc">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
                     lorem sit clita</p>
-                <div class="footer-social">
-                    <a href="#" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" target="_blank">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
+                <div class="footer__social social">
+                    <a href="#" target="_blank" class="fab fa-facebook-f"></a>
+                    <a href="#" target="_blank" class="fab fa-twitter"></a>
+                    <a href="#" target="_blank" class="fab fa-linkedin-in"></a>
+                    <a href="#" target="_blank" class="fab fa-instagram"></a>
                 </div>
 
             </article>
-            <article class="footer-item">
-                <h3>Address</h3>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt"></i>Svilajnac 123, Glavna</li>
-                    <li><i class="fas fa-envelope"></i>info@example.com</li>
-                    <li><i class="fas fa-phone-alt"></i>+012 345 67890</li>
+            <article class="footer__item">
+                <h3 class="footer__heading">Address</h3>
+                <ul class="footer__list">
+                    <li class="footer__list__item"><i class="fas fa-map-marker-alt footer__icon"></i>Belgrad 123, Serbia</li>
+                    <li class="footer__list__item"><i class="fas fa-envelope footer__icon"></i>info@example.com</li>
+                    <li class="footer__list__item"><i class="fas fa-phone-alt footer__icon"></i>+012 345 67890</li>
                 </ul>
             </article>
-            <article class="footer-item">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><i class="fas fa-angle-right"></i><a href="index.html">Home</a></li>
-                    <li><i class="fas fa-angle-right"></i><a href="#about">About</a></li>
-                    <li><i class="fas fa-angle-right"></i><a href="#services">Services</a></li>
-                    <li><i class="fas fa-angle-right"></i><a href="#gallery">Gallery</a></li>
-                    <li><i class="fas fa-angle-right"></i><a href="#contact">Contact</a></li>
+            <article class="footer__item">
+                <h3 class="footer__heading">Quick Links</h3>
+                <ul class="footer__list">
+                    <li class="footer__list__item"><i class="fas fa-angle-right footer__icon"></i><a href="index.html">Home</a></li>
+                    <li class="footer__list__item"><i class="fas fa-angle-right footer__icon"></i><a href="#about">About</a></li>
+                    <li class="footer__list__item"><i class="fas fa-angle-right footer__icon"></i><a href="#services">Services</a></li>
+                    <li class="footer__list__item"><i class="fas fa-angle-right footer__icon"></i><a href="#gallery">Gallery</a></li>
+                    <li class="footer__list__item"><i class="fas fa-angle-right footer__icon"></i><a href="#contact">Contact</a></li>
                 </ul>
             </article>
             </article>
         </div>
-        <div class="footer-subcontent">
+        <div class="footer__subcontent container">
             <p>© <span>Your Site Name</span>, All Right Reserved.</p>
             <p>Designed By <span>Author</span></p>
         </div>

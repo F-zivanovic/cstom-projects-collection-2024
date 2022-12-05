@@ -1,25 +1,16 @@
 .contact {
-    @include flex(space-between, center, row, wrap);
+    @include grid(350px, 3rem);
 
-    @include breakpoint(992px) {
-        justify-content: center;
+    @include breakpoint(576px){
+        @include grid(200px, 3rem);
     }
 
-    &-item {
-        flex: 0 0 47%;
+    &__item {
 
-        @include breakpoint(992px) {
-            flex: 0 0 70%;
-        }
-
-        @include breakpoint(576px) {
-            flex: 0 0 90%;
-        }
-
-        form {
+        .contact__form {
             @include flex(center, flex-start, column);
 
-            .input-group {
+            .contact__group {
                 @include flex(space-between, center);
                 width: 100%;
 
@@ -37,10 +28,10 @@
                 }
             }
 
-            .form-input {
+            .contact__input {
                 background-color: $light;
-                padding: 15px;
-                margin-top: 15px;
+                padding: 1rem;
+                margin-top: 1rem;
 
                 @include breakpoint(576px) {
                     font-size: 0.8rem;
@@ -56,26 +47,22 @@
                 padding: 15px;
             }
 
-            button[type="submit"] {
+            input[type="submit"] {
                 margin-top: 15px;
             }
 
-            .form-messages {
+            .contact__messages {
                 text-transform: uppercase;
                 margin-top: 15px;
             }
         }
 
-        .map {
+        .contact__map {
             height: 500px;
             width: 100%;
 
-            @include breakpoint(768px) {
+            @include breakpoint(576px) {
                 display: none;
-            }
-
-            @include breakpoint(992px) {
-                margin-top: 20px;
             }
         }
     }

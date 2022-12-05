@@ -3,17 +3,25 @@
     margin: 0px;
     padding: 0px;
     scroll-behavior: smooth;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    list-style-type: none;
+    transition:  all .5s linear;
 }
 
 
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
     line-height: 1.5;
     background-color: #fff;
     color: #555;
     overflow-x: hidden;
+    font-size: 100%;
+
+    @include breakpoint(576px){
+        font-size: 70%;
+    }
 }
 
 h1,
@@ -27,47 +35,29 @@ h6 {
 }
 
 a {
-    text-decoration: none;
-    transition: $transition;
     color: #555;
 
     &:hover,
     &:focus,
     &:active {
         cursor: pointer;
-        transition: $transition-out;
-        outline: none;
         color: $primaryColor;
     }
 }
 
-ul {
-    list-style-type: none;
-}
 
 img {
     width: 100%;
-    resize: both;
+    vertical-align: middle;
     object-fit: cover;
 }
 
 i {
     cursor: pointer;
-    transition: $transition;
-
-    &:hover {
-        transition: $transition-out;
-    }
-}
-
-input,
-textarea {
-    outline: none;
-    border: none;
 }
 
 .container {
-    width: 90%;
+    width: 80%;
     margin: 0px auto;
 }
 
@@ -82,10 +72,10 @@ textarea {
         margin-bottom: 20px;
         line-height: 1.2;
         font-weight: 700;
-        font-size: 2.5rem;
+        font-size: 2rem;
 
         @media(max-width:576px) {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
 
         span {
@@ -97,15 +87,12 @@ textarea {
 .btn {
     color: $whiteColor;
     font-weight: 500;
-    transition: $transition;
     display: inline-block;
-    padding: 15px 30px;
+    padding: 15px 25px;
     background-color: $primaryColor;
     border: 1px solid $primaryColor;
-    font-size: 1rem;
 
     &:hover {
-        transition: $transition-out;
         cursor: pointer;
         border: 1px solid $primaryColor;
         background: transparent;
@@ -114,7 +101,35 @@ textarea {
     }
 
     @include breakpoint(576px) {
-        padding: 10px 25px;
+        padding: 10px 20px;
         font-size: 0.9rem;
+    }
+}
+
+.social{
+
+    a{
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        background-color: transparent;
+        border: 2px solid $primaryColor;
+        color: $primaryColor;
+
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+
+        &:hover {
+            border: 2px solid $light;
+            color: $light;
+        }
+
+        @include breakpoint(576px){
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+        }
     }
 }
