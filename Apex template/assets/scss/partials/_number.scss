@@ -1,5 +1,5 @@
 .number {
-    @include flex(flex-start, flex-start, row, wrap);
+    @include flex(flex-start, stretch, row, wrap);
 
     &__item {
         flex: 1;
@@ -10,7 +10,7 @@
             flex: 0 0 50%;
         }
 
-        @include breakpoints(768px) {
+        @include breakpoints(576px) {
             flex: 0 0 100%;
         }
 
@@ -18,28 +18,24 @@
             background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../../assets/img/fact-1.jpg');
             background-size: cover;
             background-repeat: no-repeat;
-            height: auto;
         }
 
         &:nth-child(2) {
             background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../../assets/img/fact-2.jpg');
             background-size: cover;
             background-repeat: no-repeat;
-            height: auto;
         }
 
         &:nth-child(3) {
             background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../../assets/img/fact-3.jpg');
             background-size: cover;
             background-repeat: no-repeat;
-            height: auto;
         }
 
         &:nth-child(4) {
             background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../../assets/img/fact-4.jpg');
             background-size: cover;
             background-repeat: no-repeat;
-            height: auto;
         }
 
         &__heading {
@@ -53,14 +49,12 @@
         }
 
         &__paragraph {
-            font-size: 0.8rem;
             margin-bottom: 10px;
         }
 
         &__link {
             text-transform: uppercase;
             margin-top: 10px;
-            font-size: 0.9rem;
 
             i {
                 margin-left: 10px;

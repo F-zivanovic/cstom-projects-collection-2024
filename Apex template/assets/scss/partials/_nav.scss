@@ -1,14 +1,15 @@
 .nav {
-    padding: 15px 0px;
-    @include flex(space-between, center);
-    animation: navAnimation 1s $transition;
+    padding: 1rem 0;
+    @include flex(space-between, );
+    animation: navAnimation 1s .4s linear;
+    position: relative;
 
     &__logo {
-        @include flex(center, center);
+        @include flex();
+        gap: .5rem;
 
         i {
             color: $primaryColor;
-            margin-right: 10px;
             font-size: 3rem;
 
             @include breakpoints(576px) {
@@ -27,33 +28,44 @@
         }
     }
 
-    &__list {
-        @include flex(center, center);
+    .nav__list {
+        @include flex();
+        gap: 1rem;
 
         @include breakpoints(992px) {
             display: none;
+            @include positioning(absolute, 99%, 0, auto, 0);
+            flex-direction: column;
+            z-index: 1000;
+            align-items: flex-start;
+            background-color: $primaryColor;
+            padding: 1rem 0 1rem 1rem;
+        }
+
+        &.show {
+            display: block;
         }
 
         &__item {
 
-            &:not(:last-child) {
-                margin-right: 15px;
-            }
-
-            &:hover &__underline{
+            &:hover .nav__underline {
                 width: 100%;
             }
 
-            &__link {
+            .nav__link {
                 text-transform: uppercase;
-                font-size: 1.1rem;
+                font-weight: 500;
+                color: $primaryColor;
+
+                @include breakpoints(992px) {
+                    color: $whiteColor;
+                }
             }
 
-            &__underline{
-               width: 0%;
+            .nav__underline {
+                width: 0%;
                 height: 2px;
                 background-color: $primaryColor;
-                transition: $transition;
             }
         }
     }
@@ -68,10 +80,6 @@
             display: block;
         }
 
-        @include breakpoints(576px) {
-            padding: 5px 10px;
-        }
-
         i {
             font-size: 1.7rem;
 
@@ -79,34 +87,5 @@
                 font-size: 1.5rem;
             }
         }
-    }
-}
-
-.mobilemenu {
-    border-top: 1px solid #8D9297;
-    transition: $transition;
-
-    @media(min-width:992px) {
-        display: none;
-    }
-
-    &__list {
-        margin: 30px;
-
-        &__item {
-            &:not(:last-child) {
-                margin-bottom: 10px;
-            }
-
-            &__link {
-                display: block;
-                color: #8D9297;
-                text-transform: uppercase;
-            }
-        }
-    }
-
-    &.hidden {
-        display: none;
     }
 }

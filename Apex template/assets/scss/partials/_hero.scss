@@ -7,12 +7,15 @@
     height: 80vh;
     @include flex(center, flex-start, column);
 
+    @include breakpoints(576px) {
+        height: 60vh;
+    }
+
     &__heading {
         @include flex(center, center, column);
         text-align: center;
         max-width: 900px;
-        width: 100%;
-        animation: heroAniamtion 1s $transition;
+        animation: heroAniamtion 1s;
 
 
         &-1 {

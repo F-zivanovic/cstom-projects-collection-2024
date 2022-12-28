@@ -36,7 +36,7 @@
         }
     }
 
-    button {
+    .hero__btn {
         text-transform: uppercase;
         @include btn($whiteColor, transparent, $whiteColor, $secondaryColor, $primaryColor);
         animation: heroButtonAnimation1 1s $transition;

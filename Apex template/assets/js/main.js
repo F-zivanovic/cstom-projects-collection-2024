@@ -1,20 +1,20 @@
-let hamburgerIcon = document.querySelector('.nav__hamburger');
-let mobileMenu = document.querySelector('.mobilemenu');
-let listItems = document.querySelectorAll('.mobilemenu li');
+// Open/Close Navigation list on smaller screen
+const list = document.getElementById("list");
+const hamburger = document.getElementById("hamburger");
 
-console.log(listItems);
+hamburger.addEventListener('click', () => {
+    list.classList.toggle('show');
+});
 
-hamburgerIcon.addEventListener('click', openMobileMenu);
+// Close navigation list when click on item of that listStyle: 
+const links = document.querySelectorAll('.nav__list a');
 
-function openMobileMenu() {
-    mobileMenu.classList.toggle('hidden');
-}
-
-for (listItem of listItems) {
-    listItem.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
+for (let link of links) {
+    link.addEventListener('click', () => {
+        list.classList.remove('show');
     });
 }
+
 
 // Scroll to top
 let scrollBtn = document.querySelector('.scroll__top');
@@ -23,7 +23,6 @@ scrollBtn.addEventListener('click', scrollToTop);
 function scrollToTop() {
     window.scroll({ top: 0, behavior: "smooth" });
 }
-
 
 window.onscroll = () => {
     showScrollBtn();

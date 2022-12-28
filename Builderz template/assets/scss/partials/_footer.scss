@@ -56,7 +56,7 @@
             .footer__list {
                 margin-top: 15px;
 
-                li {
+                &__item {
 
                     &:hover {
                         transform: translateX(10px);

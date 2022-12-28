@@ -3,15 +3,16 @@
     background-position: center;
     background-size: cover;
 
-    &__content {
-        @include flex(space-between, center, row, wrap);
+    &__wrapper {
+        @include flex(space-around, center, row, wrap);
 
         @include breakpoints(992px) {
             justify-content: center;
+            gap: 1rem;
         }
 
-        &__text {
-            flex: 0 0 40%;
+        .contact__item {
+            flex: 0 0 45%;
 
             @include breakpoints(992px) {
                 flex: 0 0 80%;
@@ -20,7 +21,6 @@
             @include breakpoints(576px) {
                 flex: 0 0 100%;
             }
-
 
             .section-title {
                 color: $whiteColor;
@@ -37,35 +37,25 @@
         }
 
         form {
-            flex: 0 0 50%;
             @include flex(center, flex-start, column, nowrap);
-
-            @include breakpoints(992px) {
-                flex: 0 0 80%;
-                margin-top: 30px;
-            }
 
             @include breakpoints(576px) {
                 flex: 0 0 100%;
             }
 
-            .input-group {
-                @include flex(space-between, center);
-                gap: 10px;
+            .contact__input__group {
+                @include flex(space-between, center, row, nowrap, 1rem);
                 width: 100%;
-                margin-bottom: 15px;
+                margin-bottom: 1rem;
 
                 @include breakpoints(576px) {
                     flex-direction: column;
                 }
 
-                .form-input {
-                    flex: 0 0 50%;
-                    outline: none;
+                .contact__form__component {
+                    flex: 1;
                     padding: 25px 15px;
                     background-color: #182434;
-                    border: none;
-                    font-weight: 400;
                     color: $whiteColor;
 
                     @include breakpoints(576px) {
@@ -82,15 +72,23 @@
 
             textarea {
                 width: 100%;
-                outline: none;
                 padding: 15px;
                 background-color: #182434;
                 border: none;
                 height: 150px;
+                color: $whiteColor;
 
                 &::placeholder {
                     color: $whiteColor;
                 }
+            }
+
+            .contact__btn {
+                width: 100%;
+                text-transform: capitalize;
+                background-color: $primaryColor;
+                color: $whiteColor;
+                margin-top: 1rem;
             }
         }
     }

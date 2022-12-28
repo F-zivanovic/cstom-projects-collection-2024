@@ -1,15 +1,15 @@
 .hero {
     @include flex(center, center, column);
-    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../../assets/img/header-bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('../../assets/img/header-bg.jpg') center/cover no-repeat scroll;
     height: 80vh;
-    background-position: center;
-    background-size: cover;
-    background-attachment: scroll;
+
+    @media(max-width:576px) {
+        height: 60vh;
+    }
 
     hgroup {
         @include flex(center, center, column);
-        width: 100%;
-        max-width: 900px;
+        max-width: 700px;
 
         h3 {
             font-size: 1.5rem;
@@ -26,11 +26,11 @@
         h1 {
             font-size: 3.5rem;
 
-            @media(max-width:576px) {
+            @media(max-width:768px) {
                 font-size: 2.5rem;
             }
 
-            @media(max-width:400px) {
+            @media(max-width:576px) {
                 font-size: 1.5rem;
             }
         }

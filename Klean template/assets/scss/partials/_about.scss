@@ -1,0 +1,66 @@
+.about {
+    @include flex(space-between, center, row, wrap);
+
+    @media(max-width:992px) {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .about-item {
+        flex: 0 0 47%;
+
+        @media(max-width:992px) {
+            flex: 0 0 80%;
+        }
+
+        @media(max-width:576px) {
+            flex: 0 0 100%;
+        }
+
+        &:nth-child(1) {
+            position: relative;
+
+            img {
+                height: 30rem;
+
+                @media(max-width:576px) {
+                    height: 20rem;
+                }
+            }
+
+            .about-box {
+                @include positioning(absolute, 0, 0, 0, 0);
+                @include flex(center, center, column);
+                background: rgba(0, 0, 0, .5);
+
+                i {
+                    font-size: 4.5rem;
+
+                    @media(max-width:768px) {
+                        font-size: 3rem;
+                    }
+
+                    @media(max-width:576px) {
+                        font-size: 2rem;
+                    }
+                }
+
+                h3 {
+                    font-size: 3rem;
+
+                    @media(max-width:768px) {
+                        font-size: 2rem;
+                    }
+                }
+
+                P {
+                    font-size: 2rem;
+
+                    @media(max-width:768px) {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

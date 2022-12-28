@@ -7,15 +7,16 @@
     transition: all .2s linear;
     border: none;
     outline: none;
+    list-style-type: none;
 }
 
 html {
-    // overflow: hidden;
+    overflow: hidden;
     font-size: 100%;
     scroll-behavior: smooth;
 
     @media(max-width: 576px) {
-        font-size: 70%;
+        font-size: 85%;
     }
 
     &::-webkit-scrollbar {
@@ -31,9 +32,6 @@ html {
     }
 }
 
-ul {
-    list-style-type: none;
-}
 
 section {
     padding: 70px 0px;
@@ -42,6 +40,7 @@ section {
 img {
     width: 100%;
     vertical-align: middle;
+    object-fit: cover;
 }
 
 .btn {
@@ -69,4 +68,8 @@ img {
 .container {
     width: 80%;
     margin: 0rem auto;
+
+    @media(max-width:576px) {
+        width: 90%;
+    }
 }

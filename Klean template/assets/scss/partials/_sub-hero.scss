@@ -1,0 +1,23 @@
+.sub-hero {
+    margin-top: -50px;
+    @include flex(flex-start, stretch, row, wrap);
+
+    article {
+        flex: 1;
+        @include flex(center, center, row, nowrap, 1rem);
+        padding: 30px;
+
+        @media(max-width:768px) {
+            flex: 0 0 100%;
+        }
+
+        @media(max-width:992px) {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        i {
+            font-size: 2.5rem;
+        }
+    }
+}

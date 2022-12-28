@@ -3,6 +3,11 @@
     margin: 0px;
     padding: 0px;
     scroll-behavior: smooth;
+    text-decoration: none;
+    transition: all .5s linear;
+    outline: none;
+    border: none;
+    list-style-type: none;
 }
 
 body {
@@ -10,50 +15,30 @@ body {
     background-color: #fff;
     line-height: 1.5;
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: 100%;
     overflow-x: hidden;
+
+    @media(max-width:576px) {
+        font-size: 85%;
+    }
 
 }
 
 a {
     color: #777777;
-    text-decoration: none;
-    transition: $transition;
-
-    &:hover,
-    &:focus,
-    &:active {
-        cursor: pointer;
-        transition: $transition-out;
-        outline: none;
-        color: $secondaryColor;
-    }
+    cursor: pointer;
 }
 
-ul {
-    list-style-type: none;
-}
 
 img {
     width: 100%;
+    vertical-align: middle;
+    object-fit: cover;
 }
 
-p {
-    font-size: 1rem;
-}
 
 i {
     cursor: pointer;
-    transition: $transition;
-
-    &:hover {
-        transition: $transition-out;
-    }
-}
-
-input {
-    outline: none;
-    border: none;
 }
 
 .btn {
@@ -61,24 +46,31 @@ input {
     font-weight: 500;
     padding: 15px 25px;
     border-radius: 100px;
-    color: $blackColor;
+    color: $whiteColor;
     background-color: $primaryColor;
     display: inline-block;
     text-align: center;
-    border: none;
     margin-top: 15px;
-    transition: $transition;
-    font-size: 1.1rem;
+    text-transform: capitalize;
 
     &:hover {
-        transition: $transition-out;
         transform: translateY(10px);
+        background-color: $secondaryColor;
+    }
+
+    @media(max-width:576px) {
+        font-size: 1rem;
+        padding: 10px 20px;
     }
 }
 
 .container {
-    width: 90%;
+    width: 80%;
     margin: 0px auto;
+
+    @media(max-width:576px) {
+        width: 90%;
+    }
 }
 
 .section {
@@ -97,8 +89,9 @@ input {
         font-size: 2rem;
         color: $blackColor;
         font-weight: 700;
+        text-transform: capitalize;
 
-        @media(max-width:576px){
+        @media(max-width:576px) {
             font-size: 1.5rem;
         }
 
@@ -124,12 +117,11 @@ input {
     }
 }
 
-#toTop{
+#toTop {
     opacity: 0;
-    transition: $transition;
     @include positioning(fixed, auto, 15px, 15px, auto);
 
-    &.visible{
+    &.visible {
         opacity: 1;
     }
 }

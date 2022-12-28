@@ -7,14 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clean template - Cleaning Services</title>
 
-    <!-- Favicon -->
-    <link href="" rel="icon" />
-
-    <!-- Meta tags -->
     <meta name="author" content="Filip Zivanovic">
     <meta name="tittle" content="Clean template - Cleaning Services">
     <meta name="keywords" content="">
     <meta name="description" content="">
+
+    <!-- Favicon -->
+    <link href="assets/img/header-bg.jpg" rel="icon" />
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,9 +21,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Font awesome link -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Font awesome CDN CSS link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -33,13 +33,13 @@
 <body>
 
 
-    <!-- Nav section -->
-    <nav>
+    <!-- Nav section starts-->
+    <nav class="nav">
         <div class="nav__logo bg-secondary">
-            <a href="index.html" class="fw-700">Klean</a>
+            <a href="index.html" class="fw-700 text-primary">Klean</a>
         </div>
         <div class="nav__content">
-            <div class="nav__info bg-black pl-4 pr-3 pt-1 pb-1">
+            <div class="nav__info bg-black pl-4 pr-4 pt-2 pb-2">
                 <div class="nav__contact">
                     <i class="fas fa-envelope mr-1 text-primary"></i>
                     <span class="pr-2 text-white">info@example.com</span>
@@ -47,74 +47,63 @@
                     <span class="text-white">+012 345 6789</span>
                 </div>
                 <div class="nav__social">
-                    <a href="#"><i class="fab fa-facebook-f text-primary mr-2"></i></a>
-                    <a href="#"> <i class="fab fa-twitter text-primary mr-2"></i></a>
-                    <a href="#"> <i class="fab fa-instagram text-primary mr-2"></i></a>
-                    <a href="#"> <i class="fab fa-linkedin-in text-primary mr-2"></i></a>
+                    <a href="#" class="fab fa-facebook-f text-primary mr-2"></a>
+                    <a href="#" class="fab fa-twitter text-primary mr-2"></a>
+                    <a href="#" class="fab fa-instagram text-primary mr-2"></a>
+                    <a href="#" class="fab fa-linkedin-in text-primary mr-2"></a>
                 </div>
             </div>
-            <div class="nav__list pl-4 pr-3 pb-3 pt-3">
+            <div class="nav__list pl-4 pr-4 pb-4 pt-4" id="nav-list">
                 <ul>
                     <li class="pr-4"><a href="index.html" class="text-black fw-600">Home</a></li>
                     <li class="pr-4"><a href="#about" class="text-black fw-600">About</a></li>
                     <li class="pr-4"><a href="#services" class="text-black fw-600">Services</a></li>
                     <li class="pr-4"><a href="#projects" class="text-black fw-600">Project</a></li>
                     <li class="pr-4"><a href="#team" class="text-black fw-600">Team</a></li>
-                    <li class="pr-4"><a href="#blog" class="text-black fw-600">Blog</a></li>
+                    <li class="pr-4"><a href="#features" class="text-black fw-600">Features</a></li>
                 </ul>
-                <a href="#contact" class="btn" role="button"> Contact</a>
             </div>
         </div>
-        <div class="nav__hamburger">
+        <div class="nav__hamburger" id="hamburger">
             <span class="hamburger-top"></span>
             <span class="hamburger-middle"></span>
-            <span class="hamburger-bottom"> </span>
-        </div>
-
-        <div class="nav__mobile hidden bg-primary pr-3 text-right hidden">
-            <ul class="fw-500">
-                <li><a href="index.html" class="text-black">Home</a></li>
-                <li class="mt-2"><a href="#about" class="text-black">About</a></li>
-                <li class="mt-2"><a href="#services" class="text-black">Services</a></li>
-                <li class="mt-2"><a href="#projects" class="text-black">Projects</a></li>
-                <li class="mt-2"><a href="#team" class="text-black">Team</a></li>
-                <li class="mt-2"><a href="#blog" class="text-black">Blog</a></li>
-                <li class="mt-2"><a href="#contact" class="text-black">Contact</a></li>
-            </ul>
+            <span class="hamburger-bottom"></span>
         </div>
     </nav>
-    <!-- End Nav section -->
+    <!-- Nav section ends -->
 
-    <!-- Hero section -->
+
+
+    <!-- Hero section starts -->
     <section class="hero">
         <hgroup class="container text-center">
             <h3 class="text-primary" data-text="CLEANING SERVICES">CLEANING SERVICES</h3>
             <h1 class="text-white">Best Quality Solution In Cleaning</h1>
         </hgroup>
-        <button type="button" class="btn">Get A Quote</button>
+        <a href="#contact" class="btn">contact</a>
     </section>
-    <!-- End Hero section -->
+    <!-- Hero section ends -->
 
 
 
 
-    <!--Sub Hero section -->
-    <section class="sub-hero fw-700">
-        <article class="bg-primary p-4">
+    <!--Sub Hero section starts -->
+    <section class="sub-hero fw-700 container">
+        <article class="bg-primary">
             <i class="fas fa-map-marker-alt text-secondary"></i>
             <div class="sub-hero-text">
                 <p class="text-black">Our Office</p>
-                <p class="text-white mt-2">123 Street, Jajinci, SER</p>
+                <p class="text-white mt-2">Belgrade, Serbia</p>
             </div>
         </article>
-        <article class="bg-secondary p-4">
+        <article class="bg-secondary">
             <i class="fas fa-envelope-open text-primary"></i>
             <div class="sub-hero-text">
                 <p class="text-black">Email Us</p>
                 <p class="text-white mt-2">info@example.com</p>
             </div>
         </article>
-        <article class="bg-primary p-4">
+        <article class="bg-primary">
             <i class="fas fa-phone-alt text-secondary"></i>
             <div class="sub-hero-text">
                 <p class="text-black">Call Us</p>
@@ -122,49 +111,46 @@
             </div>
         </article>
     </section>
-    <!-- End Sub Hero section -->
+    <!-- Sub Hero section ends -->
 
-    <!-- About section -->
+
+
+    <!-- About section starts -->
     <section class="section about container" id="about">
         <article class="about-item">
             <img src="assets/img/about.jpg" alt="about-img">
-            <div class="about-over">
+            <div class="about-box">
                 <i class="fas fa-award text-primary"></i>
                 <h3 class="text-white mt-2 mb-2">25</h3>
                 <p class="text-white fw-600">Years Experience</p>
             </div>
-            <div class="about-overlay"></div>
         </article>
         <article class="about-item ">
-            <div class="section__title">Learn about us</div>
-            <div class="section__subtitle">
-                We Provide The Best Cleaning Services
-            </div>
+            <h2 class="section__title">Learn about us</h2>
+            <h3 class="section__subtitle">we provide the best cleaning services</h3>
             <p class="mt-2 text-justify">Eos kasd eos dolor vero vero, lorem stet diam rebum. Ipsum amet sed vero dolor
                 sea lorem justo est dolor eos</p>
             <p class="mt-2 text-justify">Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem
                 ipsum ut sed eos, ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea
                 ipsum est dolor</p>
-            <button type="button" class="btn">Learn more</button>
+            <a href="#" class="btn">learn more</a>
         </article>
     </section>
-    <!-- End About section -->
+    <!-- About section ends-->
 
 
 
-    <!-- Services section -->
+
+    <!-- Services section starts-->
     <section class="section services" id="services">
-        <div class="services-content container">
+        <div class="services__wrapper container">
             <article class="services-item">
-                <div class="section__title">our services</div>
-                <div class="section__subtitle text-secondary">Awesome Cleaning Services For You</div>
+                <h2 class="section__title">our services</h2>
+                <h3 class="section__subtitle text-secondary">awesome cleaning services</h3>
                 <p class="text-white text-justify mt-2 mb-2">Invidunt lorem justo clita. Erat lorem labore ea, justo
-                    dolor lorem
-                    ipsum ut sed
-                    eos, ipsum et dolor
-                    kasd
-                    sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum</p>
-                <button type="button" class="btn">More Services</button>
+                    dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat
+                    ut sed diam sea ipsum</p>
+                <a href="#" class="btn">More Services</a>
             </article>
             <article class="services-item">
                 <i class="fas fa-angle-left text-primary" id="left"></i>
@@ -177,16 +163,16 @@
             </article>
         </div>
     </section>
-    <!-- End Services section -->
+    <!-- Services section ends -->
 
 
 
 
-    <!-- Feature section -->
-    <section class="section feature container">
+    <!-- Feature section starts -->
+    <section class="section feature container" id="features">
         <article class="feature-item">
-            <div class="section__title">WHY CHOOSE US</div>
-            <div class="section__subtitle text-secondary">25 Years Experience In Cleaning Industry</div>
+            <h2 class="section__title">WHY CHOOSE US</h2>
+            <h3 class="section__subtitle text-secondary">25 Years Experience In Industry</h3>
             <p class="text-justify mt-2">Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit
                 rebum labore sit sit ut
                 vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
@@ -209,65 +195,43 @@
             <img src="assets/img/feature.jpg" alt="feature-img">
         </article>
     </section>
-    <!-- End Feature section -->
+    <!-- Feature section ends -->
 
 
 
 
-    <!-- Portfolio section -->
+    <!-- Portfolio section starts -->
     <section class="section portfolio" id="projects">
         <div class="portfolio-content container">
-            <a href="assets/img/portfolio-1.jpg">
+            <article class="portfolio__item">
                 <img src="assets/img/portfolio-1.jpg" alt="portfolio-1">
-                <div class="portfolio-over bg-primary text-black">
-                    <p class="fw-500"> Click me</p>
-                </div>
-            </a>
-            <a href="assets/img/portfolio-2.jpg">
-                <img src="assets/img/portfolio-2.jpg" alt="portfolio-2">
-                <div class="portfolio-over bg-primary text-black">
-                    <p class="fw-500"> Click me</p>
-                </div>
-            </a>
-            <a href="assets/img/portfolio-3.jpg">
-                <img src="assets/img/portfolio-3.jpg" alt="portfolio-3">
-                <div class="portfolio-over bg-primary text-black">
-                    <p class="fw-500"> Click me</p>
-                </div>
-            </a>
-            <a href="assets/img/portfolio-4.jpg">
-                <img src="assets/img/portfolio-4.jpg" alt="portfolio-4">
-                <div class="portfolio-over bg-primary text-black">
-                    <p class="fw-500"> Click me</p>
-                </div>
-            </a>
-            <a href="assets/img/portfolio-5.jpg">
-                <img src="assets/img/portfolio-5.jpg" alt="portfolio-5">
-                <div class="portfolio-over bg-primary text-black">
-                    <p class="fw-500"> Click me</p>
-                </div>
-            </a>
-            <a href="assets/img/portfolio-6.jpg">
-                <img src="assets/img/portfolio-6.jpg" alt="portfolio-6">
-                <div class="portfolio-over bg-primary text-black">
-                    <p> Click me</p>
-                </div>
-            </a>
-        </div>
-        <div class="portfolio-popup">
-            <button type="button" class="btn" id="close">X</button>
-            <img src="#" alt="Loading image">
+            </article>
+            <article class="portfolio__item">
+                <img src="assets/img/portfolio-2.jpg" alt="portfolio-1">
+            </article>
+            <article class="portfolio__item">
+                <img src="assets/img/portfolio-3.jpg" alt="portfolio-1">
+            </article>
+            <article class="portfolio__item">
+                <img src="assets/img/portfolio-4.jpg" alt="portfolio-1">
+            </article>
+            <article class="portfolio__item">
+                <img src="assets/img/portfolio-5.jpg" alt="portfolio-1">
+            </article>
+            <article class="portfolio__item">
+                <img src="assets/img/portfolio-6.jpg" alt="portfolio-1">
+            </article>
         </div>
     </section>
-    <!-- End Portfolio section -->
+    <!-- Portfolio section ends -->
 
 
 
 
-    <!-- Team section -->
+    <!-- Team section starts-->
     <section class="section team container" id="team">
-        <div class="section__title">meet our team</div>
-        <div class="section__subtitle">Meet Our Highly Experienced Cleaners</div>
+        <h2 class="section__title">meet our team</h2>
+        <h3 class="section__subtitle">Meet Our Highly Experienced Cleaners</h3>
         <div class="team-content mt-4">
             <article class="team-item">
                 <div class="team-img">
@@ -313,62 +277,12 @@
             </article>
         </div>
     </section>
-    <!-- End Team section -->
-
-
-
-    <!-- Blog section -->
-    <section class="section blog container" id="blog">
-        <div class="section__title">latest blog</div>
-        <div class="section__subtitle">Latest Articles From Our Blog Post</div>
-        <div class="blog-content mt-4">
-            <article class="blog-item">
-                <img src="assets/img/slider-1.jpg" alt="team-img">
-                <div class="team-text">
-                    <h3 class="text-black mt-3">Rebum lorem eos ipsum diam</h3>
-                    <p class="mt-2 mb-1 text-justify">Dolor justo sea kasd lorem clita justo no diam amet. Kasd magna
-                        dolor amet</p>
-                    <button type="button" class="btn">Read more</button>
-                </div>
-                <div class="team-corner bg-primary p-2 text-center">
-                    <h3 class="text-black">01</h3>
-                    <p class="text-uppercase text-white">jan</p>
-                </div>
-            </article>
-            <article class="blog-item">
-                <img src="assets/img/slider-2.jpg" alt="team-img">
-                <div class="team-text">
-                    <h3 class="text-black mt-3">Rebum lorem eos ipsum diam</h3>
-                    <p class="mt-2 mb-1 text-justify">Dolor justo sea kasd lorem clita justo no diam amet. Kasd magna
-                        dolor amet</p>
-                    <button type="button" class="btn">Read more</button>
-                </div>
-                <div class="team-corner bg-primary p-2 text-center">
-                    <h3 class="text-black">01</h3>
-                    <p class="text-uppercase text-white">jan</p>
-                </div>
-            </article>
-            <article class="blog-item">
-                <img src="assets/img/slider-3.jpg" alt="team-img">
-                <div class="team-text">
-                    <h3 class="text-black mt-3">Rebum lorem eos ipsum diam</h3>
-                    <p class="mt-2 mb-1 text-justify">Dolor justo sea kasd lorem clita justo no diam amet. Kasd magna
-                        dolor amet</p>
-                    <button type="button" class="btn">Read more</button>
-                </div>
-                <div class="team-corner bg-primary p-2 text-center">
-                    <h3 class="text-black">01</h3>
-                    <p class="text-uppercase text-white">jan</p>
-                </div>
-            </article>
-        </div>
-    </section>
-    <!-- End Blog section -->
+    <!-- Team section ends -->
 
 
 
 
-    <!-- Contact section -->
+    <!-- Contact section starts -->
     <section class="section contact container" id="contact">
         <div class="section__title">Contact us</div>
         <div class="section__subtitle">Contact Us For Cleaning Services</div>
@@ -379,34 +293,40 @@
                 <input type="text" name="inputSubject" placeholder="Subject" class="form-input" required>
                 <textarea rows="10" name="message" placeholder="Message" class="form-input" required></textarea>
                 <div class="btn-group">
-                    <button type="submit" class="btn">Send Message</button>
-                <button type="reset" class="btn ml-2" id="reset">Reset form</button>
+                    <input type="submit" class="btn" value="Send Message">
+                    <input type="reset" class="btn ml-2" id="reset" value="Reset Form">
                 </div>
             </form>
             <article class="contact-item">
-                <iframe class="map" src="//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0">
+                <iframe class="map"
+                    src="//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                    frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0">
                 </iframe>
             </article>
         </div>
     </section>
-    <!-- End Contact section -->
+    <!-- Contact section ends -->
 
 
 
 
-    <!-- Footer section -->
+    <!-- Footer section starts -->
     <footer class="section">
         <div class="footer-content container">
             <article class="footer-item">
-              <a href="index.html" class="text-primary fw-700 logo">Klean</a>
-              <p class="mt-3 text-white">Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
+                <a href="index.html" class="text-primary fw-700 logo">Klean</a>
+                <p class="mt-3 text-white">Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed
+                    elitr sed kasd et</p>
             </article>
             <article class="footer-item">
                 <h3 class="text-primary mb-3">Get In Touch</h3>
                 <ul>
-                    <li><a href="#" class="text-white"><i class="fas fa-map-marker-alt text-primary mr-2"></i>123 Street, New York, USA</a></li>
-                    <li class="mt-2"><a href="#" class="text-white"><i class="fas fa-phone-alt text-primary mr-2"></i>+012 345 67890</a></li>
-                    <li class="mt-2"><a href="#" class="text-white"><i class="fas fa-envelope text-primary mr-2"></i>info@example.com</a></li>
+                    <li><a href="#" class="text-white"><i class="fas fa-map-marker-alt text-primary mr-2"></i>123
+                            Street, New York, USA</a></li>
+                    <li class="mt-2"><a href="#" class="text-white"><i
+                                class="fas fa-phone-alt text-primary mr-2"></i>+012 345 67890</a></li>
+                    <li class="mt-2"><a href="#" class="text-white"><i
+                                class="fas fa-envelope text-primary mr-2"></i>info@example.com</a></li>
                 </ul>
                 <div class="footer-social mt-3">
                     <a href="#" class="mr-2"><i class="fab fa-twitter"></i></a>
@@ -418,33 +338,83 @@
             <article class="footer-item">
                 <h3 class="text-primary mb-3">Quick Links</h3>
                 <ul>
-                    <li><a href="#about" class="text-white"><i class="fad fa-angle-right text-primary mr-2"></i>About us</a></li>
-                    <li class="mt-2"><a href="#contact" class="text-white"><i class="fad fa-angle-right text-primary mr-2"></i>Contact us</a></li>
-                    <li class="mt-2"><a href="#team" class="text-white"><i class="fad fa-angle-right text-primary mr-2"></i>Our team</a></li>
-                    <li class="mt-2"><a href="#services" class="text-white"><i class="fad fa-angle-right text-primary mr-2"></i>Our services</a></li>
-                    <li class="mt-2"><a href="#blog" class="text-white"><i class="fad fa-angle-right text-primary mr-2"></i>Our blog</a></li>
+                    <li>
+                        <a href="#about" class="text-white">
+                            <i class="fa-solid fa-angle-right text-primary mr-2"></i>
+                            About us
+                        </a>
+                    </li>
+                    <li class="mt-2">
+                        <a href="#contact" class="text-white">
+                            <i class="fa-solid fa-angle-right text-primary mr-2"></i>
+                            Contact us
+                        </a>
+                    </li>
+                    <li class="mt-2">
+                        <a href="#team" class="text-white">
+                            <i class="fa-solid fa-angle-right text-primary mr-2"></i>
+                            Our team
+                        </a>
+                    </li>
+                    <li class="mt-2">
+                        <a href="#services" class="text-white">
+                            <i class="fa-solid fa-angle-right text-primary mr-2"></i>
+                            Our services
+                        </a>
+                    </li>
+                    <li class="mt-2">
+                        <a href="#features" class="text-white">
+                            <i class="fa-solid fa-angle-right text-primary mr-2"></i>
+                            Our features
+                        </a>
+                    </li>
                 </ul>
             </article>
             <article class="footer-item">
                 <h3 class="text-primary mb-3">Information</h3>
                 <ul>
-                    <li><a href="#" class="text-white"><i class="fad fa-angle-right text-primary mr-2"></i>Term of use</a></li>
-                    <li class="mt-2"><a href="#" class="text-white"><i class="fad fa-angle-right text-primary mr-2"></i>Privacy policy</a></li>
-                    <li class="mt-2"><a href="#" class="text-white"><i class="fad fa-angle-right text-primary mr-2"></i>Cookies</a></li>
-                    <li class="mt-2"><a href="#" class="text-white"><i class="fad fa-angle-right text-primary mr-2"></i>Helps</a></li>
-                    <li class="mt-2"><a href="#" class="text-white"><i class="fad fa-angle-right text-primary mr-2"></i>FAQs</a></li>
+                    <li>
+                        <a href="#" class="text-white">
+                            <i class="fa-solid fa-angle-right text-primary mr-2"></i>
+                            Term of use
+                        </a>
+                    </li>
+                    <li class="mt-2">
+                        <a href="#" class="text-white">
+                            <i class="fa-solid fa-angle-right text-primary mr-2"></i>
+                            Privacy Police
+                        </a>
+                    </li>
+                    <li class="mt-2">
+                        <a href="#" class="text-white">
+                            <i class="fa-solid fa-angle-right text-primary mr-2"></i>
+                            Cookies
+                        </a>
+                    </li>
+                    <li class="mt-2">
+                        <a href="#" class="text-white">
+                            <i class="fa-solid fa-angle-right text-primary mr-2"></i>
+                            Term ofuse
+                        </a>
+                    </li>
+                    <li class="mt-2">
+                        <a href="#" class="text-white">
+                            <i class="fa-solid fa-angle-right text-primary mr-2"></i>
+                            Term ofuse
+                        </a>
+                    </li>
+
                 </ul>
             </article>
         </div>
     </footer>
-    <!-- End Footer section -->
+    <!-- Footer section ends -->
 
 
     <!-- Back to top Button -->
     <button type="button" class="btn" id="toTop">
-        <i class="fad fa-arrow-up"></i>
+        <i class="fa-solid fa-angle-up"></i>
     </button>
-
 
 
     <!-- Custom JS -->

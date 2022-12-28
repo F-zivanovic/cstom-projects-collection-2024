@@ -1,26 +1,34 @@
-// Open/close Mobile Nav
-let hamburger = document.querySelector('.nav__hamburger');
-let navMobile = document.querySelector('.nav__mobile');
+// Open/close navigation list on smaller screen
+let hamburger = document.getElementById('hamburger');
+let navList = document.getElementById('nav-list');
 
 hamburger.addEventListener('click', () => {
-    navMobile.classList.toggle('hidden');
+    navList.classList.toggle('hidden');
     hamburger.classList.toggle('open');
 });
 
 
-// Close MobileNav when click on Nav Mobile Item
-let navMobileItem = document.querySelectorAll('.nav__mobile li');
+// Close navigation list when we click on item of that list
+let navListItem = document.querySelectorAll('#nav-list > li');
 
-navMobileItem.forEach(function (item) {
+navListItem.forEach(function (item) {
     item.addEventListener('click', () => {
-        navMobile.classList.add('hidden');
+        navList.classList.remove('hidden');
         hamburger.classList.remove('open');
     });
 });
 
+
+// Close navigation list when we scroll down
+window.addEventListener('scroll', () => {
+    navList.classList.remove('hidden');
+    hamburger.classList.remove('open');
+});
+
+
 // Services slider
-let rightArrow = document.querySelector('#right');
-let leftArrow = document.querySelector('#left');
+let rightArrow = document.getElementById('right');
+let leftArrow = document.getElementById('left');
 let pictures = document.querySelectorAll('.services-slider > img');
 
 let imgNumber = 0;
@@ -53,14 +61,6 @@ leftArrow.addEventListener('click', moveLeft);
 
 function hidePictures() {
 
-    // pictures.forEach(function (img) {
-    //     img.style.display = 'none';
-    // });
-
-    // for (img of pictures) {
-    //     img.style.display = 'none';
-    // }
-
     pictures.forEach((img) => {
         img.style.display = 'none';
     });
@@ -68,58 +68,58 @@ function hidePictures() {
 
 
 // Close popup
-let closeBtn = document.querySelector('#close');
-let popup = document.querySelector('.portfolio-popup');
+// let closeBtn = document.querySelector('#close');
+// let popup = document.querySelector('.portfolio-popup');
 
-closeBtn.addEventListener('click', hidePopup);
+// closeBtn.addEventListener('click', hidePopup);
 
-function hidePopup() {
-    popup.classList.remove('visible');
-}
+// function hidePopup() {
+//     popup.classList.remove('visible');
+// }
 
 // Open popup window
-function init() {
-    bindGalleryItems();
-    bindKeyDown();
-}
+// function init() {
+//     bindGalleryItems();
+//     bindKeyDown();
+// }
 
-function bindGalleryItems() {
-    let images = document.querySelectorAll('.portfolio-content > a');
+// function bindGalleryItems() {
+//     let images = document.querySelectorAll('.portfolio-content > a');
 
-    images.forEach((img) => {
-        img.addEventListener('click', showImages);
-    });
-}
+//     images.forEach((img) => {
+//         img.addEventListener('click', showImages);
+//     });
+// }
 
-function showImages(event) {
-    event.preventDefault();
+// function showImages(event) {
+//     event.preventDefault();
 
-    let link = event.target.parentElement.href;
+//     let link = event.target.parentElement.href;
 
-    let popupImg = document.querySelector('.portfolio-popup > img');
-    popupImg.src = link;
+//     let popupImg = document.querySelector('.portfolio-popup > img');
+//     popupImg.src = link;
 
-    let popup = document.querySelector('.portfolio-popup');
+//     let popup = document.querySelector('.portfolio-popup');
 
-    popup.classList.add('visible');
+//     popup.classList.add('visible');
 
-}
+// }
 
 // Close popup when press ESCAPE key
 
-function bindKeyDown() {
-    window.addEventListener('keydown', keyDownHandler)
-}
+// function bindKeyDown() {
+//     window.addEventListener('keydown', keyDownHandler)
+// }
 
-function keyDownHandler(event) {
-    switch (event.key) {
-        case "Escape":
-            hidePopup();
-            break;
-    }
-}
+// function keyDownHandler(event) {
+//     switch (event.key) {
+//         case "Escape":
+//             hidePopup();
+//             break;
+//     }
+// }
 
-window.addEventListener('load', init);
+// window.addEventListener('load', init);
 
 
 // Reset form
@@ -128,8 +128,8 @@ let formComponents = document.querySelectorAll('.form-input');
 
 resetBtn.addEventListener('click', resetForm);
 
-function resetForm(){
-    
+function resetForm() {
+
     formComponents.forEach((item) => {
         item.value = '';
     });
@@ -146,11 +146,11 @@ function scrollToTop() {
 }
 
 
-window.onscroll = function() {
-    if(document.documentElement.scrollTop > 150){
+window.onscroll = function () {
+    if (document.documentElement.scrollTop > 150) {
         scrollBtn.classList.add('visible');
     }
-    else{
+    else {
         scrollBtn.classList.remove('visible');
     }
 }

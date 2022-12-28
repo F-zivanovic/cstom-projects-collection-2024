@@ -1,0 +1,53 @@
+.team {
+
+    &__wrapper {
+        @include flex(space-around, center, row, wrap);
+
+        @include breakpoints(576px) {
+            justify-content: center;
+        }
+
+        .team__item {
+            flex: 0 0 30%;
+            margin-top: 2rem;
+            position: relative;
+
+            @include breakpoints(992px) {
+                flex: 0 0 45%;
+            }
+
+            @include breakpoints(576px) {
+                flex: 0 0 90%;
+            }
+
+            &:hover .team__item__text {
+                right: 0px;
+            }
+
+            &__img {
+                height: 25rem
+            }
+
+            &__text {
+                @include positioning(absolute, auto, 40px, 60px, 0px);
+                background-color: $whiteColor;
+                padding: 1.5rem;
+
+                @include breakpoints(576px) {
+                    padding: 10px 20px;
+                    bottom: 20px;
+                }
+
+                .team__name {
+                    font-size: 1.2rem;
+
+                    @include breakpoints(576px) {
+                        margin-bottom: 0px;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,18 +1,9 @@
 .team {
 
     &-content {
-        @include grid(auto, 20px);
+        @include grid(250px, 3rem);
 
         .team-item {
-            grid-column: span 4;
-
-            @media(max-width:768px) {
-                grid-column: span 6;
-            }
-
-            @media(max-width:576px) {
-                grid-column: span 12;
-            }
 
             .team-img {
                 position: relative;
@@ -21,29 +12,21 @@
                 &:hover .team-social {
                     transform: translateX(0);
                     opacity: 1;
-                    transition: $transition;
                 }
 
                 &:hover img {
                     transform: translateX(30px);
-                    transition: $transition;
-                }
-
-                img {
-                    vertical-align: middle;
-                    object-fit: cover;
-                    transform: translateX(0)
                 }
 
                 .team-social {
                     @include positioning(absolute, 0px, auto, 0px, 0px, auto, 100%);
-                    @include flex(center, flex-start, column, nowrap);
+                    @include flex(center, flex-start, column);
                     transform: translateX(-100%);
                     opacity: 0;
 
                     a {
-                       
-                        i{
+
+                        i {
                             @include icon(45px, $secondaryColor, $whiteColor);
                         }
                     }

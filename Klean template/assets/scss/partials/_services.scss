@@ -1,0 +1,97 @@
+.services {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../../assets/img/services-bg.jpg');
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 2rem;
+        align-items: center;
+
+        @media(max-width:576px) {
+            gap: 1rem;
+        }
+
+        .services-item {
+            grid-column: span 6;
+
+            .section__subtitle {
+                color: $whiteColor;
+                max-width: 550px;
+            }
+
+            p {
+                max-width: 550px;
+            }
+
+            i {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                border-radius: 50%;
+                background-color: $secondaryColor;
+
+                &:hover {
+                    color: $secondaryColor;
+                    background-color: $primaryColor;
+                }
+            }
+
+            #left {
+                position: absolute;
+                top: 50%;
+                left: 10px;
+            }
+
+            #right {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+            }
+
+            .services-slider {
+                height: 100%;
+                width: 100%;
+
+                img {
+                    display: none;
+                    height: 100%;
+
+                    &:nth-child(1) {
+                        display: block;
+                    }
+                }
+            }
+
+            &:nth-child(1) {
+
+                @media(max-width:992px) {
+                    grid-column: 2 / span 9;
+                }
+
+                @media(max-width:576px) {
+                    grid-column: span 12;
+                }
+            }
+
+            &:nth-child(2) {
+                position: relative;
+                height: 25rem;
+
+                @media(max-width:992px) {
+                    grid-column: 2 / span 9;
+                }
+
+                @media(max-width:576px) {
+                    grid-column: span 12;
+                    height: 20rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+footer {
+    background-color: #0a1026;
+
+    .footer-content {
+        @include grid(250px, 2rem);
+
+        .footer-item {
+
+            .logo {
+                font-size: 2.5rem;
+
+                @media(max-width:576px) {
+                    font-size: 2rem;
+                }
+            }
+
+            h3 {
+                font-size: 1.5rem;
+
+                @media(max-width:768px) {
+                    font-size: 1.3rem;
+                }
+            }
+
+            .footer-social {
+
+                i {
+                    @include icon(45px, $whiteColor, $blackColor);
+
+                    &:hover {
+                        background-color: $primaryColor;
+                    }
+                }
+            }
+
+            a {
+                &:hover {
+                    color: $primaryColor;
+                }
+            }
+        }
+    }
+}

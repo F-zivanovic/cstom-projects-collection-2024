@@ -6,18 +6,19 @@ EXTERNAL FILES
 @import 'animations';
 @import 'utilities';
 
+
+
 /*----------------------------------------
 PARTIALS
 ----------------------------------------*/
-@import 'partials/__global';
-@import 'partials/__nav';
-@import 'partials/__hero';
-@import 'partials/__sub-hero';
-@import 'partials/__about';
-@import 'partials/__services';
-@import 'partials/__feature';
-@import 'partials/__portfolio';
-@import 'partials/__team';
-@import 'partials/__blog';
-@import 'partials/__contact';
-@import 'partials/__footer';
+@import 'partials/global';
+@import 'partials/nav';
+@import 'partials/hero';
+@import 'partials/sub-hero';
+@import 'partials/about';
+@import 'partials/services';
+@import 'partials/feature';
+@import 'partials/portfolio';
+@import 'partials/team';
+@import 'partials/contact';
+@import 'partials/footer';

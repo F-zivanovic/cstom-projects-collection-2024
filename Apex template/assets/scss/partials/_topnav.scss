@@ -1,0 +1,45 @@
+.topnav {
+    background-color: $secondaryColor;
+    color: #8D9297;
+    padding: .5rem 0;
+
+    @include breakpoints(768px) {
+        display: none;
+    }
+
+    &__wrapper {
+        @include flex(space-between);
+
+        .topnav__contact {
+            display: flex;
+            gap: 1rem;
+
+            &__item {
+                font-size: .9rem;
+
+                i {
+                    color: $primaryColor;
+                    margin-right: .2rem;
+                }
+            }
+        }
+
+        .topnav__social {
+            display: flex;
+            gap: 1rem;
+
+            .topnav__link {
+                font-size: 1.1rem;
+
+                i {
+                    color: $primaryColor;
+
+                    &:hover {
+                        color: $tertiaryColor;
+                        transform: translateX(-10px);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -3,13 +3,22 @@
     margin: 0px;
     padding: 0px;
     scroll-behavior: smooth;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    transition: all .4s linear;
+    list-style-type: none;
 }
 
 body {
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 100%;
     overflow-x: hidden;
+
+    @include breakpoints(576px) {
+        font-size: 85%;
+    }
 }
 
 h1,
@@ -20,36 +29,31 @@ h5,
 h6 {
     font-family: 'Poppins', sans-serif;
     color: $tertiaryColor;
+    text-transform: capitalize;
 }
 
 
 a {
-    text-decoration: none;
-    transition: $transition;
     color: #8D9297;
 
     &:hover,
     &:focus {
         cursor: pointer;
-        transition: $transition-out;
-        outline: none;
         color: $primaryColor;
     }
 }
 
-ul {
-    list-style-type: none;
-}
 
 img {
     width: 100%;
+    vertical-align: middle;
+    object-fit: cover;
 }
 
-.cta{
+.cta {
     position: relative;
     border: 2px solid $primaryColor;
     padding: 15px 35px;
-    transition: $transition;
     cursor: pointer;
     color: $primaryColor;
     font-weight: 700;
@@ -57,7 +61,7 @@ img {
     z-index: 400;
     background: transparent;
 
-    &:hover{
+    &:hover {
         color: $whiteColor;
     }
 
@@ -66,13 +70,12 @@ img {
         font-size: 1rem;
     }
 
-    &:hover >div{
-      width: 100%;
-      transition: $transition;
+    &:hover>div {
+        width: 100%;
     }
 
-    div{ 
-        @include positioning(absolute, 0px, auto, 0px, 0px, 0%)  ; 
+    div {
+        @include positioning(absolute, 0px, auto, 0px, 0px, 0%);
         background-color: $primaryColor;
         z-index: -3;
     }
@@ -82,13 +85,14 @@ img {
     padding: 70px 0px;
 }
 
-p {
-    font-size: 1rem;
-}
 
 .container {
-    width: 90%;
+    width: 80%;
     margin: 0px auto;
+
+    @include breakpoints(576px) {
+        width: 90%;
+    }
 }
 
 .section-title {
@@ -123,12 +127,11 @@ p {
     border: 1px solid $primaryColor;
     opacity: 0;
     transform: translateX(-100%);
-    transition: $transition-out;
     background: $primaryColor;
     color: $whiteColor;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
         background: transparent;
         color: $primaryColor;
     }

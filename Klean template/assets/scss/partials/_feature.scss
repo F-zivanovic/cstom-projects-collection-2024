@@ -1,0 +1,53 @@
+.feature {
+    @include flex(space-evenly, center, row, wrap, 3rem);
+
+    @media(max-width:992px) {
+        justify-content: center;
+    }
+
+    &-item {
+        flex: 0 0 45%;
+
+        @media(max-width:992px) {
+            flex: 0 0 80%;
+        }
+
+        @media(max-width:576px) {
+            flex: 0 0 100%;
+        }
+
+        .feature-number {
+            @include grid(150px, 1rem);
+
+            h3 {
+                font-size: 2.3rem;
+
+                @media(max-width:576px) {
+                    font-size: 1.8rem;
+                }
+            }
+
+            p {
+                font-size: 1.2rem;
+
+                @media(max-width:768px) {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        img {
+            height: 35rem;
+            width: 90%;
+
+            @media(max-width:992px) {
+                height: 25rem;
+                width: 100%;
+            }
+
+            @media(max-width:576px) {
+                display: none;
+            }
+        }
+    }
+}

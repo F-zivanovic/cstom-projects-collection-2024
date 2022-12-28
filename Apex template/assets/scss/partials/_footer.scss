@@ -1,0 +1,104 @@
+.footer {
+    background-color: #182434;
+    color: $whiteColor;
+
+    &__wrapper {
+        @include flex(space-between, flex-start, row, wrap);
+
+        .footer__item {
+            flex: 0 0 30%;
+
+            @include breakpoints(992px) {
+                flex: 0 0 80%;
+            }
+
+            .footer__logo {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                color: $primaryColor;
+
+                i {
+                    font-size: 2rem;
+                }
+
+                span {
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+            }
+
+            .footer__p {
+                margin: 1rem 0;
+            }
+
+            .footer__social {
+
+                a {
+                    border: 1px solid $primaryColor;
+                    text-align: center;
+                    width: 35px;
+                    height: 35px;
+                    line-height: 35px;
+                    color: $whiteColor;
+
+                    &:not(:last-child) {
+                        margin-right: .6rem;
+                    }
+
+                    &:hover {
+                        background-color: $primaryColor;
+                    }
+                }
+            }
+
+            .footer__list {
+
+                &__item {
+                    padding: .7rem 0;
+
+                    i {
+                        margin-right: .5rem;
+                    }
+
+                    .footer__list__link {
+                        color: $whiteColor;
+
+                        &:hover {
+                            transform: translateX(10px);
+                            color: $primaryColor;
+                        }
+                    }
+                }
+            }
+
+            .footer__h3 {
+                color: $whiteColor;
+                font-size: 1.4rem;
+                margin-bottom: 15px;
+
+                @include breakpoints(992px) {
+                    margin-top: 20px;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    &__subcontent {
+        padding: 40px;
+        border-top: 1px solid $secondaryColor;
+        @include flex(space-between);
+
+        @include breakpoints(768px) {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        span {
+            font-weight: 800;
+            color: $primaryColor;
+        }
+    }
+}

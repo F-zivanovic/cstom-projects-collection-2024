@@ -1,0 +1,62 @@
+.about {
+
+    &__wrapper {
+        @include flex(space-around, center, row, wrap);
+
+        @include breakpoints(992px) {
+            justify-content: center;
+        }
+
+        .about__item {
+            flex: 0 0 45%;
+
+            @include breakpoints(992px) {
+                flex: 0 0 80%;
+            }
+
+            @include breakpoints(576px) {
+                flex: 0 0 100%;
+            }
+
+            &:nth-child(1) {
+                position: relative;
+
+                @include breakpoints(992px) {
+                    order: 1;
+                }
+
+                .about__item__img {
+                    height: 35rem;
+
+                    @include breakpoints(576px) {
+                        height: 25rem;
+                    }
+                }
+
+                .about__img-box {
+                    position: absolute;
+                    bottom: 0px;
+                    text-align: center;
+                    background-color: $primaryColor;
+                    border: 10px solid $whiteColor;
+                    padding: 2rem;
+                    color: $whiteColor;
+
+                    h3 {
+                        color: $whiteColor;
+                        font-size: 1.7rem;
+
+                        @include breakpoints(576px) {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+
+            &__p {
+                margin: 2rem 0;
+                text-align: justify;
+            }
+        }
+    }
+}
