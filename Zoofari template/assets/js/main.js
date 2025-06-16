@@ -1,29 +1,22 @@
-// Open / Close Nav
-let hamburger = document.getElementById('hamburger');
-let mobileMenu = document.querySelector('.nav__mobile-menu')
+hideNavMenu();
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('hidden');
-});
+// Hide the navigation menu when the user scrolls or resizes the window
+function hideNavMenu() {
+    const navToogler = document.querySelector('#nav-toggle');
 
-// Close hamburger menu
-let links = document.querySelectorAll('.nav-mobile-menu li');
+    navToogler.addEventListener('change', () => {
+        if (navToogler.checked) {
+            const uncheckNavToggler = () => {
+                navToogler.checked = false;
+                window.removeEventListener('scroll', uncheckNavToggler);
+                window.removeEventListener('resize', uncheckNavToggler);
+            };
 
-links.forEach((link) => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        hamburger.classList.remove('open');
+            window.addEventListener('scroll', uncheckNavToggler);
+            window.addEventListener('resize', uncheckNavToggler);
+        }
     });
-});
-
-
-// Close mobile menu when we scroll
-window.addEventListener('scroll', () => {
-    mobileMenu.classList.add('hidden');
-    hamburger.classList.remove('open');
-});
-
+}
 
 // Counter section
 let counters = document.querySelectorAll('.numbers__counter');
