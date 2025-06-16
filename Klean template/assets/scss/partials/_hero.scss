@@ -1,6 +1,6 @@
 .hero {
     @include flex(center, center, column);
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('../../assets/img/header-bg.jpg') center/cover no-repeat scroll;
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('../../assets/img/header-bg.jpg') center/cover no-repeat scroll;
     height: 80vh;
 
     @media(max-width:576px) {
