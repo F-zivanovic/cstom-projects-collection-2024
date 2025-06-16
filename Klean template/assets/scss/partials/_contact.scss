@@ -32,6 +32,7 @@
                     margin-bottom: 15px;
                     padding: 20px 15px;
                     color: $blackColor;
+                    resize: none;
 
                     &::placeholder {
                         color: $blackColor;
