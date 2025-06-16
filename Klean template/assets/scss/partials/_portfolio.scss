@@ -7,7 +7,7 @@
     background-attachment: scroll;
 
     &-content {
-        @include flex(flex-start, center, row, wrap);
+        @include flex(flex-start, center, row, wrap, 5px);
 
         @media(max-width:768px) {
             justify-content: center;
